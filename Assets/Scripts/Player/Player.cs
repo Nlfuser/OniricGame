@@ -18,4 +18,9 @@ public class Player : MonoBehaviour
         var speed = Input.GetKey(KeyCode.LeftShift) ? runSpeed : movementSpeed;
         _rb.velocity = new Vector2(h * speed, _rb.velocity.y);
     }
+
+    public float GetDir()
+    {
+        return Input.GetAxisRaw("Horizontal");
+    }
 }
