@@ -124,3 +124,6 @@ sysinfo.txt
 Icon?
 ehthumbs.db
 Thumbs.db
+
+# By popular demand
+*.idea
