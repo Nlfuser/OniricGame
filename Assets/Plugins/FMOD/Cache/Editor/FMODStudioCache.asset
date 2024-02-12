@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!114 &-6027538417409299299
+--- !u!114 &-8588555624710428604
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -10,35 +10,15 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
-  m_Name: bank:/Master.strings.bank
+  m_Name: bank:/Master.bank
   m_EditorClassIdentifier: 
-  Path: Fmod/oniric - Brackeys Game jam /Build/Desktop/Master.strings.bank
-  Name: Master.strings
-  StudioPath: bank:/Master.strings
-  lastModified: 638433422332213926
+  Path: Fmod/Fmod/oniric - Brackeys Game jam/Build/Desktop/Master.bank
+  Name: Master
+  StudioPath: bank:/Master
+  lastModified: 638432846330000000
   FileSizes:
   - Name: Desktop
-    Value: 846
-  Exists: 1
---- !u!114 &-70705942351954375
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
-  m_Name: bank:/Music.bank
-  m_EditorClassIdentifier: 
-  Path: Fmod/oniric - Brackeys Game jam /Build/Desktop/Music.bank
-  Name: Music
-  StudioPath: bank:/Music
-  lastModified: 638433422334567215
-  FileSizes:
-  - Name: Desktop
-    Value: 181632
+    Value: 1036
   Exists: 1
 --- !u!114 &11400000
 MonoBehaviour:
@@ -53,38 +33,18 @@ MonoBehaviour:
   m_Name: FMODStudioCache
   m_EditorClassIdentifier: 
   EditorBanks:
-  - {fileID: -6027538417409299299}
-  - {fileID: 1179310995183065302}
-  - {fileID: -70705942351954375}
+  - {fileID: 8977633498773502513}
+  - {fileID: -8588555624710428604}
+  - {fileID: 7943667040286757447}
   EditorEvents:
   - {fileID: 5754826835953645120}
   EditorParameters: []
   MasterBanks:
-  - {fileID: 1179310995183065302}
+  - {fileID: -8588555624710428604}
   StringsBanks:
-  - {fileID: -6027538417409299299}
-  cacheTime: 638433422334567215
+  - {fileID: 8977633498773502513}
+  cacheTime: 638432846330000000
   cacheVersion: 131609
---- !u!114 &1179310995183065302
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
-  m_Name: bank:/Master.bank
-  m_EditorClassIdentifier: 
-  Path: Fmod/oniric - Brackeys Game jam /Build/Desktop/Master.bank
-  Name: Master
-  StudioPath: bank:/Master
-  lastModified: 638433422332205361
-  FileSizes:
-  - Name: Desktop
-    Value: 1036
-  Exists: 1
 --- !u!114 &5754826835953645120
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -104,7 +64,7 @@ MonoBehaviour:
     Data3: 1652407436
     Data4: -692068417
   Banks:
-  - {fileID: -70705942351954375}
+  - {fileID: 7943667040286757447}
   IsStream: 1
   Is3D: 0
   IsOneShot: 0
@@ -112,3 +72,43 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 10285
+--- !u!114 &7943667040286757447
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Music.bank
+  m_EditorClassIdentifier: 
+  Path: Fmod/Fmod/oniric - Brackeys Game jam/Build/Desktop/Music.bank
+  Name: Music
+  StudioPath: bank:/Music
+  lastModified: 638432846330000000
+  FileSizes:
+  - Name: Desktop
+    Value: 181632
+  Exists: 1
+--- !u!114 &8977633498773502513
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.strings.bank
+  m_EditorClassIdentifier: 
+  Path: Fmod/Fmod/oniric - Brackeys Game jam/Build/Desktop/Master.strings.bank
+  Name: Master.strings
+  StudioPath: bank:/Master.strings
+  lastModified: 638432846330000000
+  FileSizes:
+  - Name: Desktop
+    Value: 846
+  Exists: 1
