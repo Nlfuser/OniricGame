@@ -21,6 +21,7 @@ public class Player : MonoBehaviour
         var speed = Input.GetKey(KeyCode.LeftShift) ? runSpeed : movementSpeed;
         _rb.velocity = new Vector2(h * speed, _rb.velocity.y);
     }
+    
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.gameObject.CompareTag("Door"))
@@ -37,6 +38,4 @@ public class Player : MonoBehaviour
                 Destroy(other.gameObject);
             }
         }
-
-    }
 }

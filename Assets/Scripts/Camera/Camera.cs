@@ -1,17 +1,26 @@
+using System;
+using Cinemachine;
 using UnityEngine;
 
 public class Camera : MonoBehaviour
 {
-    [SerializeField] private Transform player;
-    [SerializeField] private float xCamera;
+    [SerializeField] private Player player;
+    private CinemachineVirtualCamera _cam;
 
-    private void Update()
-    {
-        var playerPos = player.position;
-        var cameraPos = transform.position;
-        if (playerPos.x < cameraPos.x - xCamera)
-            transform.position = cameraPos + Vector3.left * xCamera * 2;
-        else if (playerPos.x > cameraPos.x + xCamera)
-            transform.position = cameraPos + Vector3.right * xCamera * 2;
-    }
+     private void Awake()
+     {
+         _cam = GetComponent<CinemachineVirtualCamera>();
+     }
+
+     private void Update()
+     {
+         if (player.GetDir() > 0)
+             _cam.GetCinemachineComponent<CinemachineFramingTransposer>().m_TrackedObjectOffset =
+                 new Vector3(6, 3.25f, 0);
+         else if (player.GetDir() < 0)
+         {
+             _cam.GetCinemachineComponent<CinemachineFramingTransposer>().m_TrackedObjectOffset =
+                 new Vector3(-6, 3.25f, 0);
+         }
+     }
 }
