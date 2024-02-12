@@ -127,3 +127,17 @@ Thumbs.db
 
 # By popular demand
 *.idea
+
+#Because Fmod mandates it
+
+!/[Aa]ssets/Plugins/FMOD//.dll
+!/[Aa}ssets/Gizmos/FMOD/
+!/[Aa}ssets/Editor Default Resources/FMOD/*
+/[Aa]ssets//FMODStudioCache.asset
+/[Aa]ssets/*/FMODStudioCache.asset.meta
+/[Aa]ssets/Plugins/FMOD/Cache.meta
+/[Aa]ssets/Plugins/FMOD/Cache/Editor.meta
+fmod.log
+fmod_editor.log
+/Assets/FMODAssets/
+/Assets/FMODStudioCache.meta
