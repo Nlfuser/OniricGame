@@ -1,0 +1,75 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!21 &2100000
+Material:
+  serializedVersion: 8
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Ink
+  m_Shader: {fileID: -6465566751694194690, guid: ba594d7384e5c644082bd20edcfda488, type: 3}
+  m_Parent: {fileID: 0}
+  m_ModifiedSerializedProperties: 0
+  m_ValidKeywords:
+  - _SWIPE
+  m_InvalidKeywords: []
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_LockedProperties: 
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _Paper_Texture:
+        m_Texture: {fileID: 2800000, guid: a97bf578a1609374f9c7cdd905e9cd12, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Texture2DAsset_f8972b1734a4412694a25d90a1a6cd3d_Out_0_Texture2D:
+        m_Texture: {fileID: 2800000, guid: bd70dccdae993b747a4b3b81574e63ad, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _TextureSize_6c24a4997357401f8f3b527ce5267e03_Texture_1_Texture2D:
+        m_Texture: {fileID: 2800000, guid: bd70dccdae993b747a4b3b81574e63ad, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_Lightmaps:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_LightmapsInd:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_ShadowMasks:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Ints: []
+    m_Floats:
+    - _Amount: 0
+    - _Color_Threshold: 0.1
+    - _Contrast: 7.1
+    - _Depth_Threshold: 0.1
+    - _Depth_Threshold_2: 0.01
+    - _Effect: 0.15
+    - _LEFTSIDE: 0
+    - _Luminance_Correction: -6.88
+    - _Luminence_Correction: 0.62
+    - _Normal_Threshold: 0
+    - _Normal_Threshold_2: 0.4
+    - _OVERLAY: 0
+    - _SWIPE: 1
+    - _Scale: 100
+    - _StippleSize: 3.47
+    - _Stipple_Size: 15
+    - _Thickness: 1
+    - _Threshold: 0.5
+    m_Colors:
+    - _Color: {r: 0, g: 0, b: 0, a: 0}
+    - _Emmision_Color: {r: 28.709524, g: 0, b: 0, a: 0}
+    - _Outline_Color: {r: 0, g: 0, b: 0, a: 0}
+  m_BuildTextureStacks: []
