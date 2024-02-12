@@ -15,63 +15,11 @@ MonoBehaviour:
   Path: Fmod/Fmod/oniric - Brackeys Game jam/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638433464671480685
+  lastModified: 638432846330000000
   FileSizes:
   - Name: Desktop
     Value: 1036
   Exists: 1
---- !u!114 &-3359402591046295206
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Music 2/Movement Speed
-  m_EditorClassIdentifier: 
-  Name: Movement Speed
-  StudioPath: 
-  Min: 0
-  Max: 3
-  Default: 0
-  ID:
-    data1: 3188328335
-    data2: 2146689176
-  Type: 0
-  IsGlobal: 0
-  Labels: []
-  Exists: 1
---- !u!114 &-2880176117035148032
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Music/Music 2
-  m_EditorClassIdentifier: 
-  Path: event:/Music/Music 2
-  Guid:
-    Data1: 1065469068
-    Data2: 1249078119
-    Data3: 764557449
-    Data4: -925276503
-  Banks:
-  - {fileID: 7943667040286757447}
-  IsStream: 1
-  Is3D: 0
-  IsOneShot: 0
-  Parameters:
-  - {fileID: -3359402591046295206}
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 133577
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -90,13 +38,12 @@ MonoBehaviour:
   - {fileID: 7943667040286757447}
   EditorEvents:
   - {fileID: 5754826835953645120}
-  - {fileID: -2880176117035148032}
   EditorParameters: []
   MasterBanks:
   - {fileID: -8588555624710428604}
   StringsBanks:
   - {fileID: 8977633498773502513}
-  cacheTime: 638433465428136722
+  cacheTime: 638432846330000000
   cacheVersion: 131609
 --- !u!114 &5754826835953645120
 MonoBehaviour:
@@ -140,10 +87,10 @@ MonoBehaviour:
   Path: Fmod/Fmod/oniric - Brackeys Game jam/Build/Desktop/Music.bank
   Name: Music
   StudioPath: bank:/Music
-  lastModified: 638433465428136722
+  lastModified: 638432846330000000
   FileSizes:
   - Name: Desktop
-    Value: 1611392
+    Value: 181632
   Exists: 1
 --- !u!114 &8977633498773502513
 MonoBehaviour:
@@ -160,8 +107,8 @@ MonoBehaviour:
   Path: Fmod/Fmod/oniric - Brackeys Game jam/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638433464671488188
+  lastModified: 638432846330000000
   FileSizes:
   - Name: Desktop
-    Value: 952
+    Value: 846
   Exists: 1
