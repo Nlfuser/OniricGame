@@ -32,7 +32,7 @@ public class Player : MonoBehaviour
     {
         var h = Input.GetAxisRaw("Horizontal");
         var speed = Input.GetKey(KeyCode.LeftShift) ? runSpeed : movementSpeed;
-        _rb.velocity = new Vector2(h * speed, _rb.velocity.y);
+        _rb.velocity = new Vector2(h * speed * Time.deltaTime * 250, _rb.velocity.y);
     }
     
     private void OnTriggerEnter2D(Collider2D other)
@@ -65,5 +65,20 @@ public class Player : MonoBehaviour
         Vector3 playerDirection = transform.forward;
         int directionX = Mathf.RoundToInt(playerDirection.x);
         return directionX;
+    }
+
+    public bool IsRunning()
+    {
+        return Input.GetKey(KeyCode.LeftShift);
+    }
+    
+    public bool StartedRunning()
+    {
+        return Input.GetKeyDown(KeyCode.LeftShift);
+    }
+    
+    public bool EndedRunning()
+    {
+        return Input.GetKeyUp(KeyCode.LeftShift);
     }
 }
