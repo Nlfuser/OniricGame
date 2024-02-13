@@ -25,18 +25,11 @@ public class Camera : MonoBehaviour
     private void Update()
     {
         var framingTransposer = _cam.GetCinemachineComponent<CinemachineFramingTransposer>();
-        if (player.GetDir() > 0 && _previousPlayerDirection != player.GetDir())
-        if (player.stateOfPlayer == Player.PlayerGameState.walk || player.stateOfPlayer == Player.PlayerGameState.run)
+        if (_previousPlayerDirection != player.GetDir() && (player.stateOfPlayer == Player.PlayerGameState.walk || player.stateOfPlayer == Player.PlayerGameState.run))
         {
-            DOVirtual.Float(framingTransposer.m_TrackedObjectOffset.x, 6f, duration, value => {
-                framingTransposer.m_TrackedObjectOffset = new Vector3(value, 3.25f, 0);
-            }).SetEase(ease);
-            _previousPlayerDirection = player.GetDir();
-        }
-        else if (player.GetDir() < 0 && _previousPlayerDirection != player.GetDir())
-        {
-            DOVirtual.Float(framingTransposer.m_TrackedObjectOffset.x, -6f, duration, value => {
-                framingTransposer.m_TrackedObjectOffset = new Vector3(value, 3.25f, 0);
+            int walking = player.stateOfPlayer == Player.PlayerGameState.walk? 0: 1;
+            DOVirtual.Float(framingTransposer.m_TrackedObjectOffset.x, 6f * player.GetDir(), duration, value => {
+                framingTransposer.m_TrackedObjectOffset = new Vector3(value * walking, 3.25f, 0);
             }).SetEase(ease);
             _previousPlayerDirection = player.GetDir();
         }
@@ -68,17 +61,6 @@ public class Camera : MonoBehaviour
         }
     
         _cam.m_Lens.OrthographicSize = targetSize;
-            _elapsedTime = 0f;
-            while (_elapsedTime < duration)
-            {
-                float newAmount = 0;
-                if (player.stateOfPlayer == Player.PlayerGameState.run)
-                {
-                    newAmount = Mathf.Lerp(framingTransposer.m_TrackedObjectOffset.x, 6f * player.GetDir(), _elapsedTime);
-                }
-                framingTransposer.m_TrackedObjectOffset = new Vector3(newAmount, 3.25f, 0);
-                _elapsedTime += Time.deltaTime;
-            }
-        }        
+                   
     }
 }
