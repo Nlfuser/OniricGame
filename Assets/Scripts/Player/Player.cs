@@ -28,11 +28,11 @@ public class Player : MonoBehaviour
                 break;
             case PlayerGameState.walk:
                 speed = movementSpeed;
-                _rb.velocity = new Vector2(h * speed * Time.deltaTime * 250, _rb.velocity.y);
+                MovePlayer();
                 break;
             case PlayerGameState.run:
                 speed = runSpeed;
-                _rb.velocity = new Vector2(h * speed * Time.deltaTime * 250, _rb.velocity.y);
+                MovePlayer();
                 break;
             case PlayerGameState.stop:
                 break;
@@ -42,7 +42,11 @@ public class Player : MonoBehaviour
     private void Awake()
     {
         _rb = GetComponent<Rigidbody2D>();
-    }    
+    }
+    void MovePlayer()
+    {
+        _rb.velocity = new Vector2(h * speed * Time.deltaTime * 250, _rb.velocity.y);
+    }
     private void Update()
     {
         h = Input.GetAxisRaw("Horizontal");
