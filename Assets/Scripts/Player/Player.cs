@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Player : MonoBehaviour
 {
@@ -10,6 +11,18 @@ public class Player : MonoBehaviour
     private Rigidbody2D _rb;
 
     private List<GameObject> Items = new List<GameObject>();
+    public Transform slotsParent; // Parent object of inventory slots
+    public GameObject slotPrefab; // Prefab for inventory slots
+
+    void Start(){
+        for (int i = 0; i < Items.Count; i++)
+        {
+            GameObject slot = Instantiate(slotPrefab, slotsParent);
+            Image slotImage = slot.GetComponent<Image>();
+            slotImage.sprite = Items[i].GetComponent<SpriteRenderer>().sprite;
+        }
+
+    }
     private void Awake()
     {
         _rb = GetComponent<Rigidbody2D>();
@@ -33,11 +46,19 @@ public class Player : MonoBehaviour
             Debug.Log("Get the key");
             if (Input.GetKeyDown(KeyCode.Q))
             {
-                Items.Add(other.gameObject);
+                AddItem(other.gameObject);
                 Debug.Log("Item got");
                 Destroy(other.gameObject);
             }
         }
+    }
+
+    void AddItem(GameObject item)
+    {
+        Items.Add(item);
+        GameObject slot = Instantiate(slotPrefab, slotsParent);
+        Image slotImage = slot.GetComponent<Image>();
+        slotImage.sprite = item.GetComponent<SpriteRenderer>().sprite;
     }
 
     public int GetDir(){
