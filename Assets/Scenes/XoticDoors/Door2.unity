@@ -209,6 +209,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 599594677}
+  duration: 0
+  sprintDuration: 1
 --- !u!1 &257764992
 GameObject:
   m_ObjectHideFlags: 3
@@ -844,6 +846,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sceneToLoad: Door1
+  transitionDuration: 2
+  inkTransitionMaterial: {fileID: 2100000, guid: c20d8c6643c0bf14ba65e3f7bde422d4, type: 2}
 --- !u!61 &1827324381
 BoxCollider2D:
   m_ObjectHideFlags: 0

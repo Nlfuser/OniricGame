@@ -63,7 +63,7 @@ Material:
     - _Normal_Threshold_2: 0.4
     - _OVERLAY: 0
     - _SWIPE: 1
-    - _Scale: 100
+    - _Scale: 15
     - _StippleSize: 3.47
     - _Stipple_Size: 15
     - _Thickness: 1
