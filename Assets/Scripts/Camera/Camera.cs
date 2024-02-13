@@ -1,10 +1,6 @@
-using System;
 using System.Collections;
-using System.Collections.Generic;
 using Cinemachine;
 using DG.Tweening;
-using DG.Tweening.Core;
-using DG.Tweening.Plugins.Options;
 using UnityEngine;
 
 public class Camera : MonoBehaviour
@@ -15,7 +11,7 @@ public class Camera : MonoBehaviour
     [SerializeField] private Ease ease;
     private CinemachineVirtualCamera _cam;
     private float _previousPlayerDirection;
-    private float _elapsedTime;
+    private Tweener _resetTween;
 
     private void Awake()
     {
@@ -26,53 +22,50 @@ public class Camera : MonoBehaviour
     private void Update()
     {
         var framingTransposer = _cam.GetCinemachineComponent<CinemachineFramingTransposer>();
-        _elapsedTime = 0f;
-        while (_elapsedTime < duration)
+        if (player.stateOfPlayer == PlayerGameState.Run)
         {
-            float newAmount = 0;
-            if (player.stateOfPlayer == Player.PlayerGameState.run)
+            if (player.GetDir() > 0 && (_previousPlayerDirection != player.GetDir()))
             {
-                newAmount = Mathf.Lerp(framingTransposer.m_TrackedObjectOffset.x, 6f * player.GetDir(), _elapsedTime);
+                DOVirtual.Float(framingTransposer.m_TrackedObjectOffset.x, 6f, duration, value =>
+                    {
+                        framingTransposer.m_TrackedObjectOffset = new Vector3(value, 3.25f, 0);
+                    }).SetEase(ease);
+                _previousPlayerDirection = player.GetDir();
             }
-            framingTransposer.m_TrackedObjectOffset = new Vector3(newAmount, 3.25f, 0);
-            _elapsedTime += Time.deltaTime;
+            else if (player.GetDir() < 0 && (_previousPlayerDirection != player.GetDir()))
+            {
+                DOVirtual.Float(framingTransposer.m_TrackedObjectOffset.x, -6f, duration, value =>
+                    {
+                        framingTransposer.m_TrackedObjectOffset = new Vector3(value, 3.25f, 0);
+                    }).SetEase(ease);
+                _previousPlayerDirection = player.GetDir();
+            }
         }
-        /*
-        else if (_previousPlayerDirection != player.GetDir() && player.stateOfPlayer == Player.PlayerGameState.walk)
+        if (player.stateOfPlayer is PlayerGameState.Walk or PlayerGameState.Idle && _resetTween == null)
         {
-            DOVirtual.Float(framingTransposer.m_TrackedObjectOffset.x, 6f * player.GetDir(), duration, value => {
+            _previousPlayerDirection = 99f;
+            _resetTween = DOVirtual.Float(framingTransposer.m_TrackedObjectOffset.x, 0, duration, value =>
+            {
                 framingTransposer.m_TrackedObjectOffset = new Vector3(value, 3.25f, 0);
-            }).SetEase(ease);
-            _previousPlayerDirection = player.GetDir();
-        }*/
+            }).SetEase(ease).OnComplete(() => _resetTween = null);
+        }
     }
 
     private void LateUpdate()
     {
         if (player.StartedRunning())
-        {
-            StopCoroutine($"ChangeOrthographicSize");
-            StartCoroutine(ChangeOrthographicSize(6f));
-        }
+            ChangeOrthographicSize(6f);
         if (player.EndedRunning())
-        {
-            StopCoroutine($"ChangeOrthographicSize");
-            StartCoroutine(ChangeOrthographicSize(5f));
-        }
+            ChangeOrthographicSize(5f);
     }
 
-    private IEnumerator ChangeOrthographicSize(float targetSize)
+    private void ChangeOrthographicSize(float targetSize)
     {
-        var startTime = Time.time;
-        var startSize = _cam.m_Lens.OrthographicSize;
-    
-        while (Time.time - startTime < sprintDuration)
+        DOVirtual.Float(_cam.m_Lens.OrthographicSize, targetSize, sprintDuration, value =>
         {
-            _cam.m_Lens.OrthographicSize = Mathf.Lerp(startSize, targetSize, (Time.time - startTime) / sprintDuration);
-            yield return null;
-        }
+            _cam.m_Lens.OrthographicSize = value;
+        }).SetEase(ease);
     
         _cam.m_Lens.OrthographicSize = targetSize;
-                   
     }
 }

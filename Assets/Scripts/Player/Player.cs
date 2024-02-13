@@ -1,74 +1,72 @@
 using System;
 using UnityEngine;
 
+public enum PlayerGameState
+{
+    Load,
+    Idle,
+    Walk,
+    Run,
+    Stop
+}
+
 public class Player : MonoBehaviour
 {
+    public PlayerGameState stateOfPlayer;
     [SerializeField] private float movementSpeed;
     [SerializeField] private float runSpeed;
     private Rigidbody2D _rb;
-    private float h;
-    private bool s;
-    private float speed;
-    public enum PlayerGameState
-    {
-        load,
-        idle,
-        walk,
-        run,
-        stop
-    }
-    public PlayerGameState stateOfPlayer;
-    public void PlayerStateMachine(PlayerGameState playerState)
-    {
-        switch (playerState)
-        {
-            case PlayerGameState.load:
-                break;
-            case PlayerGameState.idle:
-                break;
-            case PlayerGameState.walk:
-                speed = movementSpeed;
-                MovePlayer();
-                break;
-            case PlayerGameState.run:
-                speed = runSpeed;
-                MovePlayer();
-                break;
-            case PlayerGameState.stop:
-                break;
-        }
-        stateOfPlayer = playerState;
-    }
+    private float _horizontal;
+    private bool _isSprinting;
+    private float _speed;
+    
     private void Awake()
     {
         _rb = GetComponent<Rigidbody2D>();
     }
-    void MovePlayer()
+    
+    public void SwitchPlayerState(PlayerGameState playerState)
     {
-        _rb.velocity = new Vector2(h * speed * Time.deltaTime * 250, _rb.velocity.y);
+        switch (playerState)
+        {
+            case PlayerGameState.Load:
+                break;
+            case PlayerGameState.Idle:
+                break;
+            case PlayerGameState.Walk:
+                _speed = movementSpeed;
+                MovePlayer();
+                break;
+            case PlayerGameState.Run:
+                _speed = runSpeed;
+                MovePlayer();
+                break;
+            case PlayerGameState.Stop:
+                break;
+        }
+        stateOfPlayer = playerState;
     }
+    
     private void Update()
     {
-        h = Input.GetAxisRaw("Horizontal");
-        s = Input.GetKey(KeyCode.LeftShift);
-        if (h != 0 && !s)
-        {
-            PlayerStateMachine(PlayerGameState.walk);
-        }
-        else if(h != 0 && s)
-        {
-            PlayerStateMachine(PlayerGameState.run);
-        }
+        _horizontal = Input.GetAxisRaw("Horizontal");
+        _isSprinting = Input.GetKey(KeyCode.LeftShift);
+        if (_horizontal != 0 && !_isSprinting)
+            SwitchPlayerState(PlayerGameState.Walk);
+        else if(_horizontal != 0 && _isSprinting)
+            SwitchPlayerState(PlayerGameState.Run);
+        if(_horizontal == 0)
+            SwitchPlayerState(PlayerGameState.Idle);
     }
 
+    private void MovePlayer()
+    {
+        _rb.velocity = new Vector2(_horizontal * _speed * Time.deltaTime * 250, _rb.velocity.y);
+    }
+    
     public float GetDir()
     {
-        return Input.GetAxisRaw("Horizontal");
-    }
-
-    public bool IsRunning()
-    {
-        return Input.GetKey(KeyCode.LeftShift);
+        return _horizontal;
     }
     
     public bool StartedRunning()
