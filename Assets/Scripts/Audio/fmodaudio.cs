@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using UnityEngine;
 using FMODUnity;
 
-namespace 
      public class Fmodaudio : MonoBehaviour
     { 
         public static bool Enabled = true;
