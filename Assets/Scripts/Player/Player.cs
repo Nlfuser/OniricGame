@@ -38,4 +38,11 @@ public class Player : MonoBehaviour
                 Destroy(other.gameObject);
             }
         }
+    }
+
+    public int GetDir(){
+        Vector3 playerDirection = transform.forward;
+        int directionX = Mathf.RoundToInt(playerDirection.x);
+        return directionX;
+    }
 }
