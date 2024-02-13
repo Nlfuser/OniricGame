@@ -19,25 +19,19 @@ public class Camera : MonoBehaviour
     private void Update()
     {
         var framingTransposer = _cam.GetCinemachineComponent<CinemachineFramingTransposer>();
-        if (player.GetDir() > 0)
+        if (player.stateOfPlayer == Player.PlayerGameState.walk || player.stateOfPlayer == Player.PlayerGameState.run)
         {
             _elapsedTime = 0f;
             while (_elapsedTime < duration)
             {
-                var newAmount = Mathf.Lerp(framingTransposer.m_TrackedObjectOffset.x, 6f, _elapsedTime);
+                float newAmount = 0;
+                if (player.stateOfPlayer == Player.PlayerGameState.run)
+                {
+                    newAmount = Mathf.Lerp(framingTransposer.m_TrackedObjectOffset.x, 6f * player.GetDir(), _elapsedTime);
+                }
                 framingTransposer.m_TrackedObjectOffset = new Vector3(newAmount, 3.25f, 0);
                 _elapsedTime += Time.deltaTime;
             }
-        }
-        else if (player.GetDir() < 0)
-        {
-            _elapsedTime = 0f;
-            while (_elapsedTime < duration)
-            {
-                var newAmount = Mathf.Lerp(framingTransposer.m_TrackedObjectOffset.x, -6f, _elapsedTime);
-                framingTransposer.m_TrackedObjectOffset = new Vector3(newAmount, 3.25f, 0);
-                _elapsedTime += Time.deltaTime;
-            }
-        }
+        }        
     }
 }
