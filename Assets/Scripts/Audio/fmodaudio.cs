@@ -1,18 +1,32 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using FMODUnity;
 
-public class fmodaudio : MonoBehaviour
-{
-    // Start is called before the first frame update
-    void Start()
-    {
+namespace 
+     public class Fmodaudio : MonoBehaviour
+    { 
+        public static bool Enabled = true;
         
+        public static void Play(EventReference @event)
+        {
+            if (Enabled)
+                RuntimeManager.PlayOneShot(@event);
+        }
+
+        public static void PlayAtLocation(EventReference @event, GameObject gameObject)
+        {
+
+            if (!Enabled)
+                return;
+
+                var instance = RuntimeManager.CreateInstance(@event.Guid);
+                instance.set3DAttributes(gameObject.To3DAttributes());
+                instance.start();
+                instance.release();
+
+        }
+
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-}
+
