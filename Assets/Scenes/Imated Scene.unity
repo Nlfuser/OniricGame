@@ -389,8 +389,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 599594677}
-  duration: 0.5
+  duration: 2
   sprintDuration: 0.05
+  ease: 27
 --- !u!1 &257764992
 GameObject:
   m_ObjectHideFlags: 3
@@ -2053,12 +2054,9 @@ Transform:
 SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
+  - {fileID: 669877434}
   - {fileID: 439753093}
   - {fileID: 1286780362}
   - {fileID: 1522203968}
   - {fileID: 599594674}
   - {fileID: 216414489}
-  - {fileID: 2071118025}
-  - {fileID: 1612505851}
-  - {fileID: 2090185090}
-  - {fileID: 1715428377}

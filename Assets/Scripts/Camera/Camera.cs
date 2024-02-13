@@ -12,6 +12,7 @@ public class Camera : MonoBehaviour
     [SerializeField] private Player player;
     [SerializeField] private float duration;
     [SerializeField] private float sprintDuration = 1f;
+    [SerializeField] private Ease ease;
     private CinemachineVirtualCamera _cam;
     private float _previousPlayerDirection;
 
@@ -23,17 +24,19 @@ public class Camera : MonoBehaviour
 
     private void Update()
     {
-        
+        var framingTransposer = _cam.GetCinemachineComponent<CinemachineFramingTransposer>();
         if (player.GetDir() > 0 && _previousPlayerDirection != player.GetDir())
         {
-            StopCoroutine($"ChangeCameraDirection");
-            StartCoroutine(ChangeCameraDirection(6f));
+            DOVirtual.Float(framingTransposer.m_TrackedObjectOffset.x, 6f, duration, value => {
+                framingTransposer.m_TrackedObjectOffset = new Vector3(value, 3.25f, 0);
+            }).SetEase(ease);
             _previousPlayerDirection = player.GetDir();
         }
         else if (player.GetDir() < 0 && _previousPlayerDirection != player.GetDir())
         {
-            StopCoroutine($"ChangeCameraDirection");
-            StartCoroutine(ChangeCameraDirection(-6f));
+            DOVirtual.Float(framingTransposer.m_TrackedObjectOffset.x, -6f, duration, value => {
+                framingTransposer.m_TrackedObjectOffset = new Vector3(value, 3.25f, 0);
+            }).SetEase(ease);
             _previousPlayerDirection = player.GetDir();
         }
     }
@@ -51,22 +54,7 @@ public class Camera : MonoBehaviour
             StartCoroutine(ChangeOrthographicSize(5f));
         }
     }
-    
-    private IEnumerator ChangeCameraDirection(float targetX)
-    {
-        var framingTransposer = _cam.GetCinemachineComponent<CinemachineFramingTransposer>();
-        var startTime = Time.time;
-        var startX = framingTransposer.m_TrackedObjectOffset.x;
-    
-        while (Time.time - startTime < duration)
-        {
-            framingTransposer.m_TrackedObjectOffset = new Vector3(Mathf.Lerp(startX, targetX, (Time.time - startTime) / duration), 3.25f, 0);
-            yield return null;
-        }
-    
-        framingTransposer.m_TrackedObjectOffset = new Vector3(targetX, 3.25f, 0);
-    }
-    
+
     private IEnumerator ChangeOrthographicSize(float targetSize)
     {
         var startTime = Time.time;
