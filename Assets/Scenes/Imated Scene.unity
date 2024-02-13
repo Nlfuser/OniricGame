@@ -209,7 +209,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 599594677}
-  duration: 0.01
+  duration: 0.5
+  sprintDuration: 0.05
 --- !u!1 &257764992
 GameObject:
   m_ObjectHideFlags: 3
@@ -488,7 +489,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   movementSpeed: 2.5
-  runSpeed: 5
+  runSpeed: 7
 --- !u!1 &1286780359
 GameObject:
   m_ObjectHideFlags: 0
@@ -740,8 +741,8 @@ Transform:
   m_GameObject: {fileID: 1522203966}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 8.875, y: -4.25, z: 0}
-  m_LocalScale: {x: 38.001545, y: 2, z: 1}
+  m_LocalPosition: {x: 8.875, y: -5.25, z: 0}
+  m_LocalScale: {x: 38.001545, y: 4, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}

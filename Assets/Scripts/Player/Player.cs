@@ -23,4 +23,19 @@ public class Player : MonoBehaviour
     {
         return Input.GetAxisRaw("Horizontal");
     }
+
+    public bool IsRunning()
+    {
+        return Input.GetKey(KeyCode.LeftShift);
+    }
+    
+    public bool StartedRunning()
+    {
+        return Input.GetKeyDown(KeyCode.LeftShift);
+    }
+    
+    public bool EndedRunning()
+    {
+        return Input.GetKeyUp(KeyCode.LeftShift);
+    }
 }
