@@ -15,6 +15,7 @@ public class Item : Selectable
         if (IsMouseOver() && IsPlayerClicking())
         {
             GameManager.instance.AddToInventory(item);
+            InventoryUI.instance.SetIsPickupUpTrue();
             Destroy(gameObject);
         }
     }

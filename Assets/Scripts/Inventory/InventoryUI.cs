@@ -9,6 +9,14 @@ public class InventoryUI : Singleton<InventoryUI>
     [SerializeField] private List<UISlot> uiSlots;
     [SerializeField] private Image holdingItemImage;
     private int _currentlySelectedItem;
+    private bool _isPickingUp;
+    private float _pickupTimer;
+
+    public void SetIsPickupUpTrue()
+    {
+        _isPickingUp = true;
+        _pickupTimer = 0f;
+    }
 
     private void Update()
     {
@@ -52,8 +60,25 @@ public class InventoryUI : Singleton<InventoryUI>
             }
             else
                 if(slot.transform.localScale.x != 1f)
-                            slot.transform.DOScale(new Vector3(1f, 1f, 1f), 0.35f);
-        }   
+                    slot.transform.DOScale(new Vector3(1f, 1f, 1f), 0.35f);
+        }
+
+        if (Input.GetMouseButtonDown(0) && !_isPickingUp)
+        {
+            if (uiSlots[_currentlySelectedItem].item != null)
+            {
+                var item = Instantiate(uiSlots[_currentlySelectedItem].item.placedPrefab);
+                item.transform.position = new Vector3(holdingItemImage.transform.position.x, holdingItemImage.transform.position.y, 0f);
+                GameManager.instance.RemoveFromInventory(uiSlots[_currentlySelectedItem].item);
+            }
+        }
+
+        if (_isPickingUp)
+        {
+            _pickupTimer += Time.deltaTime;
+            if (_pickupTimer >= 0.25f)
+                _isPickingUp = false;
+        }
     }
 
     public void UpdateUI(ItemSO item)
