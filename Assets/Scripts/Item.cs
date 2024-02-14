@@ -5,10 +5,10 @@ using Image = UnityEngine.UI.Image;
 
 public class Item : Selectable
 {
-    public GameObject[] IntervorySlots;
+    public GameObject[] InventorySlots;
     //public GameObject Door;
     public void Start(){
-        IntervorySlots = GameObject.FindGameObjectsWithTag("IntervorySlot");
+        InventorySlots = GameObject.FindGameObjectsWithTag("InventorySlot");
         //Door = GameObject.Find("Door");
     }
     private void Awake()
@@ -40,17 +40,17 @@ public class Item : Selectable
     }
     void ChangeSprite()
 {
-    foreach (GameObject IntervorySlot in IntervorySlots)
+    foreach (GameObject InventorySlot in InventorySlots)
     {
-        SpriteRenderer slotSpriteRenderer = IntervorySlot.GetComponent<SpriteRenderer>();
+        SpriteRenderer slotSpriteRenderer = InventorySlot.GetComponent<SpriteRenderer>();
 
         if (slotSpriteRenderer != null)
         {
-            IntervorySlot.GetComponent<Image>().overrideSprite = gameObject.GetComponent<SpriteRenderer>().sprite;
+            InventorySlot.GetComponent<Image>().overrideSprite = gameObject.GetComponent<SpriteRenderer>().sprite;
         }
         else
         {
-            UnityEngine.Debug.LogWarning("SpriteRenderer component not found on IntervorySlot: " + IntervorySlot.name);
+            
         }
     }
 }
