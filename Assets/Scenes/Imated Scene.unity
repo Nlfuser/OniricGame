@@ -536,13 +536,6 @@ MonoBehaviour:
   stateOfPlayer: 0
   movementSpeed: 4
   runSpeed: 13
-  footstepsSfx:
-    Guid:
-      Data1: -399213169
-      Data2: 1293365752
-      Data3: 1652407436
-      Data4: -692068417
-    Path: event:/Music/24_01_09 - Synth Forward push - Experiment 1
 --- !u!1 &669877432
 GameObject:
   m_ObjectHideFlags: 0
@@ -554,6 +547,7 @@ GameObject:
   - component: {fileID: 669877434}
   - component: {fileID: 669877433}
   - component: {fileID: 669877435}
+  - component: {fileID: 669877436}
   m_Layer: 0
   m_Name: Game Manager
   m_TagString: Untagged
@@ -603,6 +597,20 @@ MonoBehaviour:
   startupSoundbanks:
   - Music
   - Master
+--- !u!114 &669877436
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 669877432}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3cd95cfc05cbede46b2dd6d38b8e8d34, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  transitionDuration: 2
+  inkTransitionMaterial: {fileID: 2100000, guid: c20d8c6643c0bf14ba65e3f7bde422d4, type: 2}
 --- !u!1 &1042799223
 GameObject:
   m_ObjectHideFlags: 0
@@ -615,6 +623,7 @@ GameObject:
   - component: {fileID: 1042799224}
   - component: {fileID: 1042799227}
   - component: {fileID: 1042799226}
+  - component: {fileID: 1042799228}
   m_Layer: 0
   m_Name: Hexagon Flat-Top
   m_TagString: Untagged
@@ -747,6 +756,19 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 0.8828125}
   m_EdgeRadius: 0
+--- !u!114 &1042799228
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1042799223}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 970273c34df8b884088f029b3a7e2f3b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sceneToLoad: Imated Scene
 --- !u!1 &1286780359
 GameObject:
   m_ObjectHideFlags: 0
