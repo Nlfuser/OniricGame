@@ -10,9 +10,16 @@ public class Door : Selectable
     public Material inkTransitionMaterial;
     private float currentTransitionTime = 0.0f;
 
+    private bool isTransitioning = false; // Flag to check if the transition is in progress
+
+    //private void Awake()
+    //{
+    //    DontDestroyOnLoad(gameObject);
+    //}
+
     private void Update()
     {
-        if (IsMouseOver() && IsPlayerClicking())
+        if (IsMouseOver() && IsPlayerClicking() && !isTransitioning)
         {
             StartCoroutine(TransitionAndLoadScene());
         }
@@ -20,6 +27,7 @@ public class Door : Selectable
 
     IEnumerator TransitionAndLoadScene()
     {
+        isTransitioning = true;
 
         inkTransitionMaterial.SetKeyword(new LocalKeyword(inkTransitionMaterial.shader, "_LEFTSIDE"), false);
 
@@ -39,8 +47,21 @@ public class Door : Selectable
         // Ensure the amount is set to 1 at the end of the loop
         inkTransitionMaterial.SetFloat("_Amount", 1.0f);
 
-        startTime = Time.time;
+        StartCoroutine(TransitionOut());
+    }
+
+    IEnumerator TransitionOut()
+    {
+        float startTime = Time.time;
         currentTransitionTime = 0.0f;
+
+        AsyncOperation asyncLoad = SceneManager.LoadSceneAsync(sceneToLoad);
+
+        // Continue the transition while the scene is being loaded asynchronously
+        while (!asyncLoad.isDone)
+        {
+            yield return null;
+        }
 
         inkTransitionMaterial.SetKeyword(new LocalKeyword(inkTransitionMaterial.shader, "_LEFTSIDE"), true);
 
@@ -56,9 +77,9 @@ public class Door : Selectable
             yield return null;
         }
 
-        SceneManager.LoadScene(sceneToLoad);
-
         // Ensure the amount is set to 0 at the end of the loop
         inkTransitionMaterial.SetFloat("_Amount", 0.0f);
+
+        isTransitioning = false; // Reset the flag to allow new transitions
     }
 }
