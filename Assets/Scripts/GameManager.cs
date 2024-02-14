@@ -22,6 +22,13 @@ public class GameManager : Singleton<GameManager>
     public void AddToInventory(ItemSO obj)
     {
         _inventory.Add(obj);
+        InventoryUI.instance.UpdateUI(obj);
+    }
+    
+    public void RemoveFromInventory(ItemSO obj)
+    {
+        _inventory.Remove(obj);
+        InventoryUI.instance.RemoveUI();
     }
 
     public bool InventoryContains(ItemSO obj)
