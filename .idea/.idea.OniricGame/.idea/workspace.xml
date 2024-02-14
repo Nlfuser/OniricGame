@@ -2,25 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="53ae792b-b653-4b52-87cf-9bb64916e685" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.OniricGame/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.OniricGame/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/BlockFlash.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/BlockFlash.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/HeroKnight.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/HeroKnight.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/HeroKnight_Green.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/HeroKnight_Green.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/HeroKnight_Yellow.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/HeroKnight_Yellow.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/SlideDust.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/SlideDust.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/Sprites-ColorSwap.shader" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/Sprites-ColorSwap.shader.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Effects/Ink.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Effects/Ink.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Items/Test1.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Items/Test1.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Imated Scene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Imated Scene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Inventory/ItemSO.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Inventory/ItemSO.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Inventory/InventoryUI.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Inventory/InventoryUI.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

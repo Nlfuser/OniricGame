@@ -45,11 +45,15 @@ public class InventoryUI : Singleton<InventoryUI>
 
         foreach (var slot in uiSlots)
         {
-            if(uiSlots[_currentlySelectedItem] == slot)
-                slot.transform.DOScale(new Vector3(1.25f, 1.25f, 1.25f), 0.35f);
+            if (uiSlots[_currentlySelectedItem] == slot)
+            {
+                if (uiSlots[_currentlySelectedItem].transform.localScale.x != 1.25f)
+                    slot.transform.DOScale(new Vector3(1.25f, 1.25f, 1.25f), 0.35f);
+            }
             else
-                slot.transform.DOScale(new Vector3(1f, 1f, 1f), 0.35f);
-        }
+                if(slot.transform.localScale.x != 1f)
+                            slot.transform.DOScale(new Vector3(1f, 1f, 1f), 0.35f);
+        }   
     }
 
     public void UpdateUI(ItemSO item)
