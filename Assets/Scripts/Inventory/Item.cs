@@ -1,7 +1,10 @@
 using System;
+using UnityEngine;
 
 public class Item : Selectable
 {
+    public ItemSO item;
+    
     private void Awake()
     {
         
@@ -11,7 +14,7 @@ public class Item : Selectable
     {
         if (IsMouseOver() && IsPlayerClicking())
         {
-            GameManager.instance.AddToInventory(this);
+            GameManager.instance.AddToInventory(item);
             Destroy(gameObject);
         }
     }
