@@ -16,7 +16,6 @@ public class Camera : MonoBehaviour
     private void Awake()
     {
         _cam = GetComponent<CinemachineVirtualCamera>();
-        DOTween.Init();
     }
 
     private void Update()
@@ -24,23 +23,16 @@ public class Camera : MonoBehaviour
         var framingTransposer = _cam.GetCinemachineComponent<CinemachineFramingTransposer>();
         if (player.stateOfPlayer == PlayerGameState.Run)
         {
-            if (player.GetDir() > 0 && (_previousPlayerDirection != player.GetDir()))
+            if (_previousPlayerDirection != player.GetDir())
             {
-                DOVirtual.Float(framingTransposer.m_TrackedObjectOffset.x, 6f, duration, value =>
-                    {
-                        framingTransposer.m_TrackedObjectOffset = new Vector3(value, 3.25f, 0);
-                    }).SetEase(ease);
-                _previousPlayerDirection = player.GetDir();
-            }
-            else if (player.GetDir() < 0 && (_previousPlayerDirection != player.GetDir()))
-            {
-                DOVirtual.Float(framingTransposer.m_TrackedObjectOffset.x, -6f, duration, value =>
-                    {
-                        framingTransposer.m_TrackedObjectOffset = new Vector3(value, 3.25f, 0);
-                    }).SetEase(ease);
+                DOVirtual.Float(framingTransposer.m_TrackedObjectOffset.x, 6f * player.GetDir(), duration, value =>
+                {
+                    framingTransposer.m_TrackedObjectOffset = new Vector3(value, 3.25f, 0);
+                }).SetEase(ease);
                 _previousPlayerDirection = player.GetDir();
             }
         }
+        
         if (player.stateOfPlayer is PlayerGameState.Walk or PlayerGameState.Idle && _resetTween == null)
         {
             _previousPlayerDirection = 99f;

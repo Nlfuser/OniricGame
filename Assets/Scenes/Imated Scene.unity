@@ -534,8 +534,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stateOfPlayer: 0
-  movementSpeed: 2.5
-  runSpeed: 7
+  movementSpeed: 4
+  runSpeed: 13
 --- !u!1 &669877432
 GameObject:
   m_ObjectHideFlags: 0
