@@ -1,4 +1,4 @@
-using UnityEngine;
+using System.Collections.Generic;
 
 public enum GameState
 {
@@ -12,8 +12,20 @@ public class GameManager : Singleton<GameManager>
     public GameState GameState => _gameState;
     private GameState _gameState;
 
+    private List<ItemSO> _inventory = new List<ItemSO>();
+
     public void SetGameState(GameState state)
     {
         _gameState = state;
+    }
+
+    public void AddToInventory(ItemSO obj)
+    {
+        _inventory.Add(obj);
+    }
+
+    public bool InventoryContains(ItemSO obj)
+    {
+        return _inventory.Contains(obj);
     }
 }
