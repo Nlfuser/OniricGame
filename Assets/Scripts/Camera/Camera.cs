@@ -27,7 +27,7 @@ public class Camera : MonoBehaviour
             {
                 DOVirtual.Float(framingTransposer.m_TrackedObjectOffset.x, 6f * player.GetDir(), duration, value =>
                 {
-                    framingTransposer.m_TrackedObjectOffset = new Vector3(value, 3.25f, 0);
+                    framingTransposer.m_TrackedObjectOffset = new Vector3(value, 2.5f, 0);
                 }).SetEase(ease);
                 _previousPlayerDirection = player.GetDir();
             }
@@ -38,7 +38,7 @@ public class Camera : MonoBehaviour
             _previousPlayerDirection = 99f;
             _resetTween = DOVirtual.Float(framingTransposer.m_TrackedObjectOffset.x, 0, duration, value =>
             {
-                framingTransposer.m_TrackedObjectOffset = new Vector3(value, 3.25f, 0);
+                framingTransposer.m_TrackedObjectOffset = new Vector3(value, 2.5f, 0);
             }).SetEase(ease).OnComplete(() => _resetTween = null);
         }
     }

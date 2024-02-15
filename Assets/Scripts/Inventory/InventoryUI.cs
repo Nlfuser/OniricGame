@@ -22,7 +22,7 @@ public class InventoryUI : Singleton<InventoryUI>
     {
         RectTransformUtility.ScreenPointToLocalPointInRectangle(transform.parent.GetComponent<RectTransform>(), Input.mousePosition, UnityEngine.Camera.main, out var localPoint);
         holdingItemImage.transform.localPosition = localPoint;
-        if (uiSlots[_currentlySelectedItem].item != null)
+        if (uiSlots[_currentlySelectedItem].item != null && !uiSlots[_currentlySelectedItem].item.dynamic)
         {
             holdingItemImage.enabled = true;
             holdingItemImage.sprite = uiSlots[_currentlySelectedItem].item.image;
@@ -67,9 +67,13 @@ public class InventoryUI : Singleton<InventoryUI>
         {
             if (uiSlots[_currentlySelectedItem].item != null)
             {
-                var item = Instantiate(uiSlots[_currentlySelectedItem].item.placedPrefab);
-                item.transform.position = new Vector3(holdingItemImage.transform.position.x, holdingItemImage.transform.position.y, 0f);
-                GameManager.instance.RemoveFromInventory(uiSlots[_currentlySelectedItem].item);
+                if (!uiSlots[_currentlySelectedItem].item.dynamic)
+                {
+                    var item = Instantiate(uiSlots[_currentlySelectedItem].item.placedPrefab);
+                    item.transform.position = new Vector3(holdingItemImage.transform.position.x,
+                        holdingItemImage.transform.position.y, 0f);
+                    GameManager.instance.RemoveFromInventory(uiSlots[_currentlySelectedItem].item);
+                }
             }
         }
 
@@ -83,16 +87,33 @@ public class InventoryUI : Singleton<InventoryUI>
 
     public void UpdateUI(ItemSO item)
     {
-        foreach (var slot in uiSlots)
+        if (!item.dynamic || (item.dynamic && item.evolution == 0))
         {
-            if(slot.item != null)
-                continue;
-            slot.item = item;
-            slot.UpdateUI();
-            break;
+            foreach (var slot in uiSlots)
+            {
+                if (slot.item != null)
+                    continue;
+                slot.item = item;
+                slot.UpdateUI();
+                if(item.dynamic)
+                    slot.item.evolution++;
+                break;
+            }
+        }
+        if(item.dynamic && item.evolution != 0)
+        {
+            foreach (var slot in uiSlots)
+            {
+                if (slot.item != item)
+                    continue;
+                slot.item = item;
+                slot.item.evolution++;
+                slot.UpdateUI();
+                break;
+            }
         }
     }
-    
+
     public void RemoveUI()
     {
         for (var i = 0; i < uiSlots.Count; i++)

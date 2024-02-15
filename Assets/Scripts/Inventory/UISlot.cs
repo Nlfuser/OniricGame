@@ -17,8 +17,11 @@ public class UISlot : MonoBehaviour
     {
         if (item != null)
         {
-            itemImage.sprite = item.image;
             itemImage.enabled = true;
+            if (!item.dynamic)
+                itemImage.sprite = item.image;
+            else
+                itemImage.sprite = item.dynamicImages[item.evolution];
         }
         else
         {
