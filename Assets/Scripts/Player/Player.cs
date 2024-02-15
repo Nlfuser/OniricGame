@@ -9,20 +9,29 @@ public class Player : MonoBehaviour
     [SerializeField] private float movementSpeed;
     [SerializeField] private float runSpeed;
     private Rigidbody2D _rb;
-
-    private List<GameObject> Items = new List<GameObject>();
     public Transform slotsParent; // Parent object of inventory slots
     public GameObject slotPrefab; // Prefab for inventory slots
+    private Animator _animator;
 
-    void Start(){
-        for (int i = 0; i < Items.Count; i++)
-        {
-            GameObject slot = Instantiate(slotPrefab, slotsParent);
-            Image slotImage = slot.GetComponent<Image>();
-            slotImage.sprite = Items[i].GetComponent<SpriteRenderer>().sprite;
-        }
-
+    public enum playerState
+    {
+        IdleNormal,
+        IdleTruePath,
+        IdleSad
     }
+
+    public playerState currentState;
+
+    //define reference time-variable
+    private float lastStateChange = 0.0f;
+
+
+    void Start()
+    {
+        _animator = GetComponent<Animator>();
+        currentState = playerState.IdleNormal;
+    }
+
     private void Awake()
     {
         _rb = GetComponent<Rigidbody2D>();
@@ -33,35 +42,27 @@ public class Player : MonoBehaviour
         var h = Input.GetAxisRaw("Horizontal");
         var speed = Input.GetKey(KeyCode.LeftShift) ? runSpeed : movementSpeed;
         _rb.velocity = new Vector2(h * speed * Time.deltaTime * 250, _rb.velocity.y);
-    }
-    
-    private void OnTriggerEnter2D(Collider2D other)
-    {
-        if (other.gameObject.CompareTag("Door"))
+        switch (currentState)
         {
-            Debug.Log("Open the door");
-        }
-        else if (other.gameObject.CompareTag("Key"))
-        {
-            Debug.Log("Get the key");
-            if (Input.GetKeyDown(KeyCode.Q))
-            {
-                AddItem(other.gameObject);
-                Debug.Log("Item got");
-                Destroy(other.gameObject);
-            }
+            case playerState.IdleNormal:
+                _animator.SetBool("IsWalking", false);
+                _animator.SetBool("IsRunning", false);
+                break;
+            case playerState.IdleTruePath:
+                _animator.SetBool("IsWalking", true);
+                _animator.SetBool("IsRunning", false);
+                break;
+            case playerState.IdleSad:
+                _animator.SetBool("IsWalking", false);
+                _animator.SetBool("IsRunning", true);
+                break;
+            default:
+                break;
         }
     }
 
-    void AddItem(GameObject item)
+    public int GetDir()
     {
-        Items.Add(item);
-        GameObject slot = Instantiate(slotPrefab, slotsParent);
-        Image slotImage = slot.GetComponent<Image>();
-        slotImage.sprite = item.GetComponent<SpriteRenderer>().sprite;
-    }
-
-    public int GetDir(){
         Vector3 playerDirection = transform.forward;
         int directionX = Mathf.RoundToInt(playerDirection.x);
         return directionX;
@@ -71,14 +72,20 @@ public class Player : MonoBehaviour
     {
         return Input.GetKey(KeyCode.LeftShift);
     }
-    
+
     public bool StartedRunning()
     {
         return Input.GetKeyDown(KeyCode.LeftShift);
     }
-    
+
     public bool EndedRunning()
     {
         return Input.GetKeyUp(KeyCode.LeftShift);
     }
+
+    public void TransitionToState(playerState newState)
+    {
+        currentState = newState;
+    }
+
 }

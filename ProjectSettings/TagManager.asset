@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Key
   - InventorySlot
+  - Item
   layers:
   - Default
   - TransparentFX
