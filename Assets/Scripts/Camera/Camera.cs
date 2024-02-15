@@ -21,7 +21,7 @@ public class Camera : MonoBehaviour
     private void Update()
     {
         var framingTransposer = _cam.GetCinemachineComponent<CinemachineFramingTransposer>();
-        if (player.getCurrentState() == Player.playerState.Run)
+        if (player.stateOfPlayer == PlayerGameState.Run)
         {
             if (_previousPlayerDirection != player.GetDir())
             {
@@ -33,7 +33,7 @@ public class Camera : MonoBehaviour
             }
         }
         
-        if (player.getCurrentState() is Player.playerState.Walk or Player.playerState.IdleNormal && _resetTween == null)
+        if (player.stateOfPlayer is PlayerGameState.Walk or PlayerGameState.Idle && _resetTween == null)
         {
             _previousPlayerDirection = 99f;
             _resetTween = DOVirtual.Float(framingTransposer.m_TrackedObjectOffset.x, 0, duration, value =>
