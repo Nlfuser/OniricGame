@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   PortInUse: 54213
   IsUseSpecificIpAddressEnabled: 0
-  UseSpecificIpAddress: 192.168.1.114
+  UseSpecificIpAddress: 
