@@ -1,81 +1,111 @@
 using System;
+using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
-
-public enum PlayerGameState
-{
-    Load,
-    Idle,
-    Walk,
-    Run,
-    Stop
-}
+using UnityEngine.UI;
 
 public class Player : MonoBehaviour
 {
-    public PlayerGameState stateOfPlayer;
     [SerializeField] private float movementSpeed;
     [SerializeField] private float runSpeed;
     private Rigidbody2D _rb;
-    private float _horizontal;
-    private bool _isSprinting;
-    private float _speed;
-    
+    private Animator _animator;
+
+    public enum playerState
+    {
+        IdleNormal,
+        IdleTruePath,
+        IdleSad,
+        Walk,
+        Run
+    }
+
+    public playerState currentState;
+
+    //define reference time-variable
+    private float lastStateChange = 0.0f;
+
+
+    void Start()
+    {
+        _animator = GetComponent<Animator>();
+        currentState = playerState.IdleNormal;
+    }
+
     private void Awake()
     {
         _rb = GetComponent<Rigidbody2D>();
     }
-    
-    public void SwitchPlayerState(PlayerGameState playerState)
-    {
-        switch (playerState)
-        {
-            case PlayerGameState.Load:
-                break;
-            case PlayerGameState.Idle:
-                break;
-            case PlayerGameState.Walk:
-                _speed = movementSpeed;
-                MovePlayer();
-                break;
-            case PlayerGameState.Run:
-                _speed = runSpeed;
-                MovePlayer();
-                break;
-            case PlayerGameState.Stop:
-                break;
-        }
-        stateOfPlayer = playerState;
-    }
-    
+
     private void Update()
     {
-        _horizontal = Input.GetAxisRaw("Horizontal");
-        _isSprinting = Input.GetKey(KeyCode.LeftShift);
-        if (_horizontal != 0 && !_isSprinting)
-            SwitchPlayerState(PlayerGameState.Walk);
-        else if(_horizontal != 0 && _isSprinting)
-            SwitchPlayerState(PlayerGameState.Run);
-        if(_horizontal == 0)
-            SwitchPlayerState(PlayerGameState.Idle);
+        var h = Input.GetAxisRaw("Horizontal");
+        var speed = Input.GetKey(KeyCode.LeftShift) ? runSpeed : movementSpeed;
+        _rb.velocity = new Vector2(h * speed * Time.deltaTime * 250, _rb.velocity.y);
+        switch (currentState)
+        {
+            case playerState.IdleNormal:
+                _animator.SetBool("IsWalking", false);
+                _animator.SetBool("IsRunning", false);
+                break;
+            case playerState.IdleTruePath:
+                _animator.SetBool("IsWalking", false);
+                _animator.SetBool("IsRunning", false);
+                break;
+            case playerState.IdleSad:
+                _animator.SetBool("IsWalking", false);
+                _animator.SetBool("IsRunning", false);
+                break;
+            case playerState.Walk:
+                _animator.SetBool("IsWalking", true);
+                _animator.SetBool("IsRunning", false);
+                break;
+            case playerState.Run:
+                _animator.SetBool("IsWalking", false);
+                _animator.SetBool("IsRunning", true);
+                break;
+            default:
+                break;
+        }
     }
 
-    private void MovePlayer()
+    public int GetDir()
     {
-        _rb.velocity = new Vector2(_horizontal * _speed * Time.deltaTime * 250, _rb.velocity.y);
+        Vector3 playerDirection = transform.forward;
+        int directionX = Mathf.RoundToInt(playerDirection.x);
+        return directionX;
     }
-    
-    public float GetDir()
+
+    public bool IsRunning()
     {
-        return _horizontal;
+        return Input.GetKey(KeyCode.LeftShift);
     }
-    
+
+    public void GoodDecision(){
+        TransitionToState(playerState.IdleSad);
+    }
+    public void BadDecision(){
+        TransitionToState(playerState.IdleTruePath);
+    }
+
     public bool StartedRunning()
     {
+        TransitionToState(playerState.Run);
         return Input.GetKeyDown(KeyCode.LeftShift);
     }
-    
+
     public bool EndedRunning()
     {
         return Input.GetKeyUp(KeyCode.LeftShift);
     }
+
+    public void TransitionToState(playerState newState)
+    {
+        currentState = newState;
+    }
+
+    public playerState getCurrentState(){
+        return currentState;
+    }
+
 }

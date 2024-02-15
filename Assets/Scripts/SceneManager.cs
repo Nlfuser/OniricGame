@@ -66,4 +66,9 @@ public class SceneManager : Singleton<SceneManager>
     {
         return _isTransitioning;
     }
+
+    internal static void LoadScene(string v)
+    {
+        throw new NotImplementedException();
+    }
 }
