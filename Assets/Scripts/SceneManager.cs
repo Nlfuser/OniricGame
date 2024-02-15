@@ -37,6 +37,8 @@ public class SceneManager : Singleton<SceneManager>
     
     private void TransitionOut(Scene scene, LoadSceneMode mode)
     {
+        if (instance == null || this == null)
+            return;
         if(!_isTransitioning)
             return;
         inkTransitionMaterial.SetKeyword(_leftSide, true);
