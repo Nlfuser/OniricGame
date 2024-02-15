@@ -1,5 +1,4 @@
 using System.Collections.Generic;
-using UnityEngine;
 
 public enum GameState
 {
@@ -13,20 +12,30 @@ public class GameManager : Singleton<GameManager>
     public GameState GameState => _gameState;
     private GameState _gameState;
 
-    private List<Selectable> _inventory = new List<Selectable>();
+    private List<ItemSO> _inventory = new List<ItemSO>();
 
     public void SetGameState(GameState state)
     {
         _gameState = state;
     }
 
-    public void AddToInventory(Selectable obj)
+    public void AddToInventory(ItemSO obj)
     {
-        _inventory.Add(obj);
+        if (!obj.dynamic || (obj.dynamic && !_inventory.Contains(obj)))
+        {
+            _inventory.Add(obj);
+            InventoryUI.instance.UpdateUI(obj);
+        }
+    }
+    
+    public void RemoveFromInventory(ItemSO obj)
+    {
+        _inventory.Remove(obj);
+        InventoryUI.instance.RemoveUI();
     }
 
-    public bool InventoryContains(Selectable obj)
+    public bool InventoryContains(ItemSO obj)
     {
-        return  _inventory.Contains(obj);
+        return _inventory.Contains(obj);
     }
 }
