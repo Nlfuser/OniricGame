@@ -9,15 +9,15 @@ public class Player : MonoBehaviour
     [SerializeField] private float movementSpeed;
     [SerializeField] private float runSpeed;
     private Rigidbody2D _rb;
-    public Transform slotsParent; // Parent object of inventory slots
-    public GameObject slotPrefab; // Prefab for inventory slots
     private Animator _animator;
 
     public enum playerState
     {
         IdleNormal,
         IdleTruePath,
-        IdleSad
+        IdleSad,
+        Walk,
+        Run
     }
 
     public playerState currentState;
@@ -49,10 +49,18 @@ public class Player : MonoBehaviour
                 _animator.SetBool("IsRunning", false);
                 break;
             case playerState.IdleTruePath:
-                _animator.SetBool("IsWalking", true);
+                _animator.SetBool("IsWalking", false);
                 _animator.SetBool("IsRunning", false);
                 break;
             case playerState.IdleSad:
+                _animator.SetBool("IsWalking", false);
+                _animator.SetBool("IsRunning", false);
+                break;
+            case playerState.Walk:
+                _animator.SetBool("IsWalking", true);
+                _animator.SetBool("IsRunning", false);
+                break;
+            case playerState.Run:
                 _animator.SetBool("IsWalking", false);
                 _animator.SetBool("IsRunning", true);
                 break;
@@ -73,8 +81,16 @@ public class Player : MonoBehaviour
         return Input.GetKey(KeyCode.LeftShift);
     }
 
+    public void GoodDecision(){
+        TransitionToState(playerState.IdleSad);
+    }
+    public void BadDecision(){
+        TransitionToState(playerState.IdleTruePath);
+    }
+
     public bool StartedRunning()
     {
+        TransitionToState(playerState.Run);
         return Input.GetKeyDown(KeyCode.LeftShift);
     }
 
@@ -86,6 +102,10 @@ public class Player : MonoBehaviour
     public void TransitionToState(playerState newState)
     {
         currentState = newState;
+    }
+
+    public playerState getCurrentState(){
+        return currentState;
     }
 
 }
