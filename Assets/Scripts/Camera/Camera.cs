@@ -45,10 +45,10 @@ public class Camera : MonoBehaviour
 
     private void LateUpdate()
     {
-        if (player.StartedRunning())
-            ChangeOrthographicSize(6f);
-        if (player.EndedRunning())
-            ChangeOrthographicSize(5f);
+        //if (player.StartedRunning())
+            //ChangeOrthographicSize(6f);
+        //if (player.EndedRunning())
+            //ChangeOrthographicSize(5f);
     }
 
     private void ChangeOrthographicSize(float targetSize)

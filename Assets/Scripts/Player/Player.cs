@@ -37,10 +37,10 @@ public class Player : MonoBehaviour
                 _speed = movementSpeed;
                 MovePlayer();
                 break;
-            case PlayerGameState.Run:
-                _speed = runSpeed;
-                MovePlayer();
-                break;
+            // case PlayerGameState.Run:
+            //     _speed = runSpeed;
+            //     MovePlayer();
+            //     break;
             case PlayerGameState.Stop:
                 break;
         }
@@ -50,11 +50,11 @@ public class Player : MonoBehaviour
     private void Update()
     {
         _horizontal = Input.GetAxisRaw("Horizontal");
-        _isSprinting = Input.GetKey(KeyCode.LeftShift);
-        if (_horizontal != 0 && !_isSprinting)
+        //_isSprinting = Input.GetKey(KeyCode.LeftShift);
+        if (_horizontal != 0 ) //Add &&_isSprinting back if we are readding sprint
             SwitchPlayerState(PlayerGameState.Walk);
-        else if(_horizontal != 0 && _isSprinting)
-            SwitchPlayerState(PlayerGameState.Run);
+        //else if(_horizontal != 0 && _isSprinting)
+            //SwitchPlayerState(PlayerGameState.Run);
         if(_horizontal == 0)
             SwitchPlayerState(PlayerGameState.Idle);
     }
@@ -69,13 +69,13 @@ public class Player : MonoBehaviour
         return _horizontal;
     }
     
-    public bool StartedRunning()
-    {
-        return Input.GetKeyDown(KeyCode.LeftShift);
-    }
-    
-    public bool EndedRunning()
-    {
-        return Input.GetKeyUp(KeyCode.LeftShift);
-    }
+    //public bool StartedRunning()
+    //{
+        //return Input.GetKeyDown(KeyCode.LeftShift);
+    //}
+                                                            //I dont see the purpose in having a run function
+    // public bool EndedRunning()
+    // {
+    //     return Input.GetKeyUp(KeyCode.LeftShift);
+    // }
 }
