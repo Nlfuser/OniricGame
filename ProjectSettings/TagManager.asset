@@ -5,8 +5,6 @@ TagManager:
   serializedVersion: 2
   tags:
   - Key
-  - InventorySlot
-  - Item
   layers:
   - Default
   - TransparentFX

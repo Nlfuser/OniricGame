@@ -1,91 +1,81 @@
 using System;
-using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
-using UnityEngine.UI;
+
+public enum PlayerGameState
+{
+    Load,
+    Idle,
+    Walk,
+    Run,
+    Stop
+}
 
 public class Player : MonoBehaviour
 {
+    public PlayerGameState stateOfPlayer;
     [SerializeField] private float movementSpeed;
     [SerializeField] private float runSpeed;
     private Rigidbody2D _rb;
-    public Transform slotsParent; // Parent object of inventory slots
-    public GameObject slotPrefab; // Prefab for inventory slots
-    private Animator _animator;
-
-    public enum playerState
-    {
-        IdleNormal,
-        IdleTruePath,
-        IdleSad
-    }
-
-    public playerState currentState;
-
-    //define reference time-variable
-    private float lastStateChange = 0.0f;
-
-
-    void Start()
-    {
-        _animator = GetComponent<Animator>();
-        currentState = playerState.IdleNormal;
-    }
-
+    private float _horizontal;
+    private bool _isSprinting;
+    private float _speed;
+    
     private void Awake()
     {
         _rb = GetComponent<Rigidbody2D>();
     }
-
-    private void Update()
+    
+    public void SwitchPlayerState(PlayerGameState playerState)
     {
-        var h = Input.GetAxisRaw("Horizontal");
-        var speed = Input.GetKey(KeyCode.LeftShift) ? runSpeed : movementSpeed;
-        _rb.velocity = new Vector2(h * speed * Time.deltaTime * 250, _rb.velocity.y);
-        switch (currentState)
+        switch (playerState)
         {
-            case playerState.IdleNormal:
-                _animator.SetBool("IsWalking", false);
-                _animator.SetBool("IsRunning", false);
+            case PlayerGameState.Load:
                 break;
-            case playerState.IdleTruePath:
-                _animator.SetBool("IsWalking", true);
-                _animator.SetBool("IsRunning", false);
+            case PlayerGameState.Idle:
                 break;
-            case playerState.IdleSad:
-                _animator.SetBool("IsWalking", false);
-                _animator.SetBool("IsRunning", true);
+            case PlayerGameState.Walk:
+                _speed = movementSpeed;
+                MovePlayer();
                 break;
-            default:
+            case PlayerGameState.Run:
+                _speed = runSpeed;
+                MovePlayer();
+                break;
+            case PlayerGameState.Stop:
                 break;
         }
+        stateOfPlayer = playerState;
     }
-
-    public int GetDir()
+    
+    private void Update()
     {
-        Vector3 playerDirection = transform.forward;
-        int directionX = Mathf.RoundToInt(playerDirection.x);
-        return directionX;
+        _horizontal = Input.GetAxisRaw("Horizontal");
+        _isSprinting = Input.GetKey(KeyCode.LeftShift);
+        if (_horizontal != 0 && !_isSprinting)
+            SwitchPlayerState(PlayerGameState.Walk);
+        else if(_horizontal != 0 && _isSprinting)
+            SwitchPlayerState(PlayerGameState.Run);
+        if(_horizontal == 0)
+            SwitchPlayerState(PlayerGameState.Idle);
     }
 
-    public bool IsRunning()
+    private void MovePlayer()
     {
-        return Input.GetKey(KeyCode.LeftShift);
+        _rb.velocity = new Vector2(_horizontal * _speed * Time.deltaTime * 250, _rb.velocity.y);
     }
-
+    
+    public float GetDir()
+    {
+        return _horizontal;
+    }
+    
     public bool StartedRunning()
     {
         return Input.GetKeyDown(KeyCode.LeftShift);
     }
-
+    
     public bool EndedRunning()
     {
         return Input.GetKeyUp(KeyCode.LeftShift);
     }
-
-    public void TransitionToState(playerState newState)
-    {
-        currentState = newState;
-    }
-
 }
