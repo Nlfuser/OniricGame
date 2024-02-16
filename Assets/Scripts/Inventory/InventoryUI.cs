@@ -87,29 +87,21 @@ public class InventoryUI : Singleton<InventoryUI>
 
     public void UpdateUI(ItemSO item)
     {
-        if (!item.dynamic || (item.dynamic && item.evolution == 0))
+        foreach (var slot in uiSlots)
         {
-            foreach (var slot in uiSlots)
+            if (!item.dynamic || item.evolution == -1)
             {
                 if (slot.item != null)
                     continue;
                 slot.item = item;
-                slot.UpdateUI();
-                if(item.dynamic)
-                    slot.item.evolution++;
+                slot.item.evolution++;
                 break;
             }
-        }
-        if(item.dynamic && item.evolution != 0)
-        {
-            foreach (var slot in uiSlots)
+            else if (item.dynamic && item.evolution != -1)
             {
                 if (slot.item != item)
                     continue;
-                slot.item = item;
                 slot.item.evolution++;
-                slot.UpdateUI();
-                break;
             }
         }
     }

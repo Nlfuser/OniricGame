@@ -9,7 +9,7 @@ public class ItemSO : ScriptableObject
     public GameObject placedPrefab;
     public Sprite image;
     public List<Sprite> dynamicImages;
-    public int evolution;
+    public int evolution = -1;
 
     private void Awake()
     {

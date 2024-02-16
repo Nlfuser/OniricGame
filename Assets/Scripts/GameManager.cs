@@ -21,11 +21,9 @@ public class GameManager : Singleton<GameManager>
 
     public void AddToInventory(ItemSO obj)
     {
-        if (!obj.dynamic || (obj.dynamic && !_inventory.Contains(obj)))
-        {
+        if (!obj.dynamic || !_inventory.Contains(obj))
             _inventory.Add(obj);
-            InventoryUI.instance.UpdateUI(obj);
-        }
+        InventoryUI.instance.UpdateUI(obj);
     }
     
     public void RemoveFromInventory(ItemSO obj)

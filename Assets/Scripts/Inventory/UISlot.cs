@@ -13,9 +13,14 @@ public class UISlot : MonoBehaviour
         UpdateUI();
     }
 
+    private void Update()
+    {
+        UpdateUI();
+    }
+
     public void UpdateUI()
     {
-        if (item != null)
+        if (item != null && item.evolution > -1)
         {
             itemImage.enabled = true;
             if (!item.dynamic)
