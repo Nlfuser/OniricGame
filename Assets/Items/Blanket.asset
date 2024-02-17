@@ -10,7 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6ac3ded5032ce55479868da96d8ff26d, type: 3}
-  m_Name: Test1
+  m_Name: Blanket
   m_EditorClassIdentifier: 
-  placedPrefab: {fileID: 6888280742240420595, guid: ca9b021c0de4a064c9a43d727254fb61, type: 3}
-  image: {fileID: 2747690628134850419, guid: 16037dbd798344f57a526d53d48f5ead, type: 3}
+  cantPlace: 0
+  dynamic: 0
+  placedPrefab: {fileID: 4567937248918913614, guid: a904d57a7a08c2d428eacf4514e45af7, type: 3}
+  image: {fileID: 21300000, guid: 97a0967d324359442924c819f4695d6f, type: 3}
+  dynamicImages: []
+  evolution: -1
+  isCompleted: 0

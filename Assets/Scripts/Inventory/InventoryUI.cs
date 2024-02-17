@@ -22,7 +22,7 @@ public class InventoryUI : Singleton<InventoryUI>
     {
         RectTransformUtility.ScreenPointToLocalPointInRectangle(transform.parent.GetComponent<RectTransform>(), Input.mousePosition, UnityEngine.Camera.main, out var localPoint);
         holdingItemImage.transform.localPosition = localPoint;
-        if (uiSlots[_currentlySelectedItem].item != null)
+        if (uiSlots[_currentlySelectedItem].item != null && !uiSlots[_currentlySelectedItem].item.cantPlace)
         {
             if (!uiSlots[_currentlySelectedItem].item.dynamic ||
                 (uiSlots[_currentlySelectedItem].item.dynamic && uiSlots[_currentlySelectedItem].item.isCompleted))
@@ -117,11 +117,11 @@ public class InventoryUI : Singleton<InventoryUI>
         }
     }
 
-    public void RemoveUI()
+    public void RemoveUI(ItemSO item)
     {
         for (var i = 0; i < uiSlots.Count; i++)
         {
-            if (i == _currentlySelectedItem)
+            if (uiSlots[i].item == item)
             {
                 uiSlots[i].item = null;
                 uiSlots[i].UpdateUI();

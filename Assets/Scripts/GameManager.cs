@@ -43,7 +43,7 @@ public class GameManager : Singleton<GameManager>
     public void RemoveFromInventory(ItemSO obj)
     {
         _inventory.Remove(obj);
-        InventoryUI.instance.RemoveUI();
+        InventoryUI.instance.RemoveUI(obj);
     }
 
     public bool InventoryContains(ItemSO obj)

@@ -15,7 +15,7 @@ MonoBehaviour:
   Path: Fmod/Fmod/oniric - Brackeys Game jam/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638432846330000000
+  lastModified: 638433540308240965
   FileSizes:
   - Name: Desktop
     Value: 1036
@@ -43,7 +43,7 @@ MonoBehaviour:
   - {fileID: -8588555624710428604}
   StringsBanks:
   - {fileID: 8977633498773502513}
-  cacheTime: 638432846330000000
+  cacheTime: 638433540308256408
   cacheVersion: 131609
 --- !u!114 &5754826835953645120
 MonoBehaviour:
@@ -87,7 +87,7 @@ MonoBehaviour:
   Path: Fmod/Fmod/oniric - Brackeys Game jam/Build/Desktop/Music.bank
   Name: Music
   StudioPath: bank:/Music
-  lastModified: 638432846330000000
+  lastModified: 638433540308256408
   FileSizes:
   - Name: Desktop
     Value: 181632
@@ -107,7 +107,7 @@ MonoBehaviour:
   Path: Fmod/Fmod/oniric - Brackeys Game jam/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638432846330000000
+  lastModified: 638433540308246095
   FileSizes:
   - Name: Desktop
     Value: 846
