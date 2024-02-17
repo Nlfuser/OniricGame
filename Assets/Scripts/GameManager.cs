@@ -22,7 +22,11 @@ public class GameManager : Singleton<GameManager>
     public void AddToInventory(ItemSO obj)
     {
         if (!obj.dynamic || !_inventory.Contains(obj))
+        {
+            obj.evolution = -1;
             _inventory.Add(obj);
+        }
+
         InventoryUI.instance.UpdateUI(obj);
     }
     

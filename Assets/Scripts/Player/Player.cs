@@ -32,6 +32,7 @@ public class Player : MonoBehaviour
             case PlayerGameState.Load:
                 break;
             case PlayerGameState.Idle:
+                _rb.velocity = new Vector2(0f, _rb.velocity.y);
                 break;
             case PlayerGameState.Walk:
                 _speed = movementSpeed;
@@ -61,7 +62,7 @@ public class Player : MonoBehaviour
 
     private void MovePlayer()
     {
-        _rb.velocity = new Vector2(_horizontal * _speed * Time.deltaTime * 250, _rb.velocity.y);
+        _rb.velocity = new Vector2(_horizontal * _speed, _rb.velocity.y);
     }
     
     public float GetDir()

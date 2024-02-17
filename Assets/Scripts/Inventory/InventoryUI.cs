@@ -22,10 +22,17 @@ public class InventoryUI : Singleton<InventoryUI>
     {
         RectTransformUtility.ScreenPointToLocalPointInRectangle(transform.parent.GetComponent<RectTransform>(), Input.mousePosition, UnityEngine.Camera.main, out var localPoint);
         holdingItemImage.transform.localPosition = localPoint;
-        if (uiSlots[_currentlySelectedItem].item != null && !uiSlots[_currentlySelectedItem].item.dynamic)
+        if (uiSlots[_currentlySelectedItem].item != null)
         {
-            holdingItemImage.enabled = true;
-            holdingItemImage.sprite = uiSlots[_currentlySelectedItem].item.image;
+            if (!uiSlots[_currentlySelectedItem].item.dynamic ||
+                (uiSlots[_currentlySelectedItem].item.dynamic && uiSlots[_currentlySelectedItem].IsCompleted()))
+            {
+                holdingItemImage.enabled = true;
+                if(!uiSlots[_currentlySelectedItem].item.dynamic)
+                    holdingItemImage.sprite = uiSlots[_currentlySelectedItem].item.image;
+                else
+                    holdingItemImage.sprite = uiSlots[_currentlySelectedItem].item.dynamicImages[uiSlots[_currentlySelectedItem].item.evolution];
+            }
         }
         else
             holdingItemImage.enabled = false;
@@ -67,12 +74,16 @@ public class InventoryUI : Singleton<InventoryUI>
         {
             if (uiSlots[_currentlySelectedItem].item != null)
             {
-                if (!uiSlots[_currentlySelectedItem].item.dynamic)
+                if (!uiSlots[_currentlySelectedItem].item.cantPlace)
                 {
-                    var item = Instantiate(uiSlots[_currentlySelectedItem].item.placedPrefab);
-                    item.transform.position = new Vector3(holdingItemImage.transform.position.x,
-                        holdingItemImage.transform.position.y, 0f);
-                    GameManager.instance.RemoveFromInventory(uiSlots[_currentlySelectedItem].item);
+                    if (!uiSlots[_currentlySelectedItem].item.dynamic ||
+                        (uiSlots[_currentlySelectedItem].item.dynamic && uiSlots[_currentlySelectedItem].IsCompleted()))
+                    {
+                        var item = Instantiate(uiSlots[_currentlySelectedItem].item.placedPrefab);
+                        item.transform.position = new Vector3(holdingItemImage.transform.position.x,
+                            holdingItemImage.transform.position.y, 0f);
+                        GameManager.instance.RemoveFromInventory(uiSlots[_currentlySelectedItem].item);
+                    }
                 }
             }
         }
