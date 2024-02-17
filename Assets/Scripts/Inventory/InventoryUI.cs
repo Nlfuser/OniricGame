@@ -83,6 +83,9 @@ public class InventoryUI : Singleton<InventoryUI>
             if (_pickupTimer >= 0.25f)
                 _isPickingUp = false;
         }
+
+        if (uiSlots[_currentlySelectedItem].item != null && uiSlots[_currentlySelectedItem].item.isNote && Input.GetKeyDown(KeyCode.E))
+            NoteUI.instance.Show();
     }
 
     public void Place(GameObject pos = null)

@@ -16,6 +16,7 @@ public class GameManager : Singleton<GameManager>
     private GameState _gameState;
 
     private List<ItemSO> _inventory = new List<ItemSO>();
+    private int _acquiredNotes;
 
     protected override void Awake()
     {
@@ -29,6 +30,16 @@ public class GameManager : Singleton<GameManager>
         _gameState = state;
     }
 
+    public int GetNotes()
+    {
+        return _acquiredNotes;
+    }
+    
+    public void AddNote()
+    {
+        _acquiredNotes++;
+    }
+    
     public void AddToInventory(ItemSO obj)
     {
         if (!obj.dynamic || !_inventory.Contains(obj))
