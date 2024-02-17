@@ -19,10 +19,13 @@ public class Player : MonoBehaviour
     private float _horizontal;
     private bool _isSprinting;
     private float _speed;
+    private Animator _anim;
+    private string _currentAnimationName;
     
     private void Awake()
     {
         _rb = GetComponent<Rigidbody2D>();
+        _anim = GetComponent<Animator>();
     }
     
     public void SwitchPlayerState(PlayerGameState playerState)
@@ -33,10 +36,25 @@ public class Player : MonoBehaviour
                 break;
             case PlayerGameState.Idle:
                 _rb.velocity = new Vector2(0f, _rb.velocity.y);
+                if (_currentAnimationName != "Idle")
+                {
+                    _anim.Play("Idle");
+                    _currentAnimationName = "Idle";
+                }
                 break;
             case PlayerGameState.Walk:
                 _speed = movementSpeed;
                 MovePlayer();
+                if (_currentAnimationName != "Walk")
+                {
+                    _anim.Play("Walk");
+                    _currentAnimationName = "Walk";
+                }
+
+                if (_horizontal > 0)
+                    transform.localScale = new Vector3(-1, 1, 1);
+                else if(_horizontal < 0)
+                    transform.localScale = new Vector3(1, 1, 1);
                 break;
             // case PlayerGameState.Run:
             //     _speed = runSpeed;
