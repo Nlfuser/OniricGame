@@ -17,12 +17,16 @@ public class GameManager : Singleton<GameManager>
 
     private List<ItemSO> _inventory = new List<ItemSO>();
     private int _acquiredNotes;
+    private int _puzzlePiecesPlaced;
 
     protected override void Awake()
     {
         base.Awake();
         foreach (var item in allItems)
+        {
             item.isCompleted = false;
+            item.evolution = -1;
+        }
     }
 
     public void SetGameState(GameState state)
@@ -35,9 +39,19 @@ public class GameManager : Singleton<GameManager>
         return _acquiredNotes;
     }
     
+    public int GetPuzzlePieces()
+    {
+        return _puzzlePiecesPlaced;
+    }
+    
     public void AddNote()
     {
         _acquiredNotes++;
+    }
+
+    public void AddPuzzlePiece()
+    {
+        _puzzlePiecesPlaced++;
     }
     
     public void AddToInventory(ItemSO obj)
