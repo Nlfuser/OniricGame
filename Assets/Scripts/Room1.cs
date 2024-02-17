@@ -8,11 +8,13 @@ public class Room1 : MonoBehaviour
     [SerializeField] private Player player;
     [SerializeField] private SpriteRenderer bedRenderer;
     [SerializeField] private SpriteRenderer windowRenderer;
+    [SerializeField] private SpriteRenderer bgRenderer;
     [SerializeField] private GameObject doorUnlocked;
     [SerializeField] private GameObject fallenFrame;
     [SerializeField] private GameObject fixedFrameFrame;
     [SerializeField] private Sprite bedBright;
     [SerializeField] private Sprite windowBright;
+    [SerializeField] private Sprite bgBright;
     [SerializeField] private DialogueBubble dialogue;
     [SerializeField] private GameObject puzzle;
     private bool _started = false;
@@ -62,6 +64,7 @@ public class Room1 : MonoBehaviour
     {
         bedRenderer.sprite = bedBright;
         windowRenderer.sprite = windowBright;
+        bgRenderer.sprite = bgBright;
         doorUnlocked.SetActive(true);
         fixedFrameFrame.SetActive(true);
         fallenFrame.SetActive(false);

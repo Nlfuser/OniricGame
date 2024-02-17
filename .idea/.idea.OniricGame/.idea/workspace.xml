@@ -2,22 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="53ae792b-b653-4b52-87cf-9bb64916e685" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.OniricGame/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.OniricGame/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/Sprites/Park/parkBG.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Sprites/Park/parkBG.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/Sprites/Player/Player_idle.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Sprites/Player/Player_idle.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/Sprites/Player/Player_idle_crossed.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Sprites/Player/Player_idle_crossed.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/Sprites/Player/Player_walk.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Sprites/Player/Player_walk.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/Sprites/Player/Player_walk_crossed.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Sprites/Player/Player_walk_crossed.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/Sprites/UI/Speech_bubble.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/Sprites/UI/Speech_bubble.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Effects/Glitch.shadergraph" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Effects/Glitch.shadergraph" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Effects/GlitchMat.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Effects/GlitchMat.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/ActualScenes/Room1.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/ActualScenes/Room1.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/ActualScenes/Room2.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/ActualScenes/Room2.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Imated Scene/Global Volume Profile.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Imated Scene/Global Volume Profile.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/Player.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/Player.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Room1.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Room1.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

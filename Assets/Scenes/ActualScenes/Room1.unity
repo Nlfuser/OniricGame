@@ -3977,11 +3977,13 @@ MonoBehaviour:
   player: {fileID: 1671733418}
   bedRenderer: {fileID: 1569206092}
   windowRenderer: {fileID: 1974454336}
+  bgRenderer: {fileID: 380825765}
   doorUnlocked: {fileID: 224812422}
   fallenFrame: {fileID: 802094754}
   fixedFrameFrame: {fileID: 570284851}
   bedBright: {fileID: 21300000, guid: 5a21ca74691f4d649a47cb20f0cd46e0, type: 3}
   windowBright: {fileID: 21300000, guid: a43cf9f40c0410f419f1bd7a657d1a0b, type: 3}
+  bgBright: {fileID: 21300000, guid: 5ca5a3095398bf74aa49733dbd9f3c79, type: 3}
   dialogue: {fileID: 616824358}
   puzzle: {fileID: 631968927}
 --- !u!1 &1592250340
