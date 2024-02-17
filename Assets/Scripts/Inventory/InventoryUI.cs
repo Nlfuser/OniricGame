@@ -25,7 +25,7 @@ public class InventoryUI : Singleton<InventoryUI>
         if (uiSlots[_currentlySelectedItem].item != null)
         {
             if (!uiSlots[_currentlySelectedItem].item.dynamic ||
-                (uiSlots[_currentlySelectedItem].item.dynamic && uiSlots[_currentlySelectedItem].IsCompleted()))
+                (uiSlots[_currentlySelectedItem].item.dynamic && uiSlots[_currentlySelectedItem].item.isCompleted))
             {
                 holdingItemImage.enabled = true;
                 if(!uiSlots[_currentlySelectedItem].item.dynamic)
@@ -77,7 +77,7 @@ public class InventoryUI : Singleton<InventoryUI>
                 if (!uiSlots[_currentlySelectedItem].item.cantPlace)
                 {
                     if (!uiSlots[_currentlySelectedItem].item.dynamic ||
-                        (uiSlots[_currentlySelectedItem].item.dynamic && uiSlots[_currentlySelectedItem].IsCompleted()))
+                        (uiSlots[_currentlySelectedItem].item.dynamic && uiSlots[_currentlySelectedItem].item.isCompleted))
                     {
                         var item = Instantiate(uiSlots[_currentlySelectedItem].item.placedPrefab);
                         item.transform.position = new Vector3(holdingItemImage.transform.position.x,

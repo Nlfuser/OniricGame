@@ -1,4 +1,6 @@
+using System;
 using System.Collections.Generic;
+using UnityEngine;
 
 public enum GameState
 {
@@ -9,10 +11,18 @@ public enum GameState
 
 public class GameManager : Singleton<GameManager>
 {
+    [SerializeField] private List<ItemSO> allItems = new List<ItemSO>();
     public GameState GameState => _gameState;
     private GameState _gameState;
 
     private List<ItemSO> _inventory = new List<ItemSO>();
+
+    protected override void Awake()
+    {
+        base.Awake();
+        foreach (var item in allItems)
+            item.isCompleted = false;
+    }
 
     public void SetGameState(GameState state)
     {

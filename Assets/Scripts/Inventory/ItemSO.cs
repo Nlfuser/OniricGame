@@ -11,9 +11,5 @@ public class ItemSO : ScriptableObject
     public Sprite image;
     public List<Sprite> dynamicImages;
     public int evolution = -1;
-
-    private void OnEnable()
-    {
-        evolution = -1;
-    }
+    public bool isCompleted;
 }

@@ -16,13 +16,11 @@ public class UISlot : MonoBehaviour
     private void Update()
     {
         UpdateUI();
+        if (item != null && item.evolution >= item.dynamicImages.Count - 1 && !item.isCompleted)
+            item.isCompleted = true;
+
     }
 
-    public bool IsCompleted()
-    {
-        return item.evolution >= item.dynamicImages.Count - 1;
-    }
-    
     public void UpdateUI()
     {
         if (item != null && item.evolution > -1)

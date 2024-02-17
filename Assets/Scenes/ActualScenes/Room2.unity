@@ -1952,6 +1952,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 725275bab3ceeab4f857c104c347917e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  allItems:
+  - {fileID: 11400000, guid: 7255e345e53ddbf4b9c0400a1ac1d493, type: 2}
+  - {fileID: 11400000, guid: e8acab09fc4ecaf48b0d63ca0a9861a9, type: 2}
+  - {fileID: 11400000, guid: d616ad409f591444eb3011460419002e, type: 2}
 --- !u!4 &669877434
 Transform:
   m_ObjectHideFlags: 0

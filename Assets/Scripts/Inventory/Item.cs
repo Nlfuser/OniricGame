@@ -4,17 +4,14 @@ using UnityEngine;
 public class Item : Selectable
 {
     public ItemSO item;
-    
-    private void Awake()
-    {
-        
-    }
 
     private void Update()
     {
         if (IsMouseOver() && IsPlayerClicking())
         {
             GameManager.instance.AddToInventory(item);
+            if (item.isCompleted)
+                item.evolution = item.dynamicImages.Count - 1;
             InventoryUI.instance.SetIsPickupUpTrue();
             Destroy(gameObject);
         }
