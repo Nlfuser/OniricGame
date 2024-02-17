@@ -1,5 +1,32 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-8850795989295094054
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/UI/Mouse Click
+  m_EditorClassIdentifier: 
+  Path: event:/UI/Mouse Click
+  Guid:
+    Data1: 651002092
+    Data2: 1096533977
+    Data3: 1178091649
+    Data4: 1410841393
+  Banks:
+  - {fileID: 3103329804378453244}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &-8588555624710428604
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15,11 +42,139 @@ MonoBehaviour:
   Path: Fmod/Fmod/oniric - Brackeys Game jam/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638437973650220202
+  lastModified: 638438014599141500
   FileSizes:
   - Name: Desktop
     Value: 1036
   Exists: 1
+--- !u!114 &-8313671627654258622
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/ROOM SFX/ROOM 2/Place Flowers
+  m_EditorClassIdentifier: 
+  Path: event:/ROOM SFX/ROOM 2/Place Flowers
+  Guid:
+    Data1: -1846569212
+    Data2: 1101126651
+    Data3: -1661643338
+    Data4: -1239551014
+  Banks:
+  - {fileID: 6537309850599138061}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &-7417643087715667006
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/PLAYER/Walking
+  m_EditorClassIdentifier: 
+  Path: event:/PLAYER/Walking
+  Guid:
+    Data1: 1349722265
+    Data2: 1151159296
+    Data3: 52494246
+    Data4: 504578211
+  Banks:
+  - {fileID: -4965428132907841392}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &-7224963044466353806
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/UI/Pick
+  m_EditorClassIdentifier: 
+  Path: event:/UI/Pick
+  Guid:
+    Data1: -1643434058
+    Data2: 1136785424
+    Data3: -1333080641
+    Data4: 523935564
+  Banks:
+  - {fileID: 3103329804378453244}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &-4965428132907841392
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/PLAYER.bank
+  m_EditorClassIdentifier: 
+  Path: Fmod/Fmod/oniric - Brackeys Game jam/Build/Desktop/PLAYER.bank
+  Name: PLAYER
+  StudioPath: bank:/PLAYER
+  lastModified: 638438014600800238
+  FileSizes:
+  - Name: Desktop
+    Value: 105568
+  Exists: 1
+--- !u!114 &-3592020863358366416
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/PLAYER/RUN
+  m_EditorClassIdentifier: 
+  Path: event:/PLAYER/RUN
+  Guid:
+    Data1: 2110845473
+    Data2: 1227652632
+    Data3: 1559028109
+    Data4: 1584454853
+  Banks:
+  - {fileID: -4965428132907841392}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &-3217406735634228229
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -90,19 +245,106 @@ MonoBehaviour:
   - {fileID: 8977633498773502513}
   - {fileID: -8588555624710428604}
   - {fileID: 7943667040286757447}
+  - {fileID: -4965428132907841392}
+  - {fileID: 6537309850599138061}
+  - {fileID: 3103329804378453244}
   EditorEvents:
   - {fileID: 6964904252617421844}
   - {fileID: -3217406735634228229}
   - {fileID: -1921521746557383695}
   - {fileID: 6389893594781952631}
   - {fileID: 6580916673591183329}
+  - {fileID: -3592020863358366416}
+  - {fileID: -7417643087715667006}
+  - {fileID: -8313671627654258622}
+  - {fileID: 7528027391358887540}
+  - {fileID: 8816841031601553357}
+  - {fileID: 8037333823437484573}
+  - {fileID: 1129823033390921588}
+  - {fileID: 3773834876449062315}
+  - {fileID: -7224963044466353806}
+  - {fileID: -8850795989295094054}
   EditorParameters: []
   MasterBanks:
   - {fileID: -8588555624710428604}
   StringsBanks:
   - {fileID: 8977633498773502513}
-  cacheTime: 638437973678050351
+  cacheTime: 638438017731690669
   cacheVersion: 131609
+--- !u!114 &1129823033390921588
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/ROOM SFX/ROOM 2/Talking
+  m_EditorClassIdentifier: 
+  Path: event:/ROOM SFX/ROOM 2/Talking
+  Guid:
+    Data1: 1374194659
+    Data2: 1201484547
+    Data3: -904030592
+    Data4: -1500497108
+  Banks:
+  - {fileID: 6537309850599138061}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &3103329804378453244
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/UI.bank
+  m_EditorClassIdentifier: 
+  Path: Fmod/Fmod/oniric - Brackeys Game jam/Build/Desktop/UI.bank
+  Name: UI
+  StudioPath: bank:/UI
+  lastModified: 638438014604612714
+  FileSizes:
+  - Name: Desktop
+    Value: 15776
+  Exists: 1
+--- !u!114 &3773834876449062315
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/ROOM SFX/ROOM 5/Beeping Monitor
+  m_EditorClassIdentifier: 
+  Path: event:/ROOM SFX/ROOM 5/Beeping Monitor
+  Guid:
+    Data1: 960262390
+    Data2: 1217282028
+    Data3: -1541940808
+    Data4: 383847827
+  Banks:
+  - {fileID: 6537309850599138061}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 22104
 --- !u!114 &6389893594781952631
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -130,6 +372,26 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 128052
+--- !u!114 &6537309850599138061
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/ROOM SFX.bank
+  m_EditorClassIdentifier: 
+  Path: Fmod/Fmod/oniric - Brackeys Game jam/Build/Desktop/ROOM SFX.bank
+  Name: ROOM SFX
+  StudioPath: bank:/ROOM SFX
+  lastModified: 638438017731690669
+  FileSizes:
+  - Name: Desktop
+    Value: 270496
+  Exists: 1
 --- !u!114 &6580916673591183329
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -184,6 +446,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 131683
+--- !u!114 &7528027391358887540
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/ROOM SFX/ROOM 2/Squirrel
+  m_EditorClassIdentifier: 
+  Path: event:/ROOM SFX/ROOM 2/Squirrel
+  Guid:
+    Data1: -554473115
+    Data2: 1079674588
+    Data3: 1799680178
+    Data4: -810440763
+  Banks:
+  - {fileID: 6537309850599138061}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &7943667040286757447
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -204,6 +493,60 @@ MonoBehaviour:
   - Name: Desktop
     Value: 6446368
   Exists: 1
+--- !u!114 &8037333823437484573
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/ROOM SFX/ROOM 2/Place basket
+  m_EditorClassIdentifier: 
+  Path: event:/ROOM SFX/ROOM 2/Place basket
+  Guid:
+    Data1: -619987017
+    Data2: 1237365971
+    Data3: -998122315
+    Data4: -950804631
+  Banks:
+  - {fileID: 6537309850599138061}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &8816841031601553357
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/ROOM SFX/ROOM 2/Place blanket
+  m_EditorClassIdentifier: 
+  Path: event:/ROOM SFX/ROOM 2/Place blanket
+  Guid:
+    Data1: 979352454
+    Data2: 1227842353
+    Data3: 735021187
+    Data4: -1601417223
+  Banks:
+  - {fileID: 6537309850599138061}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &8977633498773502513
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -219,8 +562,8 @@ MonoBehaviour:
   Path: Fmod/Fmod/oniric - Brackeys Game jam/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638437973650225367
+  lastModified: 638438014599150225
   FileSizes:
   - Name: Desktop
-    Value: 1024
+    Value: 1648
   Exists: 1

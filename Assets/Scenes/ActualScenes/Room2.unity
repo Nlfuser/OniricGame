@@ -3534,6 +3534,7 @@ GameObject:
   - component: {fileID: 1503464303}
   - component: {fileID: 1503464306}
   - component: {fileID: 1503464305}
+  - component: {fileID: 1503464307}
   m_Layer: 0
   m_Name: squirrel
   m_TagString: Untagged
@@ -3667,6 +3668,37 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemNeeded: {fileID: 11400000, guid: 1562eceeedf344541b0cf6597abacd4e, type: 2}
   Basket: {fileID: 1943902252}
+--- !u!114 &1503464307
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1503464302}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: -554473115
+      Data2: 1079674588
+      Data3: 1799680178
+      Data4: -810440763
+    Path: event:/ROOM SFX/ROOM 2/Squirrel
+  Event: 
+  PlayEvent: 15
+  StopEvent: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  AllowNonRigidbodyDoppler: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
 --- !u!1 &1522203966
 GameObject:
   m_ObjectHideFlags: 0
