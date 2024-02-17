@@ -6,12 +6,19 @@ using UnityEngine.UI;
 
 public class InventoryUI : Singleton<InventoryUI>
 {
+    public Action OnPlace;
     [SerializeField] private List<UISlot> uiSlots;
     [SerializeField] private Image holdingItemImage;
     private int _currentlySelectedItem;
     private bool _isPickingUp;
     private float _pickupTimer;
+    private List<ItemSO> _itemCounter = new List<ItemSO>();
 
+    public ItemSO GetCurrentItem()
+    {
+        return uiSlots[_currentlySelectedItem].item;
+    }
+    
     public void SetIsPickupUpTrue()
     {
         _isPickingUp = true;
@@ -70,7 +77,17 @@ public class InventoryUI : Singleton<InventoryUI>
                     slot.transform.DOScale(new Vector3(1f, 1f, 1f), 0.35f);
         }
 
-        if (Input.GetMouseButtonDown(0) && !_isPickingUp)
+        if (_isPickingUp)
+        {
+            _pickupTimer += Time.deltaTime;
+            if (_pickupTimer >= 0.25f)
+                _isPickingUp = false;
+        }
+    }
+
+    public void Place(GameObject pos = null)
+    {
+        if (!_isPickingUp)
         {
             if (uiSlots[_currentlySelectedItem].item != null)
             {
@@ -80,22 +97,27 @@ public class InventoryUI : Singleton<InventoryUI>
                         (uiSlots[_currentlySelectedItem].item.dynamic && uiSlots[_currentlySelectedItem].item.isCompleted))
                     {
                         var item = Instantiate(uiSlots[_currentlySelectedItem].item.placedPrefab);
-                        item.transform.position = new Vector3(holdingItemImage.transform.position.x,
-                            holdingItemImage.transform.position.y, 0f);
+                        OnPlace?.Invoke();
+                        _itemCounter.Add(uiSlots[_currentlySelectedItem].item);
+                        if (pos == null)
+                            item.transform.position = new Vector3(holdingItemImage.transform.position.x,
+                                holdingItemImage.transform.position.y, 0f);
+                        else
+                            item.transform.position = new Vector3(pos.transform.position.x,
+                                pos.transform.position.y, 0f);
+
                         GameManager.instance.RemoveFromInventory(uiSlots[_currentlySelectedItem].item);
                     }
                 }
             }
         }
-
-        if (_isPickingUp)
-        {
-            _pickupTimer += Time.deltaTime;
-            if (_pickupTimer >= 0.25f)
-                _isPickingUp = false;
-        }
     }
 
+    public bool PlacedContains(ItemSO item)
+    {
+        return _itemCounter.Contains(item);
+    }
+    
     public void UpdateUI(ItemSO item)
     {
         foreach (var slot in uiSlots)
