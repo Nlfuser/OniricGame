@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="AudioFile" id="{43b2cd99-0230-471e-8871-aa9660194858}">
+		<property name="assetPath">
+			<value>MUSIC/5.Solace.mp3</value>
+		</property>
+		<property name="isStreaming">
+			<value>true</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>44.0999985</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>131.68326530612245</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{4c493ee2-352a-42fe-af5a-c4bf5d530df1}</destination>
+		</relationship>
+	</object>
+</objects>

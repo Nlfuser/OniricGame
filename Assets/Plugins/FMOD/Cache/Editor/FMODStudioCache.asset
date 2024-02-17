@@ -15,11 +15,65 @@ MonoBehaviour:
   Path: Fmod/Fmod/oniric - Brackeys Game jam/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638432846330000000
+  lastModified: 638437973650220202
   FileSizes:
   - Name: Desktop
     Value: 1036
   Exists: 1
+--- !u!114 &-3217406735634228229
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Music/Room 1
+  m_EditorClassIdentifier: 
+  Path: event:/Music/Room 1
+  Guid:
+    Data1: -1186644614
+    Data2: 1127275239
+    Data3: -1425078650
+    Data4: -905905108
+  Banks:
+  - {fileID: 7943667040286757447}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 128052
+--- !u!114 &-1921521746557383695
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Music/Room 2
+  m_EditorClassIdentifier: 
+  Path: event:/Music/Room 2
+  Guid:
+    Data1: -607837794
+    Data2: 1252283557
+    Data3: -157449053
+    Data4: -1707900561
+  Banks:
+  - {fileID: 7943667040286757447}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 131683
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -37,15 +91,19 @@ MonoBehaviour:
   - {fileID: -8588555624710428604}
   - {fileID: 7943667040286757447}
   EditorEvents:
-  - {fileID: 5754826835953645120}
+  - {fileID: 6964904252617421844}
+  - {fileID: -3217406735634228229}
+  - {fileID: -1921521746557383695}
+  - {fileID: 6389893594781952631}
+  - {fileID: 6580916673591183329}
   EditorParameters: []
   MasterBanks:
   - {fileID: -8588555624710428604}
   StringsBanks:
   - {fileID: 8977633498773502513}
-  cacheTime: 638432846330000000
+  cacheTime: 638437973678050351
   cacheVersion: 131609
---- !u!114 &5754826835953645120
+--- !u!114 &6389893594781952631
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -55,14 +113,14 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Music/24_01_09 - Synth Forward push - Experiment 1
+  m_Name: event:/Music/Room 3 Hospital (death of a loved one)
   m_EditorClassIdentifier: 
-  Path: event:/Music/24_01_09 - Synth Forward push - Experiment 1
+  Path: event:/Music/Room 3 Hospital (death of a loved one)
   Guid:
-    Data1: -399213169
-    Data2: 1293365752
-    Data3: 1652407436
-    Data4: -692068417
+    Data1: 1571944101
+    Data2: 1316984211
+    Data3: 203660725
+    Data4: 414678808
   Banks:
   - {fileID: 7943667040286757447}
   IsStream: 1
@@ -71,7 +129,61 @@ MonoBehaviour:
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
-  Length: 10285
+  Length: 128052
+--- !u!114 &6580916673591183329
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Music/Room 4 (tidying room, memory, acceptance
+  m_EditorClassIdentifier: 
+  Path: event:/Music/Room 4 (tidying room, memory, acceptance
+  Guid:
+    Data1: 162284235
+    Data2: 1130674419
+    Data3: 1177829543
+    Data4: 603575929
+  Banks:
+  - {fileID: 7943667040286757447}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 156786
+--- !u!114 &6964904252617421844
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Music/Room 5 (victory)
+  m_EditorClassIdentifier: 
+  Path: event:/Music/Room 5 (victory)
+  Guid:
+    Data1: 1888913518
+    Data2: 1134704012
+    Data3: -435541114
+    Data4: -608652709
+  Banks:
+  - {fileID: 7943667040286757447}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 131683
 --- !u!114 &7943667040286757447
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -87,10 +199,10 @@ MonoBehaviour:
   Path: Fmod/Fmod/oniric - Brackeys Game jam/Build/Desktop/Music.bank
   Name: Music
   StudioPath: bank:/Music
-  lastModified: 638432846330000000
+  lastModified: 638437973678050351
   FileSizes:
   - Name: Desktop
-    Value: 181632
+    Value: 6446368
   Exists: 1
 --- !u!114 &8977633498773502513
 MonoBehaviour:
@@ -107,8 +219,8 @@ MonoBehaviour:
   Path: Fmod/Fmod/oniric - Brackeys Game jam/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638432846330000000
+  lastModified: 638437973650225367
   FileSizes:
   - Name: Desktop
-    Value: 846
+    Value: 1024
   Exists: 1
