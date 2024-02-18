@@ -1,7 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="53ae792b-b653-4b52-87cf-9bb64916e685" name="Changes" comment="" />
+    <list default="true" id="53ae792b-b653-4b52-87cf-9bb64916e685" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.OniricGame/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.OniricGame/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Effects/Ink.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Effects/Ink.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Items/Room4Items/Garbage1.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Items/Room4Items/Garbage1.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Items/Room4Items/Garbage2.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Items/Room4Items/Garbage2.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Items/Room4Items/Garbage3.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Items/Room4Items/Garbage3.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Items/Room4Items/Garbage4.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Items/Room4Items/Garbage4.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/ActualScenes/Room4.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/ActualScenes/Room4.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ItemVerifier.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ItemVerifier.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -19,6 +29,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Door.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/DoorBirth.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/GameManager.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/HoldingImage.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Interactable.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Inventory/InventoryUI.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Inventory/Item.cs" root0="FORCE_HIGHLIGHTING" />

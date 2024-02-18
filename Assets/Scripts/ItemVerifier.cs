@@ -13,7 +13,8 @@ public class ItemVerifier : MonoBehaviour
     {
         if(count == ItemSOList.Count){
             MC.SetActive(true);
-            door.SetActive(true);
+            if(door)
+                door.SetActive(true);
         }
     }
 
