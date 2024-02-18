@@ -323,6 +323,7 @@ GameObject:
   - component: {fileID: 108136301}
   - component: {fileID: 108136304}
   - component: {fileID: 108136303}
+  - component: {fileID: 108136305}
   m_Layer: 0
   m_Name: Room5_pillow_mess
   m_TagString: Untagged
@@ -455,6 +456,37 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.64, y: 0.85}
   m_EdgeRadius: 0
+--- !u!114 &108136305
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 108136300}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: 767433367
+      Data2: 1167123144
+      Data3: 1979057079
+      Data4: 2127684816
+    Path: event:/ROOM SFX/ROOM 1/Pick Up
+  Event: 
+  PlayEvent: 15
+  StopEvent: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  AllowNonRigidbodyDoppler: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
 --- !u!1 &138525277
 GameObject:
   m_ObjectHideFlags: 0
@@ -1118,11 +1150,11 @@ MonoBehaviour:
   CollisionTag: 
   EventReference:
     Guid:
-      Data1: -607837794
-      Data2: 1252283557
-      Data3: -157449053
-      Data4: -1707900561
-    Path: event:/Music/Room 2
+      Data1: 162284235
+      Data2: 1130674419
+      Data3: 1177829543
+      Data4: 603575929
+    Path: event:/Music/Room 4 (tidying room, memory, acceptance
   Event: 
   PlayEvent: 1
   StopEvent: 2
@@ -1257,6 +1289,7 @@ GameObject:
   - component: {fileID: 560162936}
   - component: {fileID: 560162935}
   - component: {fileID: 560162938}
+  - component: {fileID: 560162939}
   m_Layer: 0
   m_Name: Room5_crumplednote1
   m_TagString: Untagged
@@ -1389,6 +1422,37 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   item: {fileID: 11400000, guid: 842162379603e6f48a24708d10024be1, type: 2}
+--- !u!114 &560162939
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 560162934}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: 767433367
+      Data2: 1167123144
+      Data3: 1979057079
+      Data4: 2127684816
+    Path: event:/ROOM SFX/ROOM 1/Pick Up
+  Event: 
+  PlayEvent: 15
+  StopEvent: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  AllowNonRigidbodyDoppler: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
 --- !u!1 &573203976
 GameObject:
   m_ObjectHideFlags: 0
@@ -2923,7 +2987,7 @@ Transform:
   m_GameObject: {fileID: 1286780359}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -4.4199953, y: -0.25, z: -10}
+  m_LocalPosition: {x: -4.419995, y: -0.25, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3756,6 +3820,7 @@ GameObject:
   - component: {fileID: 1693785873}
   - component: {fileID: 1693785872}
   - component: {fileID: 1693785874}
+  - component: {fileID: 1693785875}
   m_Layer: 0
   m_Name: Room5_crumplednote2
   m_TagString: Untagged
@@ -3888,6 +3953,37 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   item: {fileID: 11400000, guid: 483eafed8d6a77d4ebcb174686ce9844, type: 2}
+--- !u!114 &1693785875
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1693785870}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: 767433367
+      Data2: 1167123144
+      Data3: 1979057079
+      Data4: 2127684816
+    Path: event:/ROOM SFX/ROOM 1/Pick Up
+  Event: 
+  PlayEvent: 15
+  StopEvent: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  AllowNonRigidbodyDoppler: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
 --- !u!1 &1769237796
 GameObject:
   m_ObjectHideFlags: 0
@@ -4911,6 +5007,7 @@ GameObject:
   - component: {fileID: 3977621784521738891}
   - component: {fileID: 3472547491553349872}
   - component: {fileID: 9101442371780583826}
+  - component: {fileID: 9101442371780583827}
   m_Layer: 0
   m_Name: Room5_crumplednote3
   m_TagString: Untagged
@@ -4946,6 +5043,37 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   item: {fileID: 11400000, guid: 198b749640cefbb44a1eff36294fceca, type: 2}
+--- !u!114 &9101442371780583827
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8351084672674090991}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: 767433367
+      Data2: 1167123144
+      Data3: 1979057079
+      Data4: 2127684816
+    Path: event:/ROOM SFX/ROOM 1/Pick Up
+  Event: 
+  PlayEvent: 15
+  StopEvent: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  AllowNonRigidbodyDoppler: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
