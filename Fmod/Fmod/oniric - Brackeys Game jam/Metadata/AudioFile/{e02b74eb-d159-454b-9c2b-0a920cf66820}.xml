@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="AudioFile" id="{e02b74eb-d159-454b-9c2b-0a920cf66820}">
+		<property name="assetPath">
+			<value>MUSIC/2.Idées noires.mp3</value>
+		</property>
+		<property name="isStreaming">
+			<value>true</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>44.0999985</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>200.07183673469387</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{4c493ee2-352a-42fe-af5a-c4bf5d530df1}</destination>
+		</relationship>
+	</object>
+</objects>
