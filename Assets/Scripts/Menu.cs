@@ -3,12 +3,8 @@ using UnityEngine;
 
 public class Menu : MonoBehaviour
 {
-    private void Update()
+    public void Play()
     {
-        if (Input.anyKeyDown)
-        {
-            SceneManager.instance.StartTransition("Room1");
-            print("a");
-        }
+        SceneManager.instance.StartTransition("Room1");
     }
 }
