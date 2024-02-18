@@ -33,11 +33,15 @@ public class GameManager : Singleton<GameManager>
 
     private void Start()
     {
-        try
+        UnityEngine.SceneManagement.SceneManager.sceneLoaded += (scene, mode) =>
         {
-            dialog = ConvoObject.GetComponent<DialogTrigger>();
-        }
-        catch { /*No reference of object in scene*/}
+            try
+            {
+                dialog = GameObject.FindWithTag("DialogueCollider").GetComponent<DialogTrigger>();
+                ConvoObject = GameObject.FindWithTag("DialogueCollider").gameObject;
+            }
+            catch { /*die*/ }
+        };
     }
 
     public void SetGameState(GameState state)

@@ -1012,6 +1012,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 97e38b99c22443a4d808f597853a05c4, type: 2}
   - {fileID: 11400000, guid: 5fb0a33eec1bd83499339437abb546cd, type: 2}
   - {fileID: 11400000, guid: 7601583d9d987034587f40880b48e1fd, type: 2}
+  ConvoObject: {fileID: 0}
 --- !u!4 &243883249
 Transform:
   m_ObjectHideFlags: 0
@@ -2584,7 +2585,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 816ee75dd7e8f3f42a8ac1001f52ca9c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialogueText: []
+  dialogueText:
+  - What am I doing? I can't just leave it like this. I must fix this.
   content: {fileID: 431447278}
 --- !u!1 &631968927
 GameObject:
