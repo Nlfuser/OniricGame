@@ -1586,7 +1586,7 @@ MonoBehaviour:
   - Let's set up the picnic.
   - I still can't believe I overpacked that picnic basket...
   - Everything barely fits in!
-  - 'Awww... How sweet of you! '
+  - Awww! How sweet of you!
   - I brought you flowers too!
   content: {fileID: 649095213}
 --- !u!212 &649095216
@@ -2265,7 +2265,7 @@ SpriteRenderer:
   m_SortingLayerID: -1301026331
   m_SortingLayer: 2
   m_SortingOrder: 50
-  m_Sprite: {fileID: 21300000, guid: 75e19e151796b6f49951bf10a83fc9b3, type: 3}
+  m_Sprite: {fileID: 21300000, guid: cfce19d514de06b488af67fcaa3865a5, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -2285,7 +2285,7 @@ Transform:
   m_GameObject: {fileID: 986738236}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 6.02, y: -1.88, z: 0}
+  m_LocalPosition: {x: 6.02, y: -2.41, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
