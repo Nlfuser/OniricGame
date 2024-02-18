@@ -2,10 +2,10 @@
 <objects serializationModel="Studio.02.02.00">
 	<object class="Event" id="{50732099-4c00-449d-a6ff-2003a340131e}">
 		<property name="name">
-			<value>Walking</value>
+			<value>Run</value>
 		</property>
 		<property name="outputFormat">
-			<value>1</value>
+			<value>0</value>
 		</property>
 		<relationship name="folder">
 			<destination>{c9889ac4-656f-4014-9a0a-bf4a0a404416}</destination>
@@ -82,11 +82,7 @@
 			<destination>{f7f79104-8f49-4542-ac91-2a7fe1b885a6}</destination>
 		</relationship>
 	</object>
-	<object class="MultiSound" id="{817dceed-74d4-4793-bf46-daf803811895}">
-		<relationship name="sounds">
-			<destination>{676d4bea-ae48-46ba-a8fd-4a6ea9be0e61}</destination>
-		</relationship>
-	</object>
+	<object class="MultiSound" id="{817dceed-74d4-4793-bf46-daf803811895}" />
 	<object class="MixerBusEffectChain" id="{d9928a56-cc0d-4a67-b725-c68d6dcdfa9e}">
 		<relationship name="effects">
 			<destination>{3e97ceff-3d99-4815-a351-00f64426ad34}</destination>
@@ -99,11 +95,6 @@
 		</relationship>
 	</object>
 	<object class="MixerBusPanner" id="{006efec1-878e-4755-9de6-75a31ab2dd70}" />
-	<object class="SingleSound" id="{676d4bea-ae48-46ba-a8fd-4a6ea9be0e61}">
-		<relationship name="audioFile">
-			<destination>{00783a54-467b-4a09-ad19-64ea1b66af63}</destination>
-		</relationship>
-	</object>
 	<object class="MixerBusFader" id="{3e97ceff-3d99-4815-a351-00f64426ad34}" />
 	<object class="MixerBusFader" id="{3642d957-4c68-453e-937a-ac9adfbe6334}" />
 </objects>

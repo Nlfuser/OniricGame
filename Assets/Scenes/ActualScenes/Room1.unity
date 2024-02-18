@@ -2176,11 +2176,11 @@ MonoBehaviour:
   CollisionTag: 
   EventReference:
     Guid:
-      Data1: -1643434058
-      Data2: 1136785424
-      Data3: -1333080641
-      Data4: 523935564
-    Path: event:/UI/Pick
+      Data1: 767433367
+      Data2: 1167123144
+      Data3: 1979057079
+      Data4: 2127684816
+    Path: event:/ROOM SFX/ROOM 1/Pick Up
   Event: 
   PlayEvent: 15
   StopEvent: 0
@@ -2436,11 +2436,11 @@ MonoBehaviour:
   CollisionTag: 
   EventReference:
     Guid:
-      Data1: -1643434058
-      Data2: 1136785424
-      Data3: -1333080641
-      Data4: 523935564
-    Path: event:/UI/Pick
+      Data1: 767433367
+      Data2: 1167123144
+      Data3: 1979057079
+      Data4: 2127684816
+    Path: event:/ROOM SFX/ROOM 1/Pick Up
   Event: 
   PlayEvent: 15
   StopEvent: 0
@@ -3729,11 +3729,11 @@ MonoBehaviour:
   CollisionTag: 
   EventReference:
     Guid:
-      Data1: -1643434058
-      Data2: 1136785424
-      Data3: -1333080641
-      Data4: 523935564
-    Path: event:/UI/Pick
+      Data1: 767433367
+      Data2: 1167123144
+      Data3: 1979057079
+      Data4: 2127684816
+    Path: event:/ROOM SFX/ROOM 1/Pick Up
   Event: 
   PlayEvent: 15
   StopEvent: 0
@@ -4060,11 +4060,11 @@ MonoBehaviour:
   CollisionTag: 
   EventReference:
     Guid:
-      Data1: -1643434058
-      Data2: 1136785424
-      Data3: -1333080641
-      Data4: 523935564
-    Path: event:/UI/Pick
+      Data1: 767433367
+      Data2: 1167123144
+      Data3: 1979057079
+      Data4: 2127684816
+    Path: event:/ROOM SFX/ROOM 1/Pick Up
   Event: 
   PlayEvent: 15
   StopEvent: 0
@@ -5352,7 +5352,7 @@ Transform:
   m_GameObject: {fileID: 2010002659}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1, y: 0.5, z: -10}
+  m_LocalPosition: {x: 0.875, y: 0.75, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
