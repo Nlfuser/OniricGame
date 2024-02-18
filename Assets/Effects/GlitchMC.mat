@@ -47,7 +47,8 @@ Material:
     m_Floats:
     - _Intensity: 145.1
     - _NoiseAmount: 50
-    - _NoiseStrength: 2
+    - _NoiseSpeed: 1
+    - _NoiseStrength: 0.1
     - _QueueControl: 0
     - _QueueOffset: 0
     - _Speed: -3.73

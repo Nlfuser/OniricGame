@@ -12,6 +12,8 @@ public enum GameState
 public class GameManager : Singleton<GameManager>
 {
     [SerializeField] private List<ItemSO> allItems = new List<ItemSO>();
+    [SerializeField] private GameObject ConvoObject;
+    private DialogTrigger dialog;
     public GameState GameState => _gameState;
     private GameState _gameState;
 
@@ -27,6 +29,19 @@ public class GameManager : Singleton<GameManager>
             item.isCompleted = false;
             item.evolution = -1;
         }
+    }
+
+    private void Start()
+    {
+        UnityEngine.SceneManagement.SceneManager.sceneLoaded += (scene, mode) =>
+        {
+            try
+            {
+                dialog = GameObject.FindWithTag("DialogueCollider").GetComponent<DialogTrigger>();
+                ConvoObject = GameObject.FindWithTag("DialogueCollider").gameObject;
+            }
+            catch { /*die*/ }
+        };
     }
 
     public void SetGameState(GameState state)
@@ -74,5 +89,11 @@ public class GameManager : Singleton<GameManager>
     public bool InventoryContains(ItemSO obj)
     {
         return _inventory.Contains(obj);
+    }
+
+    public void IncreaseChatCount()
+    {
+        dialog.IncreaseChatIndex();
+        dialog.ChatOneShot();
     }
 }
