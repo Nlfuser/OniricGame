@@ -18,7 +18,7 @@ public class DialogueBubble : MonoBehaviour
     public void StartDialogue()
     {
         content.SetActive(true);
-        _typewriter.GetComponent<TMP_Text>().text = dialogueText[_currentLine + + - 1];
+        _typewriter.GetComponent<TMP_Text>().text = dialogueText[_currentLine++ - 1];
         _typewriter.StartShowingText(true);
     }
     public void StartDialogue(int index)
