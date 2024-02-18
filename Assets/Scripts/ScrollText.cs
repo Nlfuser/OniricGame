@@ -11,6 +11,8 @@ public class ScrollText : MonoBehaviour
     {
         // Get all TextMeshPro components in children
         textMeshPros = GetComponentsInChildren<TextMeshProUGUI>();
+        Invoke(nameof(Quit), 60);
+        Invoke(nameof(Quit2), 61.5f);
     }
 
     void Update()
@@ -27,5 +29,15 @@ public class ScrollText : MonoBehaviour
                 textMeshPro.rectTransform.anchoredPosition = new Vector2(textMeshPro.rectTransform.anchoredPosition.x, -textMeshPro.preferredHeight);
             }
         }
+    }
+
+    private void Quit()
+    {
+        SceneManager.instance.StartTransition("");
+    }
+
+    private void Quit2()
+    {
+        Application.Quit();
     }
 }

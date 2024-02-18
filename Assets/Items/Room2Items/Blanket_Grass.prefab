@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7988464495394619007}
   - component: {fileID: 6897928062774177933}
+  - component: {fileID: 5451045677515783833}
   m_Layer: 0
   m_Name: Blanket_Grass
   m_TagString: Untagged
@@ -84,3 +85,34 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &5451045677515783833
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4567937248918913614}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: 979352454
+      Data2: 1227842353
+      Data3: 735021187
+      Data4: -1601417223
+    Path: event:/ROOM SFX/ROOM 2/Place blanket
+  Event: 
+  PlayEvent: 1
+  StopEvent: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  AllowNonRigidbodyDoppler: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
