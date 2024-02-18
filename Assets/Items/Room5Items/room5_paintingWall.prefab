@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 7402664094149006523}
   - component: {fileID: -4174015082284369442}
   - component: {fileID: -7934232387005429042}
+  - component: {fileID: 6345301411037855661}
   m_Layer: 0
   m_Name: room5_paintingWall
   m_TagString: Untagged
@@ -98,6 +99,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 01af32b67a21faa4c9ade68dc833fbc4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isCompleted: 0
 --- !u!61 &-7934232387005429042
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -143,3 +145,34 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.93, y: 2.57}
   m_EdgeRadius: 0
+--- !u!114 &6345301411037855661
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5922839566395752230}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: -281794595
+      Data2: 1239297449
+      Data3: -413717335
+      Data4: 605591743
+    Path: event:/ROOM SFX/ROOM 2/Pick Right Flowers
+  Event: 
+  PlayEvent: 1
+  StopEvent: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  AllowNonRigidbodyDoppler: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20

@@ -424,6 +424,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemNeeded: {fileID: 11400000, guid: a2911c74b3d0c7942a858a968af83173, type: 2}
+  scene2: 0
   Placement: {fileID: 1407196404}
 --- !u!61 &247996392
 BoxCollider2D:
@@ -1346,6 +1347,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 97e38b99c22443a4d808f597853a05c4, type: 2}
   - {fileID: 11400000, guid: a2911c74b3d0c7942a858a968af83173, type: 2}
   - {fileID: 11400000, guid: 902e9e381cb8e3a4e86aa163d5838a25, type: 2}
+  ConvoObject: {fileID: 0}
 --- !u!4 &669877434
 Transform:
   m_ObjectHideFlags: 0
@@ -1402,6 +1404,7 @@ GameObject:
   - component: {fileID: 744778879}
   - component: {fileID: 744778882}
   - component: {fileID: 744778881}
+  - component: {fileID: 744778883}
   m_Layer: 0
   m_Name: photo_floor
   m_TagString: Untagged
@@ -1534,6 +1537,37 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.44, y: 1.16}
   m_EdgeRadius: 0
+--- !u!114 &744778883
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 744778878}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: -1846569212
+      Data2: 1101126651
+      Data3: -1661643338
+      Data4: -1239551014
+    Path: event:/ROOM SFX/ROOM 2/Flower 1 put down
+  Event: 
+  PlayEvent: 15
+  StopEvent: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  AllowNonRigidbodyDoppler: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
 --- !u!1 &990970367
 GameObject:
   m_ObjectHideFlags: 0
@@ -2377,6 +2411,7 @@ GameObject:
   - component: {fileID: 1217407881}
   - component: {fileID: 1217407883}
   - component: {fileID: 1217407884}
+  - component: {fileID: 1217407885}
   m_Layer: 0
   m_Name: room5_paintingFloor
   m_TagString: Untagged
@@ -2509,6 +2544,37 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   item: {fileID: 11400000, guid: 902e9e381cb8e3a4e86aa163d5838a25, type: 2}
+--- !u!114 &1217407885
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1217407880}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: 1241377370
+      Data2: 1125326816
+      Data3: 158198715
+      Data4: 707976888
+    Path: event:/ROOM SFX/ROOM 2/Flower 2 put down
+  Event: 
+  PlayEvent: 15
+  StopEvent: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  AllowNonRigidbodyDoppler: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
 --- !u!1 &1218018111
 GameObject:
   m_ObjectHideFlags: 0
@@ -2726,7 +2792,7 @@ Transform:
   m_GameObject: {fileID: 1286780359}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.61109805, y: -0.25, z: -10}
+  m_LocalPosition: {x: 0.2357769, y: -0.25, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3060,6 +3126,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemNeeded: {fileID: 11400000, guid: 902e9e381cb8e3a4e86aa163d5838a25, type: 2}
+  scene2: 0
   Placement: {fileID: 467368706}
 --- !u!1 &1475167454
 GameObject:
