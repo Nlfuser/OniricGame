@@ -646,6 +646,9 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 97e38b99c22443a4d808f597853a05c4, type: 2}
   - {fileID: 11400000, guid: 5fb0a33eec1bd83499339437abb546cd, type: 2}
   - {fileID: 11400000, guid: 7601583d9d987034587f40880b48e1fd, type: 2}
+  - {fileID: 11400000, guid: 650ec59801ea7f84fbf6987bf05d3f42, type: 2}
+  - {fileID: 11400000, guid: 8881923f5d9551f409579da15033137b, type: 2}
+  - {fileID: 11400000, guid: 91081bda766f9714091cfe142d4fcbf3, type: 2}
   ConvoObject: {fileID: 0}
 --- !u!4 &1221801530
 Transform:
