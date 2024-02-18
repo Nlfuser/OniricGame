@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <objects serializationModel="Studio.02.02.00">
-	<object class="AudioFile" id="{7a79f07b-a3f9-438d-8de7-4d685bc4092a}">
+	<object class="AudioFile" id="{e99b02b5-d28a-49d7-ade3-e05517be7232}">
 		<property name="assetPath">
 			<value>Inventory /pick.mp3</value>
 		</property>
