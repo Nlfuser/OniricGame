@@ -2,10 +2,10 @@
 <objects serializationModel="Studio.02.02.00">
 	<object class="Event" id="{91ef9704-dbfb-41a1-b655-f59cdaf31db6}">
 		<property name="name">
-			<value>Flower 1 put down</value>
+			<value>Place Flowers</value>
 		</property>
 		<property name="outputFormat">
-			<value>1</value>
+			<value>0</value>
 		</property>
 		<relationship name="folder">
 			<destination>{00d76c19-b3d9-4860-95eb-fdad0e855d4b}</destination>
@@ -82,11 +82,7 @@
 			<destination>{82af9af6-6348-4a80-8d4b-a4c244050f69}</destination>
 		</relationship>
 	</object>
-	<object class="MultiSound" id="{a75484a5-4ca8-42dd-82a3-2f69842a22be}">
-		<relationship name="sounds">
-			<destination>{0843b65a-7fda-4dc6-a363-664a68215f86}</destination>
-		</relationship>
-	</object>
+	<object class="MultiSound" id="{a75484a5-4ca8-42dd-82a3-2f69842a22be}" />
 	<object class="MixerBusEffectChain" id="{79353db4-97c1-4d58-ac4e-6608d59101bb}">
 		<relationship name="effects">
 			<destination>{c86b2eb2-2e17-4c24-9325-6a576ff6a28c}</destination>
@@ -96,24 +92,9 @@
 	<object class="MixerBusEffectChain" id="{ee3ec673-f14e-4140-b7f9-ceac5760b524}">
 		<relationship name="effects">
 			<destination>{5e975d6f-ed86-4e04-8302-16a08a743980}</destination>
-			<destination>{1d701d24-4b45-4667-ba48-c7ad53c91589}</destination>
 		</relationship>
 	</object>
-	<object class="MixerBusPanner" id="{d4c91eaf-80cf-4adf-8a62-5cd580444856}">
-		<property name="stereoPan">
-			<value>-24</value>
-		</property>
-	</object>
-	<object class="SingleSound" id="{0843b65a-7fda-4dc6-a363-664a68215f86}">
-		<relationship name="audioFile">
-			<destination>{b44aafcf-9958-4aaa-92d1-04b085090077}</destination>
-		</relationship>
-	</object>
+	<object class="MixerBusPanner" id="{d4c91eaf-80cf-4adf-8a62-5cd580444856}" />
 	<object class="MixerBusFader" id="{c86b2eb2-2e17-4c24-9325-6a576ff6a28c}" />
 	<object class="MixerBusFader" id="{5e975d6f-ed86-4e04-8302-16a08a743980}" />
-	<object class="ThreeEQEffect" id="{1d701d24-4b45-4667-ba48-c7ad53c91589}">
-		<property name="highGain">
-			<value>-30</value>
-		</property>
-	</object>
 </objects>

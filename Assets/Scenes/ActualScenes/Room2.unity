@@ -123,6 +123,7 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &1316752
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -140,6 +141,7 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &1316753
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -161,6 +163,7 @@ MonoBehaviour:
   bubbleGal: {fileID: 0}
   dialogLad: {fileID: 1357597975}
   dialogGal: {fileID: 1258453024}
+--- !u!61 &1316754
 BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -205,6 +208,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 7.476199, y: 3.8854542}
   m_EdgeRadius: 0
+--- !u!4 &1316755
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -221,31 +225,7 @@ Transform:
   - {fileID: 649095214}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_GameObject: {fileID: 2380236}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  CollisionTag: 
-  EventReference:
-    Guid:
-      Data1: 651002092
-      Data2: 1096533977
-      Data3: 1178091649
-      Data4: 1410841393
-    Path: event:/UI/Mouse Click
-  Event: 
-  PlayEvent: 15
-  StopEvent: 0
-  AllowFadeout: 1
-  TriggerOnce: 0
-  Preload: 0
-  AllowNonRigidbodyDoppler: 0
-  Params: []
-  OverrideAttenuation: 0
-  OverrideMinDistance: 1
-  OverrideMaxDistance: 20
+--- !u!1 &115339508
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -6646,9 +6626,6 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 6104565278612583778, guid: cd62f75fd8b168e4c922f35071a939bc, type: 3}
       insertIndex: -1
       addedObject: {fileID: 3243661595705076582}
-    - targetCorrespondingSourceObject: {fileID: 6104565278612583778, guid: cd62f75fd8b168e4c922f35071a939bc, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 3243661595705076585}
   m_SourcePrefab: {fileID: 100100000, guid: cd62f75fd8b168e4c922f35071a939bc, type: 3}
 --- !u!1 &3243661595705076578 stripped
 GameObject:
@@ -6713,37 +6690,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 2.76, y: 2.4}
   m_EdgeRadius: 0
---- !u!114 &3243661595705076585
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3243661595705076578}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  CollisionTag: 
-  EventReference:
-    Guid:
-      Data1: -1743405818
-      Data2: 1322504614
-      Data3: 751759274
-      Data4: -1161992412
-    Path: event:/ROOM SFX/ROOM 2/Pick Left Flowers
-  Event: 
-  PlayEvent: 15
-  StopEvent: 0
-  AllowFadeout: 1
-  TriggerOnce: 0
-  Preload: 0
-  AllowNonRigidbodyDoppler: 0
-  Params: []
-  OverrideAttenuation: 0
-  OverrideMinDistance: 1
-  OverrideMaxDistance: 20
 --- !u!1001 &3520900658028671772
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6806,9 +6752,6 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 9107336245823245129, guid: d9622c0941e9e63408199b9b0096e5d4, type: 3}
       insertIndex: -1
       addedObject: {fileID: 3520900658028671777}
-    - targetCorrespondingSourceObject: {fileID: 9107336245823245129, guid: d9622c0941e9e63408199b9b0096e5d4, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 3520900658028671780}
   m_SourcePrefab: {fileID: 100100000, guid: d9622c0941e9e63408199b9b0096e5d4, type: 3}
 --- !u!1 &3520900658028671773 stripped
 GameObject:
@@ -6873,37 +6816,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 2.31, y: 3.14}
   m_EdgeRadius: 0
---- !u!114 &3520900658028671780
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3520900658028671773}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  CollisionTag: 
-  EventReference:
-    Guid:
-      Data1: -281794595
-      Data2: 1239297449
-      Data3: -413717335
-      Data4: 605591743
-    Path: event:/ROOM SFX/ROOM 2/Pick Right Flowers
-  Event: 
-  PlayEvent: 15
-  StopEvent: 0
-  AllowFadeout: 1
-  TriggerOnce: 0
-  Preload: 0
-  AllowNonRigidbodyDoppler: 0
-  Params: []
-  OverrideAttenuation: 0
-  OverrideMinDistance: 1
-  OverrideMaxDistance: 20
 --- !u!1001 &4018516070664992838
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6975,10 +6887,7 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 5885168269064361669, guid: b81ab636fd0997a4c922aeef03f1edac, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 2380241}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b81ab636fd0997a4c922aeef03f1edac, type: 3}
 --- !u!1001 &7203697621622826066
 PrefabInstance:
@@ -7105,9 +7014,6 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 222480576265232235, guid: 37ff6585a3b371f41bdc1c5190a27441, type: 3}
       insertIndex: -1
       addedObject: {fileID: 9090397549145487014}
-    - targetCorrespondingSourceObject: {fileID: 222480576265232235, guid: 37ff6585a3b371f41bdc1c5190a27441, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 9090397549145487017}
   m_SourcePrefab: {fileID: 100100000, guid: 37ff6585a3b371f41bdc1c5190a27441, type: 3}
 --- !u!1 &9090397549145487010 stripped
 GameObject:
@@ -7172,37 +7078,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.83, y: 1.89}
   m_EdgeRadius: 0
---- !u!114 &9090397549145487017
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9090397549145487010}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  CollisionTag: 
-  EventReference:
-    Guid:
-      Data1: -918411688
-      Data2: 1159108596
-      Data3: 508549535
-      Data4: 180269957
-    Path: event:/ROOM SFX/ROOM 2/Pick up Blanket
-  Event: 
-  PlayEvent: 15
-  StopEvent: 0
-  AllowFadeout: 1
-  TriggerOnce: 0
-  Preload: 0
-  AllowNonRigidbodyDoppler: 0
-  Params: []
-  OverrideAttenuation: 0
-  OverrideMinDistance: 1
-  OverrideMaxDistance: 20
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
