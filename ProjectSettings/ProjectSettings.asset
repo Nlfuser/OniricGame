@@ -707,7 +707,7 @@ PlayerSettings:
     Stadia: DOTWEEN
     Standalone: DOTWEEN;LiveScriptReload_Enabled;LiveScriptReload_IncludeInBuild_Enabled
     VisionOS: DOTWEEN
-    WebGL: DOTWEEN
+    WebGL: DOTWEEN;LiveScriptReload_Enabled;LiveScriptReload_IncludeInBuild_Enabled
     Windows Store Apps: DOTWEEN
     XboxOne: DOTWEEN
     iPhone: DOTWEEN
