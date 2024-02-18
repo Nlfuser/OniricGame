@@ -5,12 +5,11 @@ TagManager:
   serializedVersion: 2
   tags:
   - Key
-  - DialogueCollider
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - Player
+  - 
   - Water
   - UI
   - 

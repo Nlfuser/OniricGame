@@ -17,7 +17,6 @@ MonoBehaviour:
   dynamic: 0
   placedPrefab: {fileID: 0}
   image: {fileID: 21300000, guid: 943d4a8db6ccfce4592b2dc3b3aeb1f8, type: 3}
-  dynamicImages:
-  - {fileID: 21300000, guid: 943d4a8db6ccfce4592b2dc3b3aeb1f8, type: 3}
+  dynamicImages: []
   evolution: -1
   isCompleted: 0

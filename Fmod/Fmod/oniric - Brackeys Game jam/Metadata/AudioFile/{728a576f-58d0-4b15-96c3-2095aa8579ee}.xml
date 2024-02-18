@@ -2,7 +2,7 @@
 <objects serializationModel="Studio.02.02.00">
 	<object class="AudioFile" id="{728a576f-58d0-4b15-96c3-2095aa8579ee}">
 		<property name="assetPath">
-			<value>Room SFX/squirrel.mp3</value>
+			<value>Room SFX/ROOM 2/squirrel.mp3</value>
 		</property>
 		<property name="frequencyInKHz">
 			<value>48</value>
