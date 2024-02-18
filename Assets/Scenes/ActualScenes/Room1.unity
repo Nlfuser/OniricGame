@@ -1631,10 +1631,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 816ee75dd7e8f3f42a8ac1001f52ca9c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 1671733416}
-  canvas: {fileID: 133189396}
+  dialogueText:
+  - What am I doing? I can't just leave it like this. I must fix this.
   content: {fileID: 431447278}
-  offset: {x: 225, y: 215}
 --- !u!1 &442178265
 GameObject:
   m_ObjectHideFlags: 0
@@ -2353,10 +2352,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 816ee75dd7e8f3f42a8ac1001f52ca9c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 1671733416}
-  canvas: {fileID: 133189396}
+  dialogueText: []
   content: {fileID: 431447278}
-  offset: {x: 225, y: 215}
 --- !u!1 &631968927
 GameObject:
   m_ObjectHideFlags: 0
@@ -4141,17 +4138,12 @@ RectTransform:
   m_AnchoredPosition: {x: 381, y: -225}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!1 &1671733416 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7219097233430927390, guid: d5b38cb5c98add44e89dcb2663e85797, type: 3}
-  m_PrefabInstance: {fileID: 200942710}
-  m_PrefabAsset: {fileID: 0}
 --- !u!114 &1671733418 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 8109300727631005584, guid: d5b38cb5c98add44e89dcb2663e85797, type: 3}
   m_PrefabInstance: {fileID: 200942710}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1671733416}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 57ff66005c402ae4296822a31887b3c5, type: 3}
