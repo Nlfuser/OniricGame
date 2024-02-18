@@ -39,8 +39,7 @@ public class Room1 : MonoBehaviour
                     foreach (var item2 in _itemsCollected)
                     {
                         GameManager.instance.RemoveFromInventory(item2);
-                    }
-                    
+                    }                    
                     dialogue.StartDialogue();
                     player.SetCanMove(false);
                     _started = true;
