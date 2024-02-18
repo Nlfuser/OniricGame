@@ -12,6 +12,8 @@ public class Item : Selectable
             GameManager.instance.AddToInventory(item);
             if (item.isCompleted)
                 item.evolution = item.dynamicImages.Count - 1;
+            if(item.isNote)
+                GameManager.instance.AddNote();
             InventoryUI.instance.SetIsPickupUpTrue();
             Destroy(gameObject);
         }

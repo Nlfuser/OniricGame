@@ -5,6 +5,7 @@ using UnityEngine;
 [CreateAssetMenu(menuName = "Item", fileName = "Item")]
 public class ItemSO : ScriptableObject
 {
+    public bool isNote;
     public bool cantPlace;
     public bool dynamic;
     public GameObject placedPrefab;

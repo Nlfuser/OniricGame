@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6ac3ded5032ce55479868da96d8ff26d, type: 3}
   m_Name: Records 2
   m_EditorClassIdentifier: 
+  isNote: 1
   cantPlace: 1
   dynamic: 1
   placedPrefab: {fileID: 2372579275811175588, guid: feabd88e8a0d0624cac0b8bbeba5ca45, type: 3}
