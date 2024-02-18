@@ -1944,6 +1944,7 @@ GameObject:
   - component: {fileID: 541063768}
   - component: {fileID: 541063767}
   - component: {fileID: 541063766}
+  - component: {fileID: 541063769}
   m_Layer: 0
   m_Name: Room1_photo4
   m_TagString: Untagged
@@ -2076,6 +2077,37 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &541063769
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 541063764}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: -1643434058
+      Data2: 1136785424
+      Data3: -1333080641
+      Data4: 523935564
+    Path: event:/UI/Pick
+  Event: 
+  PlayEvent: 15
+  StopEvent: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  AllowNonRigidbodyDoppler: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
 --- !u!1 &570284851
 GameObject:
   m_ObjectHideFlags: 0
@@ -2172,6 +2204,7 @@ GameObject:
   - component: {fileID: 581902210}
   - component: {fileID: 581902209}
   - component: {fileID: 581902208}
+  - component: {fileID: 581902211}
   m_Layer: 0
   m_Name: Room1_photo3
   m_TagString: Untagged
@@ -2304,6 +2337,37 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &581902211
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 581902206}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: -1643434058
+      Data2: 1136785424
+      Data3: -1333080641
+      Data4: 523935564
+    Path: event:/UI/Pick
+  Event: 
+  PlayEvent: 15
+  StopEvent: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  AllowNonRigidbodyDoppler: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
 --- !u!1 &616824356
 GameObject:
   m_ObjectHideFlags: 0
@@ -3262,6 +3326,7 @@ GameObject:
   - component: {fileID: 1252859468}
   - component: {fileID: 1252859467}
   - component: {fileID: 1252859466}
+  - component: {fileID: 1252859469}
   m_Layer: 0
   m_Name: Room1_photo2
   m_TagString: Untagged
@@ -3394,6 +3459,37 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1252859469
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1252859464}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: -1643434058
+      Data2: 1136785424
+      Data3: -1333080641
+      Data4: 523935564
+    Path: event:/UI/Pick
+  Event: 
+  PlayEvent: 15
+  StopEvent: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  AllowNonRigidbodyDoppler: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
 --- !u!1 &1474192505
 GameObject:
   m_ObjectHideFlags: 0
@@ -3561,6 +3657,7 @@ GameObject:
   - component: {fileID: 1526431536}
   - component: {fileID: 1526431538}
   - component: {fileID: 1526431537}
+  - component: {fileID: 1526431539}
   m_Layer: 0
   m_Name: Room1_photo1
   m_TagString: Untagged
@@ -3693,6 +3790,37 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.58, y: 0.68}
   m_EdgeRadius: 0
+--- !u!114 &1526431539
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1526431534}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: -1643434058
+      Data2: 1136785424
+      Data3: -1333080641
+      Data4: 523935564
+    Path: event:/UI/Pick
+  Event: 
+  PlayEvent: 15
+  StopEvent: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  AllowNonRigidbodyDoppler: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
 --- !u!1 &1560474450
 GameObject:
   m_ObjectHideFlags: 0
@@ -4974,7 +5102,7 @@ Transform:
   m_GameObject: {fileID: 2010002659}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1, y: 0.5, z: -10}
+  m_LocalPosition: {x: 0.875, y: 0.75, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
