@@ -7,7 +7,7 @@ public class Item : Selectable
 
     private void Update()
     {
-        if (IsMouseOver() && IsPlayerClicking())
+        if (IsMouseOver() && IsPlayerClicking() && !GameManager.instance.InventoryFull())
         {
             GameManager.instance.AddToInventory(item);
             if (item.isCompleted)

@@ -96,4 +96,9 @@ public class GameManager : Singleton<GameManager>
         dialog.IncreaseChatIndex();
         dialog.ChatOneShot();
     }
+
+    public bool InventoryFull()
+    {
+        return _inventory.Count >= 4;
+    }
 }
