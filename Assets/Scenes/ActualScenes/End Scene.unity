@@ -351,7 +351,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -485.99994, y: -1304}
+  m_AnchoredPosition: {x: -485.99988, y: -1304}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &271981024
@@ -701,6 +701,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 681f6b088b3fa39408a2e7f6e63be6f9, type: 2}
   - {fileID: 11400000, guid: 66981ad389a9ff846b544e993de486c9, type: 2}
   - {fileID: 11400000, guid: 97e38b99c22443a4d808f597853a05c4, type: 2}
+  ConvoObject: {fileID: 0}
 --- !u!4 &669877434
 Transform:
   m_ObjectHideFlags: 0
@@ -779,7 +780,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -485.99994, y: -2634}
+  m_AnchoredPosition: {x: -485.99988, y: -2634}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1223952420
@@ -1160,7 +1161,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -485.99994, y: -1299}
+  m_AnchoredPosition: {x: -485.99988, y: -1299}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1468633701
@@ -1183,8 +1184,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "\n Voltage\n Lian\n\nImated\n Xotic\n Voltage\n\n Lian\n Catnip\n Lee\n\n
-    Wave\n Harcher\n\n\nGatoni"
+  m_text: "\n Voltage (NFLUser)\n Lian (bearrib)\n\n Imated\n Xotic (EliTE08)\n Voltage
+    (NFLUser)\n\n Lian (bearrib)\n Catnip (Catlaiya)\n Lee (alienbluez)\n\n Wave\n
+    Ryan Harcher\n\n\nGatoni"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 2e15bfd0c4d05e948a1a79d8eb39bd2c, type: 2}
   m_sharedMaterial: {fileID: 238898196791003853, guid: 2e15bfd0c4d05e948a1a79d8eb39bd2c, type: 2}
@@ -1295,7 +1297,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -485.99994, y: -1058}
+  m_AnchoredPosition: {x: -485.99988, y: -1058}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1483530375
