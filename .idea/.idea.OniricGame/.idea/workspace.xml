@@ -2,6 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="53ae792b-b653-4b52-87cf-9bb64916e685" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/Assets/Effects/GlitchMat.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Effects/GlitchMat.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ROCK SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ROCK SDF.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Rockwell-Bold SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Rockwell-Bold SDF.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/ActualScenes/Room3.3.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/ActualScenes/Room3.3.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.OniricGame/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.OniricGame/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Effects/Ink.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Effects/Ink.mat" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Items/Room4Items/Garbage1.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Items/Room4Items/Garbage1.asset" afterDir="false" />
@@ -11,6 +16,7 @@
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/ActualScenes/Room4.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/ActualScenes/Room4.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/ItemVerifier.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ItemVerifier.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Imated Scene/Global Volume Profile.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Imated Scene/Global Volume Profile.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,6 +41,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Inventory/Item.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Inventory/ItemSO.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Inventory/UISlot.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Menu.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/NoteUI.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/ParallaxBG.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Player/Player.cs" root0="FORCE_HIGHLIGHTING" />

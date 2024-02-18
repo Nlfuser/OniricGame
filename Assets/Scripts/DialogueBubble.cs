@@ -1,30 +1,30 @@
-using System;
+using System.Collections.Generic;
 using Febucci.UI;
+using TMPro;
 using UnityEngine;
 
 public class DialogueBubble : MonoBehaviour
 {
-    [SerializeField] private GameObject player;
-    [SerializeField] private GameObject canvas;
+    [SerializeField] private List<string> dialogueText;
     [SerializeField] private GameObject content;
-    [SerializeField] private Vector2 offset;
     private TypewriterByCharacter _typewriter;
+    private int _currentLine;
 
     private void Awake()
     {
         _typewriter = transform.GetChild(0).GetComponentInChildren<TypewriterByCharacter>();
     }
 
-    private void Update()
-    {
-        var screenPoint = RectTransformUtility.WorldToScreenPoint(UnityEngine.Camera.main, player.transform.position);
-        RectTransformUtility.ScreenPointToLocalPointInRectangle(canvas.transform as RectTransform, screenPoint, UnityEngine.Camera.main, out var canvasPos);
-        content.GetComponent<RectTransform>().anchoredPosition = canvasPos + offset;
-    }
-
     public void StartDialogue()
     {
         content.SetActive(true);
+        _typewriter.GetComponent<TMP_Text>().text = dialogueText[_currentLine++ - 1];
+        _typewriter.StartShowingText(true);
+    }
+    public void StartDialogue(int index)
+    {
+        content.SetActive(true);
+        _typewriter.GetComponent<TMP_Text>().text = dialogueText[index];
         _typewriter.StartShowingText(true);
     }
 }
