@@ -5,7 +5,7 @@ public class RotateSprite : MonoBehaviour
     private SpriteRenderer spriteRenderer;
     private float initialRotation;
     private bool isRotating;
-    private bool isCompleted;
+    public bool isCompleted;
 
     void Start()
     {
