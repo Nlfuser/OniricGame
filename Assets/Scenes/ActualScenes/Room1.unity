@@ -2092,11 +2092,11 @@ MonoBehaviour:
   CollisionTag: 
   EventReference:
     Guid:
-      Data1: -1643434058
-      Data2: 1136785424
-      Data3: -1333080641
-      Data4: 523935564
-    Path: event:/UI/Pick
+      Data1: 767433367
+      Data2: 1167123144
+      Data3: 1979057079
+      Data4: 2127684816
+    Path: event:/ROOM SFX/ROOM 1/Pick Up
   Event: 
   PlayEvent: 15
   StopEvent: 0
@@ -2352,11 +2352,11 @@ MonoBehaviour:
   CollisionTag: 
   EventReference:
     Guid:
-      Data1: -1643434058
-      Data2: 1136785424
-      Data3: -1333080641
-      Data4: 523935564
-    Path: event:/UI/Pick
+      Data1: 767433367
+      Data2: 1167123144
+      Data3: 1979057079
+      Data4: 2127684816
+    Path: event:/ROOM SFX/ROOM 1/Pick Up
   Event: 
   PlayEvent: 15
   StopEvent: 0
@@ -3474,11 +3474,11 @@ MonoBehaviour:
   CollisionTag: 
   EventReference:
     Guid:
-      Data1: -1643434058
-      Data2: 1136785424
-      Data3: -1333080641
-      Data4: 523935564
-    Path: event:/UI/Pick
+      Data1: 767433367
+      Data2: 1167123144
+      Data3: 1979057079
+      Data4: 2127684816
+    Path: event:/ROOM SFX/ROOM 1/Pick Up
   Event: 
   PlayEvent: 15
   StopEvent: 0
@@ -3805,11 +3805,11 @@ MonoBehaviour:
   CollisionTag: 
   EventReference:
     Guid:
-      Data1: -1643434058
-      Data2: 1136785424
-      Data3: -1333080641
-      Data4: 523935564
-    Path: event:/UI/Pick
+      Data1: 767433367
+      Data2: 1167123144
+      Data3: 1979057079
+      Data4: 2127684816
+    Path: event:/ROOM SFX/ROOM 1/Pick Up
   Event: 
   PlayEvent: 15
   StopEvent: 0
