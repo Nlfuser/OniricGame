@@ -2120,7 +2120,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 970273c34df8b884088f029b3a7e2f3b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneToLoad: Room5
+  sceneToLoad: Room4
 --- !u!212 &1546809060
 SpriteRenderer:
   m_ObjectHideFlags: 0
