@@ -29,6 +29,7 @@ public class GameManager : Singleton<GameManager>
             item.isCompleted = false;
             item.evolution = -1;
         }
+        DontDestroyOnLoad(gameObject);
     }
 
     private void Start()
