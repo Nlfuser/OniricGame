@@ -29,6 +29,12 @@ public class GameManager : Singleton<GameManager>
             item.isCompleted = false;
             item.evolution = -1;
         }
+        try
+        {
+            dialog = GameObject.FindWithTag("DialogueCollider").GetComponent<DialogTrigger>();
+            ConvoObject = GameObject.FindWithTag("DialogueCollider").gameObject;
+        }
+        catch { /*die*/ }
         DontDestroyOnLoad(gameObject);
     }
 
