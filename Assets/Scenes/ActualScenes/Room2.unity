@@ -158,6 +158,8 @@ MonoBehaviour:
   textUpEase: 18
   bubbleLadObject: {fileID: 213322290}
   bubbleGalObject: {fileID: 649095213}
+  galCanvasGroup: {fileID: 932313804}
+  ladCanvasGroup: {fileID: 1208565672}
 --- !u!61 &1316754
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -212,7 +214,7 @@ Transform:
   m_GameObject: {fileID: 1316752}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 9.535636, y: -1.0981554, z: 1.14}
+  m_LocalPosition: {x: 9.5, y: -1, z: 1.14}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -543,7 +545,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 8451fe12f1d71ae4281b3cf87f7a3cfa, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -1587,7 +1589,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 60db1bba5f09a6445a7f09161602565a, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -2005,6 +2007,7 @@ GameObject:
   - component: {fileID: 932313803}
   - component: {fileID: 932313802}
   - component: {fileID: 932313801}
+  - component: {fileID: 932313804}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -2095,6 +2098,18 @@ Canvas:
   m_SortingLayerID: -1301026331
   m_SortingOrder: 70
   m_TargetDisplay: 0
+--- !u!225 &932313804
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 932313799}
+  m_Enabled: 1
+  m_Alpha: 0
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
 --- !u!1 &986738236
 GameObject:
   m_ObjectHideFlags: 0
@@ -3442,6 +3457,7 @@ GameObject:
   - component: {fileID: 1208565671}
   - component: {fileID: 1208565670}
   - component: {fileID: 1208565669}
+  - component: {fileID: 1208565672}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -3532,6 +3548,18 @@ Canvas:
   m_SortingLayerID: -1301026331
   m_SortingOrder: 70
   m_TargetDisplay: 0
+--- !u!225 &1208565672
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1208565667}
+  m_Enabled: 1
+  m_Alpha: 0
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
 --- !u!1 &1254141511
 GameObject:
   m_ObjectHideFlags: 0
@@ -3727,7 +3755,7 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
+    rgba: 4278190080
   m_fontColor: {r: 0, g: 0, b: 0, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
@@ -3751,8 +3779,8 @@ MonoBehaviour:
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 0
-  m_HorizontalAlignment: 1
+  m_fontStyle: 1
+  m_HorizontalAlignment: 4
   m_VerticalAlignment: 256
   m_textAlignment: 65535
   m_characterSpacing: 0
@@ -4132,7 +4160,7 @@ MonoBehaviour:
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 0
+  m_fontStyle: 1
   m_HorizontalAlignment: 1
   m_VerticalAlignment: 256
   m_textAlignment: 65535

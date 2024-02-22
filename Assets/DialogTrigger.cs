@@ -10,11 +10,11 @@ public class DialogTrigger : MonoBehaviour
     [SerializeField] private Ease textUpEase;
     [SerializeField] private GameObject bubbleLadObject;
     [SerializeField] private GameObject bubbleGalObject;
+    [SerializeField] private CanvasGroup galCanvasGroup;
+    [SerializeField] private CanvasGroup ladCanvasGroup;
     
     private DialogueBubble _bubbleLad;
     private DialogueBubble _bubbleGal;
-    private TextMeshProUGUI _dialogLad;
-    private TextMeshProUGUI _dialogGal;   
     private int _textIndex = 0;
     private int _levIndex = -1;
     private bool _galBubbleUp;
@@ -38,8 +38,8 @@ public class DialogTrigger : MonoBehaviour
             _galBubbleUp = false;
         }
 
-        HideText(bubbleLadObject);
-        HideText(bubbleGalObject);
+        bubbleLadObject.SetActive(false);
+        bubbleGalObject.SetActive(false);
         StopAllCoroutines();
         if(_textIndex != _levIndex)
             StartCoroutine(ChatAnimate(_textIndex));
@@ -51,45 +51,45 @@ public class DialogTrigger : MonoBehaviour
         switch (interaction)
         {
             case 0:
-                ShowText(bubbleGalObject, _bubbleGal, 0);
+                ShowText(bubbleGalObject, _bubbleGal, galCanvasGroup, 0);
                 yield return new WaitForSeconds(2f);
                 ChatLerpUp(bubbleGalObject);
                 _galBubbleUp = true;
-                ShowText(bubbleLadObject, _bubbleLad, 0);
+                ShowText(bubbleLadObject, _bubbleLad, ladCanvasGroup, 0);
                 yield return new WaitForSeconds(2f);
-                HideText(bubbleLadObject);
-                HideText(bubbleGalObject);
+                HideText(bubbleLadObject, ladCanvasGroup);
+                HideText(bubbleGalObject, galCanvasGroup);
                 ChatLerpDown(bubbleGalObject);
                 _galBubbleUp = false;
                 yield return new WaitForSeconds(1f);
                 break;
             case 1:
-                ShowText(bubbleGalObject, _bubbleGal, 1);
+                ShowText(bubbleGalObject, _bubbleGal, galCanvasGroup, 1);
                 yield return new WaitForSeconds(2f);
-                ShowText(bubbleGalObject, _bubbleGal, 2);
+                ShowText(bubbleGalObject, _bubbleGal, galCanvasGroup, 2);
                 yield return new WaitForSeconds(2f);
                 ChatLerpUp(bubbleGalObject);
                 _galBubbleUp = true;
-                ShowText(bubbleLadObject, _bubbleLad, 1);
+                ShowText(bubbleLadObject, _bubbleLad, ladCanvasGroup, 1);
                 yield return new WaitForSeconds(3f);
-                HideText(bubbleLadObject);
-                HideText(bubbleGalObject);
+                HideText(bubbleLadObject, ladCanvasGroup);
+                HideText(bubbleGalObject, galCanvasGroup);
                 ChatLerpDown(bubbleGalObject);
                 _galBubbleUp = false;
                 yield return new WaitForSeconds(1f);
                 break;
             case 2:
-                ShowText(bubbleGalObject, _bubbleGal, 3);
+                ShowText(bubbleGalObject, _bubbleGal, galCanvasGroup, 3);
                 yield return new WaitForSeconds(3);
                 ChatLerpUp(bubbleGalObject);
-                ShowText(bubbleLadObject, _bubbleLad, 2);
+                ShowText(bubbleLadObject, _bubbleLad, ladCanvasGroup, 2);
                 yield return new WaitForSeconds(3);
                 ChatLerpUp(bubbleLadObject);
                 ChatLerpDown(bubbleGalObject);
-                ShowText(bubbleGalObject, _bubbleGal, 4);
+                ShowText(bubbleGalObject, _bubbleGal, galCanvasGroup, 4);
                 yield return new WaitForSeconds(3);
-                HideText(bubbleLadObject);
-                HideText(bubbleGalObject);
+                HideText(bubbleLadObject, ladCanvasGroup);
+                HideText(bubbleGalObject, galCanvasGroup);
                 ChatLerpDown(bubbleLadObject);
                 yield return new WaitForSeconds(1);
                 break;
@@ -109,15 +109,18 @@ public class DialogTrigger : MonoBehaviour
         chatObject.transform.DOMoveY(chatObject.transform.position.y - textUpMargin, textUpDuration).SetEase(textUpEase);
     }
     
-    private void ShowText(GameObject chatObject, DialogueBubble chatBubble, int textNext)
+    private void ShowText(GameObject chatObject, DialogueBubble chatBubble, CanvasGroup chatCanvasGroup, int textNext)
     {
         chatObject.SetActive(true);
+        chatCanvasGroup.DOFade(1f, 0.25f);
+        chatObject.GetComponent<SpriteRenderer>().DOFade(1f, 0.25f);
         chatBubble.StartDialogue(textNext);
     }
     
-    private void HideText(GameObject chatObject)
+    private void HideText(GameObject chatObject, CanvasGroup chatCanvasGroup)
     {
-        chatObject.SetActive(false);
+        chatCanvasGroup.DOFade(0f, 0.25f);
+        chatObject.GetComponent<SpriteRenderer>().DOFade(0f, 0.25f);
     }
     
     internal void IncreaseChatIndex()
