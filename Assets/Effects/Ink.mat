@@ -50,7 +50,7 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - _Amount: 0
+    - _Amount: 0.07586861
     - _Color_Threshold: 0.1
     - _Contrast: 7.1
     - _Depth_Threshold: 0.1
