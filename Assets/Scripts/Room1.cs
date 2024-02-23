@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using DG.Tweening;
 using UnityEngine;
 
 public class Room1 : MonoBehaviour
@@ -56,7 +57,7 @@ public class Room1 : MonoBehaviour
 
     public void ShowPuzzle()
     {
-        puzzle.SetActive(true);
+        ((RectTransform)puzzle.transform).DOAnchorPosY(0f, 0.75f).SetEase(Ease.OutBack);
     }
 
     public void OnPuzzleComplete()
@@ -68,7 +69,7 @@ public class Room1 : MonoBehaviour
         fixedFrameFrame.SetActive(true);
         fallenFrame.SetActive(false);
         player.SetCanMove(true);
-        puzzle.SetActive(false);
+        ((RectTransform)puzzle.transform).DOAnchorPosY(1100f, 0.75f).SetEase(Ease.InBack);
         dialogue.transform.GetChild(0).gameObject.SetActive(false);
     }
 }
