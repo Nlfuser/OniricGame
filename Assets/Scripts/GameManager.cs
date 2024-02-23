@@ -12,7 +12,6 @@ public enum GameState
 public class GameManager : Singleton<GameManager>
 {
     [SerializeField] private List<ItemSO> allItems = new List<ItemSO>();
-    [SerializeField] private GameObject ConvoObject;
     private DialogTrigger dialog;
     public GameState GameState => _gameState;
     private GameState _gameState;
@@ -32,7 +31,6 @@ public class GameManager : Singleton<GameManager>
         try
         {
             dialog = GameObject.FindWithTag("DialogueCollider").GetComponent<DialogTrigger>();
-            ConvoObject = GameObject.FindWithTag("DialogueCollider").gameObject;
         }
         catch { /*die*/ }
         DontDestroyOnLoad(gameObject);
@@ -45,7 +43,6 @@ public class GameManager : Singleton<GameManager>
             try
             {
                 dialog = GameObject.FindWithTag("DialogueCollider").GetComponent<DialogTrigger>();
-                ConvoObject = GameObject.FindWithTag("DialogueCollider").gameObject;
             }
             catch { /*die*/ }
         };
@@ -84,7 +81,7 @@ public class GameManager : Singleton<GameManager>
             _inventory.Add(obj);
         }
 
-        InventoryUI.instance.UpdateUI(obj);
+        InventoryUI.instance.AddUI(obj);
     }
     
     public void RemoveFromInventory(ItemSO obj)

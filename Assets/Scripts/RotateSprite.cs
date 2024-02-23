@@ -41,6 +41,7 @@ public class RotateSprite : MonoBehaviour
             if (Mathf.Abs(transform.rotation.eulerAngles.z) <= 3f || Mathf.Abs(transform.rotation.eulerAngles.z - 360f) <= 3f)
             {
                 isCompleted = true;
+                ItemCounter.instance.UpdateObjective();
             }
             else
             {

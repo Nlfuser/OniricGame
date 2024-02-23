@@ -7,6 +7,7 @@ using UnityEngine.UI;
 public class InventoryUI : Singleton<InventoryUI>
 {
     public Action OnPlace;
+    public Action OnPickup;
     [SerializeField] private List<UISlot> uiSlots;
     [SerializeField] private Image holdingItemImage;
     private int _currentlySelectedItem;
@@ -121,8 +122,9 @@ public class InventoryUI : Singleton<InventoryUI>
         return _itemCounter.Contains(item);
     }
     
-    public void UpdateUI(ItemSO item)
+    public void AddUI(ItemSO item)
     {
+        OnPickup?.Invoke();
         foreach (var slot in uiSlots)
         {
             if (!item.dynamic || item.evolution == -1)
