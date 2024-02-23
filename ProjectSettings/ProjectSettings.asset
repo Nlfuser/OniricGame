@@ -705,7 +705,7 @@ PlayerSettings:
     PS5: DOTWEEN
     QNX: DOTWEEN
     Stadia: DOTWEEN
-    Standalone: DOTWEEN;LiveScriptReload_Enabled;LiveScriptReload_IncludeInBuild_Enabled
+    Standalone: DOTWEEN;LiveScriptReload_Enabled
     VisionOS: DOTWEEN
     WebGL: DOTWEEN;LiveScriptReload_Enabled;LiveScriptReload_IncludeInBuild_Enabled
     Windows Store Apps: DOTWEEN
