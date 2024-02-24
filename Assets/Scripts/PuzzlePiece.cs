@@ -30,7 +30,7 @@ public class PuzzlePiece : MonoBehaviour, IDragHandler, IPointerDownHandler, IPo
         Vector2 currentDragPosition;
         RectTransformUtility.ScreenPointToLocalPointInRectangle((RectTransform) canvas.transform, Input.mousePosition, UnityEngine.Camera.main, out currentDragPosition);
         transform.localPosition = currentDragPosition + _pointerOffset;
-        transform.localPosition = new Vector3(transform.localPosition.x, transform.localPosition.y, 1f);
+        transform.SetAsLastSibling();
     }
     
     public void OnPointerUp(PointerEventData eventData)
