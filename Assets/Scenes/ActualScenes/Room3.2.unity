@@ -4201,7 +4201,7 @@ MonoBehaviour:
   - {fileID: 1045220425}
   - {fileID: 289365675}
   - {fileID: 1139653197}
-  holdingItemImage: {fileID: 0}
+  holdingItemImage: {fileID: 530125122}
 --- !u!114 &1415692401
 MonoBehaviour:
   m_ObjectHideFlags: 0
