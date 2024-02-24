@@ -82,6 +82,8 @@ public class Player : MonoBehaviour
     
     private void Update()
     {
+        if(!_canMove)
+            return;
         _horizontal = Input.GetAxisRaw("Horizontal");
         //_isSprinting = Input.GetKey(KeyCode.LeftShift);
         if (_horizontal != 0 ) //Add &&_isSprinting back if we are readding sprint
