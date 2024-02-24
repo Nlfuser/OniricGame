@@ -105,10 +105,10 @@ public class InventoryUI : Singleton<InventoryUI>
                         _itemCounter.Add(uiSlots[_currentlySelectedItem].item);
                         if (pos == null)
                             item.transform.position = new Vector3(holdingItemImage.transform.position.x,
-                                holdingItemImage.transform.position.y, 0f);
+                                holdingItemImage.transform.position.y, item.transform.position.z);
                         else
                             item.transform.position = new Vector3(pos.transform.position.x,
-                                pos.transform.position.y, 0f);
+                                pos.transform.position.y, item.transform.position.z);
 
                         GameManager.instance.RemoveFromInventory(uiSlots[_currentlySelectedItem].item);
                     }

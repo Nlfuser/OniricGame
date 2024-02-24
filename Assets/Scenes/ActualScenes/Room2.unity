@@ -3256,7 +3256,7 @@ MonoBehaviour:
   - {fileID: 1937263789}
   - {fileID: 1969326806}
   - {fileID: 2020371816}
-  holdingItemImage: {fileID: 0}
+  holdingItemImage: {fileID: 1492881818}
 --- !u!114 &999168002
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4596,7 +4596,7 @@ Transform:
   m_GameObject: {fileID: 1286780359}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.10974741, y: -0.25, z: -10}
+  m_LocalPosition: {x: -0.6110983, y: -0.25, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
