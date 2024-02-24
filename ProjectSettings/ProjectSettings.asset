@@ -707,7 +707,7 @@ PlayerSettings:
     Stadia: DOTWEEN
     Standalone: DOTWEEN;LiveScriptReload_Enabled;ODIN_INSPECTOR;ODIN_INSPECTOR_3;ODIN_INSPECTOR_3_1
     VisionOS: DOTWEEN
-    WebGL: DOTWEEN;LiveScriptReload_Enabled;LiveScriptReload_IncludeInBuild_Enabled
+    WebGL: DOTWEEN;LiveScriptReload_Enabled;LiveScriptReload_IncludeInBuild_Enabled;ODIN_INSPECTOR;ODIN_INSPECTOR_3;ODIN_INSPECTOR_3_1
     Windows Store Apps: DOTWEEN
     XboxOne: DOTWEEN
     iPhone: DOTWEEN

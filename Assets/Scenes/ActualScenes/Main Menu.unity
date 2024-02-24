@@ -379,6 +379,7 @@ GameObject:
   - component: {fileID: 672185177}
   - component: {fileID: 672185179}
   - component: {fileID: 672185178}
+  - component: {fileID: 672185180}
   m_Layer: 5
   m_Name: BG
   m_TagString: Untagged
@@ -443,6 +444,100 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 672185176}
   m_CullTransparentMesh: 1
+--- !u!114 &672185180
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 672185176}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: 651002092
+      Data2: 1096533977
+      Data3: 1178091649
+      Data4: 1410841393
+    Path: event:/UI/Mouse Click
+  Event: 
+  PlayEvent: 15
+  StopEvent: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  AllowNonRigidbodyDoppler: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
+--- !u!1 &1026494709
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1026494711}
+  - component: {fileID: 1026494710}
+  m_Layer: 0
+  m_Name: Audio Manager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1026494710
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1026494709}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: -607837794
+      Data2: 1252283557
+      Data3: -157449053
+      Data4: -1707900561
+    Path: event:/Music/Room 2
+  Event: 
+  PlayEvent: 1
+  StopEvent: 2
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  AllowNonRigidbodyDoppler: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
+--- !u!4 &1026494711
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1026494709}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1180113453
 GameObject:
   m_ObjectHideFlags: 3
@@ -637,19 +732,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 725275bab3ceeab4f857c104c347917e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  allItems:
-  - {fileID: 11400000, guid: 0931d6ef6756813458ea3048841f3562, type: 2}
-  - {fileID: 11400000, guid: 1562eceeedf344541b0cf6597abacd4e, type: 2}
-  - {fileID: 11400000, guid: e7cd04c3b3f55384aa80ee517eb6c1c6, type: 2}
-  - {fileID: 11400000, guid: 681f6b088b3fa39408a2e7f6e63be6f9, type: 2}
-  - {fileID: 11400000, guid: 66981ad389a9ff846b544e993de486c9, type: 2}
-  - {fileID: 11400000, guid: 97e38b99c22443a4d808f597853a05c4, type: 2}
-  - {fileID: 11400000, guid: 5fb0a33eec1bd83499339437abb546cd, type: 2}
-  - {fileID: 11400000, guid: 7601583d9d987034587f40880b48e1fd, type: 2}
-  - {fileID: 11400000, guid: 650ec59801ea7f84fbf6987bf05d3f42, type: 2}
-  - {fileID: 11400000, guid: 8881923f5d9551f409579da15033137b, type: 2}
-  - {fileID: 11400000, guid: 91081bda766f9714091cfe142d4fcbf3, type: 2}
-  ConvoObject: {fileID: 0}
+  itemManager: {fileID: 0}
 --- !u!4 &1221801530
 Transform:
   m_ObjectHideFlags: 0
@@ -726,7 +809,7 @@ GameObject:
   - component: {fileID: 1539671800}
   - component: {fileID: 1539671799}
   - component: {fileID: 1539671798}
-  - component: {fileID: 1539671801}
+  - component: {fileID: 1539671802}
   m_Layer: 0
   m_Name: Play Btn
   m_TagString: Untagged
@@ -847,7 +930,7 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1539671796}
   m_CullTransparentMesh: 1
---- !u!114 &1539671801
+--- !u!114 &1539671802
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -868,7 +951,7 @@ MonoBehaviour:
       Data4: 2127684816
     Path: event:/ROOM SFX/ROOM 1/Pick Up
   Event: 
-  PlayEvent: 15
+  PlayEvent: 19
   StopEvent: 0
   AllowFadeout: 1
   TriggerOnce: 0
@@ -914,7 +997,7 @@ MonoBehaviour:
   m_BlockingObjects: 0
   m_BlockingMask:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 63
 --- !u!114 &1835891961
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1004,3 +1087,4 @@ SceneRoots:
   - {fileID: 1221801530}
   - {fileID: 1835891963}
   - {fileID: 379211636}
+  - {fileID: 1026494711}
