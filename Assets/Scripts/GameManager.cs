@@ -1,6 +1,9 @@
-using System;
 using System.Collections.Generic;
+using Sirenix.OdinInspector;
 using UnityEngine;
+#if UNITY_EDITOR
+using UnityEditor;
+#endif
 
 public enum GameState
 {
@@ -11,26 +14,41 @@ public enum GameState
 
 public class GameManager : Singleton<GameManager>
 {
-    [SerializeField] private List<ItemSO> allItems = new List<ItemSO>();
-    private DialogTrigger dialog;
     public GameState GameState => _gameState;
     private GameState _gameState;
-
+    
+    [SerializeField] private ItemManager itemManager;
+    
+    private DialogTrigger _dialog;
     private List<ItemSO> _inventory = new List<ItemSO>();
     private int _acquiredNotes;
     private int _puzzlePiecesPlaced;
 
+    [Button(ButtonSizes.Small, ButtonStyle.FoldoutButton)]
+    public void FindItemManager()
+    {
+#if UNITY_EDITOR
+        if (itemManager == null)
+        {
+            var itemManagerAsset = AssetDatabase.FindAssets("t:ItemManager");
+            itemManager =
+                AssetDatabase.LoadAssetAtPath<ItemManager>(AssetDatabase.GUIDToAssetPath(itemManagerAsset[0]));
+        }
+#endif
+    }
+    
     protected override void Awake()
     {
         base.Awake();
-        foreach (var item in allItems)
+        FindItemManager();
+        foreach (var item in itemManager.items)
         {
             item.isCompleted = false;
             item.evolution = -1;
         }
         try
         {
-            dialog = GameObject.FindWithTag("DialogueCollider").GetComponent<DialogTrigger>();
+            _dialog = GameObject.FindWithTag("DialogueCollider").GetComponent<DialogTrigger>();
         }
         catch { /*die*/ }
         DontDestroyOnLoad(gameObject);
@@ -42,7 +60,7 @@ public class GameManager : Singleton<GameManager>
         {
             try
             {
-                dialog = GameObject.FindWithTag("DialogueCollider").GetComponent<DialogTrigger>();
+                _dialog = GameObject.FindWithTag("DialogueCollider").GetComponent<DialogTrigger>();
             }
             catch { /*die*/ }
         };
@@ -97,8 +115,8 @@ public class GameManager : Singleton<GameManager>
 
     public void IncreaseChatCount()
     {
-        dialog.IncreaseChatIndex();
-        dialog.ChatOneShot();
+        _dialog.IncreaseChatIndex();
+        _dialog.ChatOneShot();
     }
 
     public bool InventoryFull()

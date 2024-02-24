@@ -2,38 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="53ae792b-b653-4b52-87cf-9bb64916e685" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Inventory/ItemManager.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Inventory/ItemManager.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.OniricGame/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.OniricGame/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/Sprites/Room 1 - Bedroom/AFTER PUZZLE Background/Room1_Framcomplete_bright.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/Sprites/Room 1 - Bedroom/AFTER PUZZLE Background/Room1_Framcomplete_bright.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/Sprites/Room 1 - Bedroom/Photo puzzle/photopuzzle_1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/Sprites/Room 1 - Bedroom/Photo puzzle/photopuzzle_1.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/Sprites/Room 1 - Bedroom/Photo puzzle/photopuzzle_2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/Sprites/Room 1 - Bedroom/Photo puzzle/photopuzzle_2.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/Sprites/Room 1 - Bedroom/Photo puzzle/photopuzzle_3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/Sprites/Room 1 - Bedroom/Photo puzzle/photopuzzle_3.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/Sprites/Room 1 - Bedroom/Photo puzzle/photopuzzle_4.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/Sprites/Room 1 - Bedroom/Photo puzzle/photopuzzle_4.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/Sprites/Room 1 - Bedroom/Photo puzzle/photopuzzle_Complete.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/Sprites/Room 1 - Bedroom/Photo puzzle/photopuzzle_Complete.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Effects/Ink.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Effects/Ink.mat" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Items/Room1Items/Photo1.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Items/Room1Items/Photo1.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Items/Room1Items/Photo2.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Items/Room1Items/Photo2.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Items/Room1Items/Photo3.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Items/Room1Items/Photo3.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Items/Room1Items/Photo4.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Items/Room1Items/Photo4.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ROCK SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ROCK SDF.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/ActualScenes/Room1.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/ActualScenes/Room1.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/ActualScenes/Room2.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/ActualScenes/Room2.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/ActualScenes/Room3.1.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/ActualScenes/Room3.1.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/ActualScenes/Room3.2.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/ActualScenes/Room3.2.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/ActualScenes/Room3.3.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/ActualScenes/Room3.3.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/ActualScenes/Room4.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/ActualScenes/Room4.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/ActualScenes/Room5.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/ActualScenes/Room5.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Inventory/InventoryUI.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Inventory/InventoryUI.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Inventory/Item.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Inventory/Item.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PlacementArea.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PlacementArea.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/RotateSprite.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/RotateSprite.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Squirrel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Squirrel.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Inventory/ItemSO.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Inventory/ItemSO.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
