@@ -12,7 +12,6 @@ Material:
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
   m_ValidKeywords:
-  - _LEFTSIDE
   - _SWIPE
   m_InvalidKeywords: []
   m_LightmapFlags: 4
@@ -64,7 +63,7 @@ Material:
     - _Normal_Threshold_2: 0.4
     - _OVERLAY: 0
     - _SWIPE: 1
-    - _Scale: 15
+    - _Scale: 12
     - _StippleSize: 3.47
     - _Stipple_Size: 15
     - _Thickness: 1

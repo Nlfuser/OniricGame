@@ -3,9 +3,15 @@
   <component name="ChangeListManager">
     <list default="true" id="53ae792b-b653-4b52-87cf-9bb64916e685" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.OniricGame/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.OniricGame/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Inventory/InventoryUI.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Inventory/InventoryUI.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Inventory/Item.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Inventory/Item.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Effects/Ink.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Effects/Ink.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/ActualScenes/Main Menu.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/ActualScenes/Main Menu.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/ActualScenes/Room1.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/ActualScenes/Room1.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/ActualScenes/Room2.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/ActualScenes/Room2.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/ActualScenes/Room3.1.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/ActualScenes/Room3.1.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/ActualScenes/Room4.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/ActualScenes/Room4.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/ActualScenes/Room5.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/ActualScenes/Room5.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Inventory/ItemSO.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Inventory/ItemSO.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,6 +42,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/NoteUI.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/ParallaxBG.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Player/Player.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Preloader.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/PuzzlePiece.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Room1.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Room5.cs" root0="FORCE_HIGHLIGHTING" />
@@ -52,15 +59,16 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Discover.Launch.Via.Unity&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Discover.Launch.Via.Unity": "true",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
     <configuration name="Standalone Player" type="RunUnityExe" factoryName="Unity Executable">
       <option name="EXE_PATH" value="$PROJECT_DIR$/Builds\OniricGame.exe" />

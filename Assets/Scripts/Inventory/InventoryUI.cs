@@ -105,8 +105,8 @@ public class InventoryUI : Singleton<InventoryUI>
         {
             if (!_currentlySelectedItem.dynamic || _currentlySelectedItem.isCompleted)
             {
-                OnPlace?.Invoke();
                 var item = Instantiate(_currentlySelectedItem.placedPrefab);
+                OnPlace?.Invoke();
                 if (pos == null)
                 {
                     var position = holdingItemImage.transform.position;
