@@ -7,124 +7,126 @@ using UnityEngine.UI;
 public class InventoryUI : Singleton<InventoryUI>
 {
     public Action OnPlace;
-    public Action OnPickup;
     [SerializeField] private List<UISlot> uiSlots;
     [SerializeField] private Image holdingItemImage;
-    private int _currentlySelectedItem;
-    private bool _isPickingUp;
-    private float _pickupTimer;
-    private List<ItemSO> _itemCounter = new List<ItemSO>();
-
-    public ItemSO GetCurrentItem()
-    {
-        return uiSlots[_currentlySelectedItem].item;
-    }
-    
-    public void SetIsPickupUpTrue()
-    {
-        _isPickingUp = true;
-        _pickupTimer = 0f;
-    }
+    private int _currentlySelectedItemIndex;
+    private ItemSO _currentlySelectedItem;
+    private bool _canPlace;
+    private float _canPlaceTimer;
 
     private void Update()
     {
+        _currentlySelectedItem = uiSlots[_currentlySelectedItemIndex].item;
+        UpdateHoldingImage();
+
+        UpdateSelectedItem();
+
+        UpdatePlacingBool();
+        
+        foreach (var slot in uiSlots)
+        {
+            if (uiSlots[_currentlySelectedItemIndex] == slot)
+            {
+                if (Math.Abs(uiSlots[_currentlySelectedItemIndex].transform.localScale.x - 1.25f) > 0.1f)
+                    slot.transform.DOScale(new Vector3(1.25f, 1.25f, 1.25f), 0.35f);
+            }
+            else
+            {
+                if (Math.Abs(slot.transform.localScale.x - 1f) > 0.1f)
+                    slot.transform.DOScale(new Vector3(1f, 1f, 1f), 0.35f);
+            }
+        }
+
+        if (_currentlySelectedItem != null && _currentlySelectedItem.isNote && Input.GetKeyDown(KeyCode.E))
+            NoteUI.instance.Show();
+    }
+
+    private void UpdatePlacingBool()
+    {
+        if (!_canPlace)
+        {
+            _canPlaceTimer += Time.deltaTime;
+            if (_canPlaceTimer >= 0.25f)
+                _canPlace = true;
+        }
+
+        if (_currentlySelectedItem)
+            _canPlace = !_currentlySelectedItem.cantPlace && _canPlace;
+        else
+            _canPlace = false;
+    }
+
+    private void UpdateSelectedItem()
+    {
+        if (Input.GetKeyDown(KeyCode.Alpha1))
+            _currentlySelectedItemIndex = 0;
+        if (Input.GetKeyDown(KeyCode.Alpha2))
+            _currentlySelectedItemIndex = 1;
+        if (Input.GetKeyDown(KeyCode.Alpha3))
+            _currentlySelectedItemIndex = 2;
+        if (Input.GetKeyDown(KeyCode.Alpha4))
+            _currentlySelectedItemIndex = 3;
+        if (Input.mouseScrollDelta.y < 0)
+        {
+            _currentlySelectedItemIndex++;
+            if (_currentlySelectedItemIndex > 3)
+                _currentlySelectedItemIndex = 0;
+        }
+        else if (Input.mouseScrollDelta.y > 0)
+        {
+            _currentlySelectedItemIndex--;
+            if (_currentlySelectedItemIndex < 0)
+                _currentlySelectedItemIndex = 3;
+        }
+    }
+
+    private void UpdateHoldingImage()
+    {
         RectTransformUtility.ScreenPointToLocalPointInRectangle(transform.parent.GetComponent<RectTransform>(), Input.mousePosition, UnityEngine.Camera.main, out var localPoint);
         holdingItemImage.transform.localPosition = localPoint;
-        if (uiSlots[_currentlySelectedItem].item != null && !uiSlots[_currentlySelectedItem].item.cantPlace)
+        if (_currentlySelectedItem != null && !_currentlySelectedItem.cantPlace)
         {
-            if (!uiSlots[_currentlySelectedItem].item.dynamic ||
-                (uiSlots[_currentlySelectedItem].item.dynamic && uiSlots[_currentlySelectedItem].item.isCompleted))
+            if (!_currentlySelectedItem.dynamic || uiSlots[_currentlySelectedItemIndex].item.isCompleted)
             {
                 holdingItemImage.enabled = true;
-                if(!uiSlots[_currentlySelectedItem].item.dynamic)
-                    holdingItemImage.sprite = uiSlots[_currentlySelectedItem].item.image;
+                if(!_currentlySelectedItem.dynamic)
+                    holdingItemImage.sprite = _currentlySelectedItem.image;
                 else
-                    holdingItemImage.sprite = uiSlots[_currentlySelectedItem].item.dynamicImages[uiSlots[_currentlySelectedItem].item.evolution];
+                    holdingItemImage.sprite = _currentlySelectedItem.dynamicImages[_currentlySelectedItem.evolution];
             }
         }
         else
             holdingItemImage.enabled = false;
-
-        if (Input.GetKeyDown(KeyCode.Alpha1))
-            _currentlySelectedItem = 0;
-        if (Input.GetKeyDown(KeyCode.Alpha2))
-            _currentlySelectedItem = 1;
-        if (Input.GetKeyDown(KeyCode.Alpha3))
-            _currentlySelectedItem = 2;
-        if (Input.GetKeyDown(KeyCode.Alpha4))
-            _currentlySelectedItem = 3;
-        if (Input.mouseScrollDelta.y < 0)
-        {
-            _currentlySelectedItem++;
-            if (_currentlySelectedItem > 3)
-                _currentlySelectedItem = 0;
-        }
-        else if (Input.mouseScrollDelta.y > 0)
-        {
-            _currentlySelectedItem--;
-            if (_currentlySelectedItem < 0)
-                _currentlySelectedItem = 3;
-        }
-
-        foreach (var slot in uiSlots)
-        {
-            if (uiSlots[_currentlySelectedItem] == slot)
-            {
-                if (uiSlots[_currentlySelectedItem].transform.localScale.x != 1.25f)
-                    slot.transform.DOScale(new Vector3(1.25f, 1.25f, 1.25f), 0.35f);
-            }
-            else
-                if(slot.transform.localScale.x != 1f)
-                    slot.transform.DOScale(new Vector3(1f, 1f, 1f), 0.35f);
-        }
-
-        if (_isPickingUp)
-        {
-            _pickupTimer += Time.deltaTime;
-            if (_pickupTimer >= 0.25f)
-                _isPickingUp = false;
-        }
-
-        if (uiSlots[_currentlySelectedItem].item != null && uiSlots[_currentlySelectedItem].item.isNote && Input.GetKeyDown(KeyCode.E))
-            NoteUI.instance.Show();
     }
 
     public void Place(GameObject pos = null)
     {
-        if (!_isPickingUp)
+        if (_canPlace)
         {
-            if (uiSlots[_currentlySelectedItem].item != null)
+            if (!_currentlySelectedItem.dynamic || _currentlySelectedItem.isCompleted)
             {
-                if (!uiSlots[_currentlySelectedItem].item.cantPlace)
+                OnPlace?.Invoke();
+                var item = Instantiate(_currentlySelectedItem.placedPrefab);
+                if (pos == null)
                 {
-                    if (!uiSlots[_currentlySelectedItem].item.dynamic ||
-                        (uiSlots[_currentlySelectedItem].item.dynamic && uiSlots[_currentlySelectedItem].item.isCompleted))
-                    {
-                        var item = Instantiate(uiSlots[_currentlySelectedItem].item.placedPrefab);
-                        OnPlace?.Invoke();
-                        _itemCounter.Add(uiSlots[_currentlySelectedItem].item);
-                        if (pos == null)
-                            item.transform.position = new Vector3(holdingItemImage.transform.position.x,
-                                holdingItemImage.transform.position.y, item.transform.position.z);
-                        else
-                            item.transform.position = new Vector3(pos.transform.position.x,
-                                pos.transform.position.y, item.transform.position.z);
-
-                        GameManager.instance.RemoveFromInventory(uiSlots[_currentlySelectedItem].item);
-                    }
+                    var position = holdingItemImage.transform.position;
+                    item.transform.position = new Vector3(position.x,
+                        position.y, item.transform.position.z);
                 }
+                else
+                {
+                    var position = pos.transform.position;
+                    item.transform.position = new Vector3(position.x,
+                        position.y, item.transform.position.z);
+                }
+
+                GameManager.instance.RemoveFromInventory(_currentlySelectedItem);
             }
         }
     }
 
-    public bool PlacedContains(ItemSO item)
+    public void AddItem(ItemSO item)
     {
-        return _itemCounter.Contains(item);
-    }
-    
-    public void AddUI(ItemSO item)
-    {
-        OnPickup?.Invoke();
         foreach (var slot in uiSlots)
         {
             if (!item.dynamic || item.evolution == -1)
@@ -144,7 +146,7 @@ public class InventoryUI : Singleton<InventoryUI>
         }
     }
 
-    public void RemoveUI(ItemSO item)
+    public void RemoveItem(ItemSO item)
     {
         for (var i = 0; i < uiSlots.Count; i++)
         {
@@ -154,5 +156,16 @@ public class InventoryUI : Singleton<InventoryUI>
                 uiSlots[i].UpdateUI();
             }
         }
+    }
+    
+    public ItemSO GetCurrentItem()
+    {
+        return _currentlySelectedItem;
+    }
+    
+    public void SetCannotPlace()
+    {
+        _canPlace = false;
+        _canPlaceTimer = 0f;
     }
 }

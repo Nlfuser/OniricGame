@@ -99,13 +99,13 @@ public class GameManager : Singleton<GameManager>
             _inventory.Add(obj);
         }
 
-        InventoryUI.instance.AddUI(obj);
+        InventoryUI.instance.AddItem(obj);
     }
     
     public void RemoveFromInventory(ItemSO obj)
     {
         _inventory.Remove(obj);
-        InventoryUI.instance.RemoveUI(obj);
+        InventoryUI.instance.RemoveItem(obj);
     }
 
     public bool InventoryContains(ItemSO obj)

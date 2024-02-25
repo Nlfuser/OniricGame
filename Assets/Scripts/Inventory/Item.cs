@@ -21,7 +21,7 @@ public class Item : Selectable
             if(shouldUpdateObjective && !item.isNote)
                 ItemCounter.instance.UpdateObjective();
 
-            InventoryUI.instance.SetIsPickupUpTrue();
+            InventoryUI.instance.SetCannotPlace();
             Destroy(gameObject);
         }
     }
