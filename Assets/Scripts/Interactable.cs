@@ -4,7 +4,12 @@ public abstract class Interactable : Selectable
 
     private void Update()
     {
-        if (IsMouseOver() && IsPlayerClicking() && GameManager.instance.InventoryContains(itemNeeded) && InventoryUI.instance.GetCurrentItem() == itemNeeded)
+        var canInteract = false;
+        if (itemNeeded.dynamic)
+            canInteract = InventoryUI.instance.GetCurrentItem() == itemNeeded && itemNeeded.isCompleted;
+        else
+            canInteract = InventoryUI.instance.GetCurrentItem() == itemNeeded;
+        if (IsMouseOver() && IsPlayerClicking() && GameManager.instance.InventoryContains(itemNeeded) && canInteract)
             OnInteract();
     }
 
