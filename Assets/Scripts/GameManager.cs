@@ -24,19 +24,6 @@ public class GameManager : Singleton<GameManager>
     private int _acquiredNotes;
     private int _puzzlePiecesPlaced;
 
-    [Button(ButtonSizes.Small, ButtonStyle.FoldoutButton)]
-    public void FindItemManager()
-    {
-#if UNITY_EDITOR
-        if (itemManager == null)
-        {
-            var itemManagerAsset = AssetDatabase.FindAssets("t:ItemManager");
-            itemManager =
-                AssetDatabase.LoadAssetAtPath<ItemManager>(AssetDatabase.GUIDToAssetPath(itemManagerAsset[0]));
-        }
-#endif
-    }
-    
     protected override void Awake()
     {
         base.Awake();
@@ -64,6 +51,20 @@ public class GameManager : Singleton<GameManager>
             }
             catch { /*die*/ }
         };
+    }
+    
+    
+    [Button(ButtonSizes.Small, ButtonStyle.FoldoutButton)]
+    public void FindItemManager()
+    {
+#if UNITY_EDITOR
+        if (itemManager == null)
+        {
+            var itemManagerAsset = AssetDatabase.FindAssets("t:ItemManager");
+            itemManager =
+                AssetDatabase.LoadAssetAtPath<ItemManager>(AssetDatabase.GUIDToAssetPath(itemManagerAsset[0]));
+        }
+#endif
     }
 
     public void SetGameState(GameState state)

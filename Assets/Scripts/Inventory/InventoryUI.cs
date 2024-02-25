@@ -26,15 +26,9 @@ public class InventoryUI : Singleton<InventoryUI>
         foreach (var slot in uiSlots)
         {
             if (uiSlots[_currentlySelectedItemIndex] == slot)
-            {
-                if (Math.Abs(uiSlots[_currentlySelectedItemIndex].transform.localScale.x - 1.25f) > 0.1f)
-                    slot.transform.DOScale(new Vector3(1.25f, 1.25f, 1.25f), 0.35f);
-            }
+                slot.Select();
             else
-            {
-                if (Math.Abs(slot.transform.localScale.x - 1f) > 0.1f)
-                    slot.transform.DOScale(new Vector3(1f, 1f, 1f), 0.35f);
-            }
+                slot.Deselect();
         }
 
         if (_currentlySelectedItem != null && _currentlySelectedItem.isNote && Input.GetKeyDown(KeyCode.E))

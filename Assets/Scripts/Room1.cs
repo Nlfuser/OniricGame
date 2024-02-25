@@ -41,7 +41,7 @@ public class Room1 : MonoBehaviour
                     {
                         GameManager.instance.RemoveFromInventory(item2);
                     }                    
-                    dialogue.StartDialogue();
+                    dialogue.StartDialogue(0);
                     player.SetCanMove(false);
                     _started = true;
                 }

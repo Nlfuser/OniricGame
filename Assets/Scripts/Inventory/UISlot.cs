@@ -7,6 +7,9 @@ public class UISlot : MonoBehaviour
 {
     public ItemSO item;
     [SerializeField] private Image itemImage;
+    private Tweener _slotTweener;
+    private Tweener _slotExitTweener;
+    private bool _isSelected;
 
     private void Awake()
     {
@@ -36,5 +39,19 @@ public class UISlot : MonoBehaviour
             itemImage.sprite = null;
             itemImage.enabled = false;
         }
+    }
+
+    public void Select()
+    {
+        if(_slotTweener == null && !_isSelected && gameObject.activeInHierarchy)
+            transform.DOScale(new Vector3(1.25f, 1.25f, 1.25f), 0.35f).OnComplete(() => _slotTweener = null).SetAutoKill(true);
+        _isSelected = true;
+    }
+
+    public void Deselect()
+    {
+        if(_slotExitTweener == null && _isSelected && gameObject.activeInHierarchy)
+            transform.DOScale(new Vector3(1f, 1f, 1f), 0.35f).OnComplete(() => _slotExitTweener = null).SetAutoKill(true);
+        _isSelected = false;
     }
 }
