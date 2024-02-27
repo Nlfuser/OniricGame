@@ -385,12 +385,7 @@ MonoBehaviour:
 
 
 
-    Sound
-
-
-
-    Special
-    Thanks'
+    Sound'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 2e15bfd0c4d05e948a1a79d8eb39bd2c, type: 2}
   m_sharedMaterial: {fileID: 238898196791003853, guid: 2e15bfd0c4d05e948a1a79d8eb39bd2c, type: 2}
@@ -694,14 +689,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 725275bab3ceeab4f857c104c347917e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  allItems:
-  - {fileID: 11400000, guid: 0931d6ef6756813458ea3048841f3562, type: 2}
-  - {fileID: 11400000, guid: 1562eceeedf344541b0cf6597abacd4e, type: 2}
-  - {fileID: 11400000, guid: e7cd04c3b3f55384aa80ee517eb6c1c6, type: 2}
-  - {fileID: 11400000, guid: 681f6b088b3fa39408a2e7f6e63be6f9, type: 2}
-  - {fileID: 11400000, guid: 66981ad389a9ff846b544e993de486c9, type: 2}
-  - {fileID: 11400000, guid: 97e38b99c22443a4d808f597853a05c4, type: 2}
-  ConvoObject: {fileID: 0}
+  itemManager: {fileID: 0}
 --- !u!4 &669877434
 Transform:
   m_ObjectHideFlags: 0
@@ -780,7 +768,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -485.99988, y: -2634}
+  m_AnchoredPosition: {x: -485.99994, y: -2418}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1223952420
@@ -1186,7 +1174,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: "\n Voltage (NFLUser)\n Lian (bearrib)\n\n Imated\n Xotic (EliTE08)\n Voltage
     (NFLUser)\n\n Lian (bearrib)\n Catnip (Catlaiya)\n Lee (alienbluez)\n\n Wave\n
-    Ryan Harcher\n\n\nGatoni"
+    Ryan Harcher"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 2e15bfd0c4d05e948a1a79d8eb39bd2c, type: 2}
   m_sharedMaterial: {fileID: 238898196791003853, guid: 2e15bfd0c4d05e948a1a79d8eb39bd2c, type: 2}
