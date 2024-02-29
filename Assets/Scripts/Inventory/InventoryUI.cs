@@ -6,7 +6,7 @@ using UnityEngine.UI;
 
 public class InventoryUI : Singleton<InventoryUI>
 {
-    public Action OnPlace;
+    public Action<ItemSO> OnPlace;
     [SerializeField] private List<UISlot> uiSlots;
     [SerializeField] private Image holdingItemImage;
     private int _currentlySelectedItemIndex;
@@ -100,7 +100,7 @@ public class InventoryUI : Singleton<InventoryUI>
             if (!_currentlySelectedItem.dynamic || _currentlySelectedItem.isCompleted)
             {
                 var item = Instantiate(_currentlySelectedItem.placedPrefab);
-                OnPlace?.Invoke();
+                OnPlace?.Invoke(_currentlySelectedItem);
                 if (pos == null)
                 {
                     var position = holdingItemImage.transform.position;

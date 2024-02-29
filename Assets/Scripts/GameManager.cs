@@ -38,11 +38,6 @@ public class GameManager : Singleton<GameManager>
             _dialog = GameObject.FindWithTag("DialogueCollider").GetComponent<DialogTrigger>();
         }
         catch { /*die*/ }
-        DontDestroyOnLoad(gameObject);
-    }
-
-    private void Start()
-    {
         UnityEngine.SceneManagement.SceneManager.sceneLoaded += (scene, mode) =>
         {
             try
@@ -51,6 +46,12 @@ public class GameManager : Singleton<GameManager>
             }
             catch { /*die*/ }
         };
+        DontDestroyOnLoad(gameObject);
+    }
+
+    private void Start()
+    {
+
     }
     
     
@@ -117,7 +118,7 @@ public class GameManager : Singleton<GameManager>
     public void IncreaseChatCount()
     {
         _dialog.IncreaseChatIndex();
-        _dialog.ChatOneShot();
+        //_dialog.ChatOneShot();
     }
 
     public bool InventoryFull()

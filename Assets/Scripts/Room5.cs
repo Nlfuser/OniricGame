@@ -23,7 +23,7 @@ public class Room5 : MonoBehaviour
         InventoryUI.instance.OnPlace -= OnPlaced;
     }
 
-    private void OnPlaced()
+    private void OnPlaced(ItemSO itemSo)
     {
         _count++;
         pic = FindObjectOfType<RotateSprite>();

@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using DG.Tweening;
 using TMPro;
@@ -5,6 +6,8 @@ using UnityEngine;
 
 public class DialogTrigger : MonoBehaviour
 {
+    [SerializeField] private ItemSO flowerItem;
+    [SerializeField] private ItemSO flowerItem2;
     [SerializeField] private float textUpMargin = 1f;
     [SerializeField] private float textUpDuration = 2;
     [SerializeField] private Ease textUpEase;
@@ -17,14 +20,41 @@ public class DialogTrigger : MonoBehaviour
     private DialogueBubble _bubbleGal;
     private int _textIndex = 0;
     private int _levIndex = -1;
+    private bool _hasFlowerDialoguePlayed;
     private bool _galBubbleUp;
+    private float _itemHintTimer = 15f;
     
     private void Start()
     {
         _bubbleGal = bubbleGalObject.GetComponent<DialogueBubble>();
         _bubbleLad = bubbleLadObject.GetComponent<DialogueBubble>();
+        InventoryUI.instance.OnPlace += OnItemPlaced;
     }
-    
+
+    private void OnItemPlaced(ItemSO item)
+    {
+        _itemHintTimer = 15f;
+        if(_hasFlowerDialoguePlayed)
+            return;
+        if (item == flowerItem || item == flowerItem2)
+        {
+            _textIndex = 2;
+            ChatOneShot();
+            _hasFlowerDialoguePlayed = true;
+        }
+    }
+
+    private void Update()
+    {
+        _itemHintTimer -= Time.deltaTime;
+        if (_itemHintTimer <= 0f)
+        {
+            _textIndex = 1;
+            ChatOneShot();
+            _itemHintTimer = Mathf.Infinity;
+        }
+    }
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
         ChatOneShot();

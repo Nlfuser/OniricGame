@@ -28,7 +28,7 @@ public class ItemVerifier : MonoBehaviour
         InventoryUI.instance.OnPlace -= OnPlaced;
     }
 
-    private void OnPlaced(){
+    private void OnPlaced(ItemSO itemSo){
         count+=1;
     }
 }
