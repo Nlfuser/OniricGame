@@ -15,9 +15,8 @@ public class PlacementArea : Interactable
     {
         scene2 = UnityEngine.SceneManagement.SceneManager.GetActiveScene().name == "Room2";
     }
-    public override void OnInteract(){
-
-
+    public override void OnInteract()
+    {
         InventoryUI.instance.Place(Placement);
 
         if (scene2)

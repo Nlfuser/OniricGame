@@ -22,7 +22,7 @@ public class SceneManager : Singleton<SceneManager>
         sceneLoaded += TransitionOut;
     }
 
-    public void StartTransition(string sceneName)
+    public void StartTransition(string sceneName, Action onComplete = null)
     {
         if(_isTransitioning)
             return;
@@ -30,7 +30,9 @@ public class SceneManager : Singleton<SceneManager>
         inkTransitionMaterial.SetKeyword(_leftSide, false);
         inkTransitionMaterial.SetFloat(Amount, 0);
         
-        StartCoroutine(Transition(0f, 1f, () => {
+        StartCoroutine(Transition(0f, 1f, () => 
+        {
+            onComplete?.Invoke();
             LoadScene(sceneName);
         }));
     }

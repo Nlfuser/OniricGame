@@ -16,6 +16,8 @@ public class InventoryUI : Singleton<InventoryUI>
 
     private void Update()
     {
+        if(PauseMenu.instance.IsPaused())
+            return;
         _currentlySelectedItem = uiSlots[_currentlySelectedItemIndex].item;
         UpdateHoldingImage();
 

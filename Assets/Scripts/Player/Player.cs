@@ -82,7 +82,7 @@ public class Player : MonoBehaviour
     
     private void Update()
     {
-        if(!_canMove)
+        if(!_canMove || PauseMenu.instance.IsPaused())
             return;
         _horizontal = Input.GetAxisRaw("Horizontal");
         //_isSprinting = Input.GetKey(KeyCode.LeftShift);

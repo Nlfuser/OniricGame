@@ -4,6 +4,8 @@ public abstract class Interactable : Selectable
 
     private void Update()
     {
+        if(PauseMenu.instance.IsPaused())
+            return;
         var canInteract = false;
         if (itemNeeded.dynamic)
             canInteract = InventoryUI.instance.GetCurrentItem() == itemNeeded && itemNeeded.isCompleted;
