@@ -4947,7 +4947,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 71a1ad9e6183ed94b8ea2138b93c6961, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pauseScreen: {fileID: 567105496}
+  pauseBtn: {fileID: 642435454}
 --- !u!225 &1246965393
 CanvasGroup:
   m_ObjectHideFlags: 0

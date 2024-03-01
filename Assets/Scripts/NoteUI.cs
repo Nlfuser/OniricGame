@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class NoteUI : Singleton<NoteUI>
 {
-    [SerializeField] private GameObject content;
+    public GameObject content;
     [SerializeField] private List<GameObject> notes;
     private int _currentNote;
 
